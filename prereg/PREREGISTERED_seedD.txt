@@ -1,0 +1,36 @@
+PRE-REGISTRATION, seed D (supersedes the VOID seed-B and seed-C registrations). Written BEFORE any seed-D data exists.
+date: 2026-11-18T20:34:47Z
+seed commitment (sha256): 755a57fd4dd7d65fec1c77318096fc5bbc233fafe1336745d535615634b34b47
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, --jobs 6 (safe max on this machine: 8), local mode (own solvers only), baseline_bkz vs tuned_bkz, this machine.
+
+PRIMARY estimator (as in the code hashes below): difficulty-stratified credit, JOINT bootstrap re-selecting bins every resample;
+bins = octaves of baseline cost from 0.5 s; usable = >=5 instances and submission median cost >=0.5 s; top 3 hardest usable bins;
+baseline-timeout instances excluded; one-sided 95% lower bound.
+UNCONDITIONAL criterion for the primary estimator:
+  (a) credit >= 1.0 bit                   -> supports the claim that this ladder size can certify a pruning-sized speedup
+  (b) 0 <= credit < 1.0, conclusive       -> FAILS
+  (c) inconclusive (< 2 usable bins)      -> FAILS (insufficient power for gm 24/dim at a 120 s cap)
+
+EXPLORATORY estimator (reported beside, never instead): hard-pool claim, baseline cost >= 4 s, n >= 12, submission median >= 0.5 s.
+  Its 4 s threshold was chosen AFTER the author saw seed A's bin table (in-sample there). A hard-pool lower bound >= 1.0 bit on seed D is
+  the first out-of-sample support for promoting it; below 1.0 or inconclusive means it is NOT promoted.
+
+CONCURRENCY check (after the ladders finish): remeasure.py re-runs 4 instances per cost octave of the BASELINE ladder sequentially.
+  Criterion: overall median |shift| <= 0.10 bits AND no octave with n>=3 beyond +-0.20 bits; otherwise the concurrency bias is flagged
+  and the seed-D credit must not be called clean.
+
+Known before the run (so they are not later presented as findings): on seed A (12/dim, 60 s cap) the primary estimator gave 0.1 bits
+(median speedup 2.2) with ~0% simulated power; the exploratory claim gave 2.3 (in-sample). The primary rule's design (bins, top-3, floor)
+was influenced by seed A; the joint-bootstrap correction came from simulation. Production-code simulations at n=120: lower bound exceeds truth
+2.5-5% of the time; 63% power at a true 1.5 bits, 100% at 2.5. Real runs may have fewer eligible instances (timeouts, floor).
+Bare local mode: a solver can escape cleanup (setsid) and macOS does not kill SIGXCPU-ignorers at the CPU limit; both solvers here are mine and
+well-behaved, so neither applies. No Docker is used (the sandbox meter is unverified).
+
+code hashes (sha256):
+2feb07a369fcfdb7c08e8fc416f5a846f29c7fa644096d4b12be140c8a82123b  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+6da9b5b0b3fc232b3d162ff4d03248964dca1902722c2715aaae7a10c60f1ed6  harness.py
+fde3e74fe6a0442d7d63246c2b29052fb9b3fe40bccf2fcb6f707dc79a92068f  runner.py
+8d33943015f2c2089f98c738f868451a63fddf1b8663d80293e3b6a731f20a1d  solvers/baseline_bkz.py
+4d011945d3f33adf3bc856f977784b5c572fe3cb0d831bb4db2307ef853247ee  solvers/tuned_bkz.py

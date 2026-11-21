@@ -1,0 +1,48 @@
+PRE-REGISTRATION: does the compiler's power table match what real solvers earn? (domain dlog). Written BEFORE any seed data exists.
+date: 2026-11-20T13:14:15Z
+seed commitments (sha256), three throwaway seeds, kept outside the tree until the run ends:
+  e5dab2c85ee9d6b6955aac0a3e28ba3ee027ed42674a43cd332c299f2bd36b5f
+  d00100a775e5449d08aeb33d89afb0e346d98db33e1a95f9b9c91f8fef6e61a8
+  e70be0d87b1c53f89ee9267a3cf89a5a92aaed8325580cf3a955b80433f169fa
+config: family dlog as compiled (sizes [28, 29, 30], n=24 per size, cap 120 s), local mode (--insecure-local), this machine, --jobs 1.
+baseline: domains/dlog/reference.py (linear scan). Self-test of the compiled domain passed on 2026-11-20 (zero 0.00, none 0, known 1-bit 0.99).
+
+SUBMISSIONS (both return correct answers; submit_check passes):
+  A  solvers/dlog_stride4.py  baby-step scan with a 4-entry table. TRUE speedup measured BEFORE this run on the PUBLIC profiling seed, 6 instances,
+     median cpu ratio: 1.44 bits at size 22, 1.60 at 24, 1.31 at 26. Sizes 28-30 are above that range: the true effect there is unmeasured, the
+     prediction is an extrapolation of three numbers.
+  B  solvers/dlog_bsgs.py  full baby-step/giant-step. True speedup is large: 6.6 bits at 22, 6.1 at 24, 10.7 at 26, growing with size
+     (about size/2 bits). At sizes 28-30 its cost is far below the estimator's 0.5 s floor.
+
+WHAT THE COMPILER SAID (domains/dlog/compiled.json, power table, pair noise assumed 0.6): certifiable range "about 1.5 to about 3 bits"; with
+true effect 1.5, P(all three seeds >= 1 bit) = 0.967; at 1.0, 0.0; at 4, 0.60; at 5, 0.0 (inconclusive 0.22); at 6, 0.0 (inconclusive 0.82).
+
+UNCONDITIONAL CRITERIA (judged on the primary estimator's output, no reinterpretation afterwards):
+  A1  every one of the three seeds is conclusive.
+  A2  the claim (minimum credit over the three seeds) is in [0.7, 1.7] bits. It must not exceed the pooled paired median speedup measured on the
+      judged instances themselves by more than 0.3 bits (a lower bound that exceeds the truth is NOT conservative: FAILS).
+  A3  the claim is >= 1.0 bit (the compiler's own meaning of "certified"). Expected probability is not ~1: A's true effect sits at the lower edge of
+      the stated range (1.3-1.6), where the table's all-three power is between 0 and 0.97. A failing A3 is reported as a miss, not explained away.
+  B1  B's claim is conclusive and below 5 bits, OR inconclusive: the stated ceiling (about 3-4 bits at a 120 s cap) is real, and a very large
+      true speedup is NOT reported at its true size. B's claim above 5 bits would mean the ceiling note is wrong.
+  B2  B's pooled paired median speedup on the judged instances is reported next to its claim (the gap is the ceiling's size).
+  C   on a zero-effect repeat (not run here): see the compiler self-test. Not part of this run.
+
+PRIMARY estimator: unchanged (difficulty-stratified credit, joint bootstrap; hashes below). All three seeds are run for BOTH submissions; the
+baseline ladder per seed is measured once (--reuse-baseline), identically for both.
+
+CAVEAT KNOWN BEFORE THE RUN: local mode, no sandbox, so even a perfect result is PROVISIONAL, and one machine measures both the baseline and
+the submissions (a ratio is robust to hardware speed, but this run does not show that: that is a different experiment).
+
+code hashes (sha256):
+3184799efdf9133d53d476ae7fddd3f9e46988f9a58f2192c5b773023d3e672f  extrapolate.py
+06da3bcb599e76f29bcda66ad35bb6d431e7a63c21b3fdcdb36e209a026a9c51  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+e0e6fe31815ed11a174756a42279e2a7a25ce13e414f06cc66ebc11e085faeb0  harness.py
+6b1a319d7ce289be40b8ec4a159863d9e7835291eb4934c9062ab6ea29190246  runner.py
+cf27909aa0b3436345919c4e2918e6760ed1b182aac145a90e3de5dafda36cef  declared.py
+4b6669a7acc63fca54b0ebd1f95d4fb39cb254db44d50f231f9266389fd590b5  domains/dlog/decl.py
+cc576160b83253cc09c55120fda2bd59fb62f35494436542ff5e0cdfa451cf8d  domains/dlog/reference.py
+14ea9a08a031968e30fb97d65a58e45d5160c052230fbedfeb8ed0dee46b4fa4  domains/dlog/compiled.json
+f0abec57b0fe6bf68809ad477f8418ca2194c606ae9c96d43812eda21ee3a324  solvers/dlog_stride4.py
+5f7e5823f18692b33c3b8a1fb5ea6cd721a958239f4229fd3b4b669217e11201  solvers/dlog_bsgs.py

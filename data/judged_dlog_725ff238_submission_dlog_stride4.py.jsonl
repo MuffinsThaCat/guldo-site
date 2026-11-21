@@ -1,0 +1,10 @@
+{"meta": true, "solver": "dlog_stride4.py", "commit": "725ff2384ab94d474f1fb8dd7f6f9a0bb89c8ba42d4f7ba3f6dc007cfa2c92f4", "overhead": 0.09100799999999999, "budget": 12.0, "family": "dlog", "sandbox": null, "instance_version": "dlog-v1", "image": null, "host": "macOS-15.3.1-arm64-arm-64bit-Mach-O / arm", "cpu": "Apple M4 Pro", "ncpu": 14, "jobs": 1, "solver_sha256": "f0abec57b0fe6bf68809ad477f8418ca2194c606ae9c96d43812eda21ee3a324"}
+{"id": "28:0", "dim": 28, "cpu": 1.1897, "wall": 1.1958861351013184, "status": "solved", "cpu_net": 1.098692}
+{"id": "28:1", "dim": 28, "cpu": 0.228839, "wall": 0.23279905319213867, "status": "solved", "cpu_net": 0.13783099999999998}
+{"id": "28:2", "dim": 28, "cpu": 0.030386999999999997, "wall": 0.03403115272521973, "status": "solved", "cpu_net": 0.001}
+{"id": "29:0", "dim": 29, "cpu": 9.583829, "wall": 9.624722003936768, "status": "solved", "cpu_net": 9.492821}
+{"id": "29:1", "dim": 29, "cpu": 7.097074999999999, "wall": 7.140120267868042, "status": "solved", "cpu_net": 7.006066999999999}
+{"id": "29:2", "dim": 29, "cpu": 3.817287, "wall": 3.8363239765167236, "status": "solved", "cpu_net": 3.726279}
+{"id": "30:0", "dim": 30, "cpu": 13.012616999999999, "wall": 13.076088905334473, "status": "timeout", "cpu_net": 12.921608999999998}
+{"id": "30:1", "dim": 30, "cpu": 0.853415, "wall": 0.8646962642669678, "status": "solved", "cpu_net": 0.7624070000000001}
+{"id": "30:2", "dim": 30, "cpu": 13.008095, "wall": 13.11672592163086, "status": "timeout", "cpu_net": 12.917087}

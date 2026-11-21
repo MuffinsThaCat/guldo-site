@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pre-registrations - Guldo</title><meta name="description" content="Dated registrations with seed commitments and unconditional criteria.">
+<meta name="color-scheme" content="dark light"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%232A78D6'/%3E%3Cpath d='M6 20h4v-4h4v-4h4V8h4' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap"><link rel="stylesheet" href="assets/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<div class="wrap"><header class="top"><a class="brand" href="index.html"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect x="1.5" y="1.5" width="25" height="25" rx="6" fill="none" stroke="var(--ink)" stroke-width="2"/><path d="M6 20h4v-4h4v-4h4V8h4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Guldo</a>
+<nav class="main" aria-label="Main"><a href="index.html">Overview</a><a href="install.html">Install</a><a href="domains.html">Domains</a><a href="guide.html">Guide</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="preregistrations.html" aria-current="page">Pre-registrations</a><a href="compete.html">Compete</a><a href="claims.html">Other claims</a><a href="limits.html">Limits</a><button class="theme" id="theme-toggle" type="button" aria-pressed="true">Light mode</button></nav></header>
+<main id="main">
+<section class="block"><p class="kicker">Pre-registrations</p><h1>Written before the data existed</h1>
+<p class="lede">A claim that the method works is only worth something if the pass criteria were fixed before looking. Each registration here carries its date, the seed commitment, the criteria and the hashes of the code it will run.</p></section>
+<section class="block"><div class="tl"><div class="item void"><div class="small muted mono">2026-11-18T19:51:50Z</div><h3>PRE-REGISTRATION for the out-of-sample check of the difficulty-stratified credit (written BEFORE any data from this seed exists)</h3><span class="pill idle"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 8h7" stroke="currentColor" stroke-width="1.8"/></svg><span>Void</span></span><p class="fine">Void: the run was killed and the harness changed before it finished. Superseded by seed C.</p><p class="small mono" style="word-break:break-all">commitment 2315b668de577ece44e7a57a14d75043331a6073b61af0a1cfd3a06f3ae96537</p><p class="small muted">Seed not revealed yet.</p><details><summary>The registration, verbatim</summary><pre>PRE-REGISTRATION for the out-of-sample check of the difficulty-stratified credit (written BEFORE any data from this seed exists)
+date: 2026-11-18T19:51:50Z
+seed commitment (sha256): 2315b668de577ece44e7a57a14d75043331a6073b61af0a1cfd3a06f3ae96537
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, jobs 6, local mode, baseline_bkz vs tuned_bkz
+rule: credit = one-sided 95% lower bound of pooled median log2 speedup over the 3 hardest usable baseline-cost octave bins (start 0.5 s); usable = &gt;=5 instances and submission median &gt;=0.5 s; baseline-timeout instances excluded
+predictions written in advance: credit &gt;= 1.0 bit expected IF hard bins fill; a result below 1.0 or inconclusive counts AGAINST the rule
+code hashes:
+4e2f80c67128710a2ce207e67e6466639435a8b99d9732a34aa2f4de3d53d616  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+221c2a60d0aaf6c1e12ff76f250894c9602d25ddc8a0096e551b4eb838c846cf  harness.py
+
+ADDENDUM (appended during the audit, after launch; at this time the seed-B BASELINE ladder was still running and the
+tuned_bkz ladder had produced no data, so no outcome of the comparison was known):
+1. The prediction above is hedged (&quot;IF hard bins fill&quot;). Replace it with this UNCONDITIONAL criterion, to be applied to the
+   pre-registered estimator exactly as hashed above:
+   (a) credit &gt;= 1.0 bit                       -&gt; consistent with the prediction;
+   (b) 0 &lt;= credit &lt; 1.0, conclusive           -&gt; the prediction FAILS;
+   (c) INCONCLUSIVE (&lt; 2 usable bins)          -&gt; the prediction FAILS for this configuration (insufficient power),
+       and counts as evidence that gm 24/dim at a 120 s cap cannot certify a pruning-sized speedup.
+   &quot;Hard bins did not fill&quot; is not an excuse for (b) or (c): it is the thing being tested.
+2. A joint-resample bootstrap (re-selecting bins inside every resample) was found by simulation to be better calibrated
+   (P(lower bound &gt; truth) 4-5% vs 5-9%). It was designed from simulations, not from seed-B data. It is EXPLORATORY here:
+   its seed-B number will be reported next to the pre-registered one, never instead of it.
+OUTCOME (appended later): this run was KILLED by the user&#x27;s instruction when the baseline ladder was complete and the
+tuned ladder had 100 of 120 records, so that the harness could be fixed (preexec_fn thread-safety, fd leak) and the lower
+bound corrected (joint bootstrap). The seed-B tuned-vs-baseline comparison was never computed or looked at (only the
+baseline&#x27;s per-dimension solved/timeout counts were seen). The files are archived in results/stale_superseded/
+seedB_killed_run/. This pre-registration is VOID; a new one is written for seed C against the fixed code.
+3. Known weakness of this run, written in advance: it runs 6 instances concurrently (harness --jobs 6) and the drift
+   check covered only short instances (dims 62/64). A sequential re-measurement of a sample of seed-B instances will be
+   reported alongside the credit.
+</pre><p class="small"><a href="prereg/PREREGISTERED_seedB.txt">Download PREREGISTERED_seedB.txt</a></p></details></div><div class="item void"><div class="small muted mono">2026-11-18T20:10:56Z</div><h3>PRE-REGISTRATION, seed C (supersedes the VOID seed-B registration). Written BEFORE any seed-C data exists.</h3><span class="pill idle"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 8h7" stroke="currentColor" stroke-width="1.8"/></svg><span>Void</span></span><p class="fine">Void: the run was killed and the harness changed before it finished. Superseded by seed D.</p><p class="small mono" style="word-break:break-all">commitment 14a1b0db58dc95db6600070efe34a460bb3bc6e64fabc72580ecd51c9af5cf09</p><p class="small muted">Seed not revealed yet.</p><details><summary>The registration, verbatim</summary><pre>PRE-REGISTRATION, seed C (supersedes the VOID seed-B registration). Written BEFORE any seed-C data exists.
+date: 2026-11-18T20:10:56Z
+seed commitment (sha256): 14a1b0db58dc95db6600070efe34a460bb3bc6e64fabc72580ecd51c9af5cf09
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, --jobs 6, local mode (own solvers only), baseline_bkz vs tuned_bkz, this machine.
+
+PRIMARY estimator (fixed, as in the code hashes below): difficulty-stratified credit with the JOINT bootstrap that re-selects bins
+in every resample; bins = octaves of baseline cost from 0.5 s; usable = &gt;=5 instances and submission median cost &gt;=0.5 s; top 3 hardest
+usable bins; baseline-timeout instances excluded; one-sided 95% lower bound.
+UNCONDITIONAL criterion for the primary estimator:
+  (a) credit &gt;= 1.0 bit                   -&gt; supports the claim that this ladder size can certify a pruning-sized speedup
+  (b) 0 &lt;= credit &lt; 1.0, conclusive       -&gt; FAILS
+  (c) inconclusive (&lt; 2 usable bins)      -&gt; FAILS (insufficient power for gm 24/dim at a 120 s cap)
+
+EXPLORATORY estimator (reported beside, never instead): hard-pool claim, baseline cost &gt;= 4 s, n &gt;= 12, submission median &gt;= 0.5 s.
+  Its 4 s threshold was chosen AFTER the author saw seed A&#x27;s bin table (in-sample there). Criterion: a hard-pool lower bound &gt;= 1.0 bit on
+  seed C is the first out-of-sample support for promoting it; below 1.0 or inconclusive means it is NOT promoted.
+
+CONCURRENCY check (run after the ladders finish): remeasure.py re-runs 4 instances per cost octave of the baseline ladder sequentially.
+  Criterion: overall median |shift| &lt;= 0.10 bits AND no octave with n&gt;=3 beyond +-0.20 bits; otherwise the concurrency bias is flagged
+  and the seed-C credit must not be called clean.
+
+OUTCOME (appended later): this run was KILLED by the user&#x27;s instruction about 30 seconds after launch, with essentially no data
+(archived in results/stale_superseded/seedC_aborted_run/, never analyzed). Afterwards an audit found a hang in harness.py
+(orphan holding the output pipe) and the harness was changed, so the code hashes below NO LONGER MATCH. This registration is VOID.
+A new one (new seed, new hashes) must be written before any further run.
+
+Already-known facts, stated so they are not later presented as findings: on seed A (12/dim, 60 s cap) the primary estimator gave 0.1 bits
+(median speedup 2.2) and had 0% simulated power; the exploratory claim gave 2.3 (in-sample). The primary rule&#x27;s design (bins, top-3, floor)
+was influenced by seed A; the joint-bootstrap correction was derived from simulation. Seed B&#x27;s comparison was never analyzed.
+
+code hashes (sha256):
+2feb07a369fcfdb7c08e8fc416f5a846f29c7fa644096d4b12be140c8a82123b  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+1fdb522b6ddf9258419d1740dc8f4f2bb3896865f113c8f5f10d7ab707d79d0c  harness.py
+fde3e74fe6a0442d7d63246c2b29052fb9b3fe40bccf2fcb6f707dc79a92068f  runner.py
+8d33943015f2c2089f98c738f868451a63fddf1b8663d80293e3b6a731f20a1d  solvers/baseline_bkz.py
+4d011945d3f33adf3bc856f977784b5c572fe3cb0d831bb4db2307ef853247ee  solvers/tuned_bkz.py
+</pre><p class="small"><a href="prereg/PREREGISTERED_seedC.txt">Download PREREGISTERED_seedC.txt</a></p></details></div><div class="item "><div class="small muted mono">2026-11-18T20:34:47Z</div><h3>PRE-REGISTRATION, seed D (supersedes the VOID seed-B and seed-C registrations). Written BEFORE any seed-D data exists.</h3><span class="pill ok"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.6 8.4l2.2 2.2 4.6-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Completed</span></span><p class="fine">Completed. Criterion (a) met; see Results.</p><p class="small mono" style="word-break:break-all">commitment 755a57fd4dd7d65fec1c77318096fc5bbc233fafe1336745d535615634b34b47</p><p class="small muted">Seed revealed: <span class="mono">ee956d370181...</span> (shipped with the checker below)</p><details><summary>The registration, verbatim</summary><pre>PRE-REGISTRATION, seed D (supersedes the VOID seed-B and seed-C registrations). Written BEFORE any seed-D data exists.
+date: 2026-11-18T20:34:47Z
+seed commitment (sha256): 755a57fd4dd7d65fec1c77318096fc5bbc233fafe1336745d535615634b34b47
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, --jobs 6 (safe max on this machine: 8), local mode (own solvers only), baseline_bkz vs tuned_bkz, this machine.
+
+PRIMARY estimator (as in the code hashes below): difficulty-stratified credit, JOINT bootstrap re-selecting bins every resample;
+bins = octaves of baseline cost from 0.5 s; usable = &gt;=5 instances and submission median cost &gt;=0.5 s; top 3 hardest usable bins;
+baseline-timeout instances excluded; one-sided 95% lower bound.
+UNCONDITIONAL criterion for the primary estimator:
+  (a) credit &gt;= 1.0 bit                   -&gt; supports the claim that this ladder size can certify a pruning-sized speedup
+  (b) 0 &lt;= credit &lt; 1.0, conclusive       -&gt; FAILS
+  (c) inconclusive (&lt; 2 usable bins)      -&gt; FAILS (insufficient power for gm 24/dim at a 120 s cap)
+
+EXPLORATORY estimator (reported beside, never instead): hard-pool claim, baseline cost &gt;= 4 s, n &gt;= 12, submission median &gt;= 0.5 s.
+  Its 4 s threshold was chosen AFTER the author saw seed A&#x27;s bin table (in-sample there). A hard-pool lower bound &gt;= 1.0 bit on seed D is
+  the first out-of-sample support for promoting it; below 1.0 or inconclusive means it is NOT promoted.
+
+CONCURRENCY check (after the ladders finish): remeasure.py re-runs 4 instances per cost octave of the BASELINE ladder sequentially.
+  Criterion: overall median |shift| &lt;= 0.10 bits AND no octave with n&gt;=3 beyond +-0.20 bits; otherwise the concurrency bias is flagged
+  and the seed-D credit must not be called clean.
+
+Known before the run (so they are not later presented as findings): on seed A (12/dim, 60 s cap) the primary estimator gave 0.1 bits
+(median speedup 2.2) with ~0% simulated power; the exploratory claim gave 2.3 (in-sample). The primary rule&#x27;s design (bins, top-3, floor)
+was influenced by seed A; the joint-bootstrap correction came from simulation. Production-code simulations at n=120: lower bound exceeds truth
+2.5-5% of the time; 63% power at a true 1.5 bits, 100% at 2.5. Real runs may have fewer eligible instances (timeouts, floor).
+Bare local mode: a solver can escape cleanup (setsid) and macOS does not kill SIGXCPU-ignorers at the CPU limit; both solvers here are mine and
+well-behaved, so neither applies. No Docker is used (the sandbox meter is unverified).
+
+code hashes (sha256):
+2feb07a369fcfdb7c08e8fc416f5a846f29c7fa644096d4b12be140c8a82123b  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+6da9b5b0b3fc232b3d162ff4d03248964dca1902722c2715aaae7a10c60f1ed6  harness.py
+fde3e74fe6a0442d7d63246c2b29052fb9b3fe40bccf2fcb6f707dc79a92068f  runner.py
+8d33943015f2c2089f98c738f868451a63fddf1b8663d80293e3b6a731f20a1d  solvers/baseline_bkz.py
+4d011945d3f33adf3bc856f977784b5c572fe3cb0d831bb4db2307ef853247ee  solvers/tuned_bkz.py
+</pre><p class="small"><a href="prereg/PREREGISTERED_seedD.txt">Download PREREGISTERED_seedD.txt</a></p></details></div><div class="item "><div class="small muted mono">2026-11-18T21:08:20Z</div><h3>PRE-REGISTRATION, seed E: POSITIVE CONTROL on a second domain (integer factoring). Written BEFORE any seed-E data exists.</h3><span class="pill ok"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.6 8.4l2.2 2.2 4.6-5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span>Completed</span></span><p class="fine">Positive control on a second domain (integer factoring). The written criteria are applied to the saved ladders on the Results page.</p><p class="small mono" style="word-break:break-all">commitment 88ecb627dbe3b09dc77db99e8d60ebe3096b7f89e6eb9be3379d886b6d9bc843</p><p class="small muted">Seed revealed: <span class="mono">ba6db7cc402f...</span> (shipped with the checker below)</p><details><summary>The registration, verbatim</summary><pre>PRE-REGISTRATION, seed E: POSITIVE CONTROL on a second domain (integer factoring). Written BEFORE any seed-E data exists.
+date: 2026-11-18T21:08:20Z
+seed commitment (sha256): 88ecb627dbe3b09dc77db99e8d60ebe3096b7f89e6eb9be3379d886b6d9bc843
+config: family factor, sizes (bits of N) [58, 60, 62, 64], n=24/size, cap 120 s, --jobs 6 (safe max 8), local mode, this machine.
+baseline: solvers/factor_trial_py.py (trial division over odd candidates, Python loop). submission: solvers/factor_trial_np.py (the SAME algorithm,
+same candidates in the same order, vectorized with numpy). They return identical divisors; only the implementation differs.
+
+WHY: the lattice runs never had a speedup whose true size was known independently. Here it is: calibrated in-process on the PRACTICE seed at
+44/48/52 bits the true speedup was +3.69 / +4.34 / +4.43 bits (per-instance sd 0.13-0.29). Sizes 58-64 are above the calibrated range, so the true
+effect there is unmeasured; the prediction below is an extrapolation of those three numbers, not a measurement.
+
+PRIMARY estimator: unchanged (difficulty-stratified credit, joint bootstrap; hashes below).
+UNCONDITIONAL criteria (judged on the primary estimator&#x27;s output, no reinterpretation afterwards):
+  (a) credit &gt;= 2.5 bits AND pooled median in [3.5, 5.5] bits  -&gt; the pipeline RECOVERS a known large speedup
+  (b) credit &gt;= 2.5 but the pooled median is outside [3.5, 5.5]  -&gt; the pipeline certifies, but the number disagrees with the calibration: FAILS as a recovery
+  (c) conclusive credit &lt; 2.5 bits                              -&gt; the pipeline UNDER-certifies a known effect: FAILS
+  (d) inconclusive                                              -&gt; FAILS (a known large effect was not certifiable at this ladder)
+Known before the run: numpy&#x27;s cost at 58 bits is ~0.4 s (&lt; 0.5 s floor), so the lowest bins are expected to be unusable; the credit then rests on
+the 60-64 bit instances. Baseline cost doubles every 2 bits (~1 s at 52), so some 64-bit instances may hit the 120 s cap and are excluded.
+
+CONCURRENCY: after the ladders finish, remeasure.py re-runs a stratified sample of BOTH ladders sequentially (this time pre-registered for both).
+  Criterion: for each ladder, overall median |shift| &lt;= 0.10 bits; the credit is reported with the combined shift (baseline - submission) alongside.
+
+code hashes (sha256):
+3184799efdf9133d53d476ae7fddd3f9e46988f9a58f2192c5b773023d3e672f  extrapolate.py
+c97bf968b6d466123998f1103f1f910f64956171285b889f95df241f951c9276  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+75c56f34b632dd39b1527a8df97db952e0676de3cfcccf2b3cc94449a8c1f2b1  instances_factor.py
+d428d67ec7b9ca36f2ffbadd77009c6f8ec2be63b192068a3aee97213759aa49  harness.py
+6b1a319d7ce289be40b8ec4a159863d9e7835291eb4934c9062ab6ea29190246  runner.py
+8d429f3eb2651cd3eac1addd50b7a52bc9b755e457fe50af96d4d8e6063136d7  solvers/factor_trial_py.py
+e7c4f007a207b3700bdef94f675cbeacc7244a9d85306b54187939628c92cffc  solvers/factor_trial_np.py
+</pre><p class="small"><a href="prereg/PREREGISTERED_seedE_factor.txt">Download PREREGISTERED_seedE_factor.txt</a></p></details></div></div></section>
+<section class="card"><h2>Check a commitment yourself</h2>
+<p class="fine">Pick a run, paste the revealed seed, and your own browser computes its SHA-256 and compares it with the commitment above. Nothing is sent anywhere.</p>
+<form class="verify" id="verify" onsubmit="return false"><label for="v-run" class="small muted">Run</label><select id="v-run"></select>
+<label for="v-seed" class="small muted">Seed</label><textarea id="v-seed" spellcheck="false" placeholder="paste the revealed seed (hex text)"></textarea>
+<div class="btnrow"><button class="btn primary" id="v-check" type="button">Check</button><button class="btn" id="v-fill" type="button">Fill in the revealed seed</button></div>
+<div class="vres" id="v-result" role="status" aria-live="polite"></div></form></section></main>
+<footer class="foot"><p>Generated 2026-11-21 13:21 UTC from the saved measurement files in <span class="mono">results/</span>; every figure on these pages is recomputed from that data by the judge's own scoring code.</p>
+<p>No result on this site is official: they are all practice runs. <a href="limits.html">Why, and what would make one official</a>.</p></footer></div>
+<div id="tip" role="tooltip"></div><script type="application/json" id="runs-manifest">[{"label": "seed 2315b668: PRE-REGISTRATION for the out-of-sample check of the difficulty-stratif", "commit": "2315b668de577ece44e7a57a14d75043331a6073b61af0a1cfd3a06f3ae96537", "seed": ""}, {"label": "seed 14a1b0db: PRE-REGISTRATION, seed C (supersedes the VOID seed-B registration). Wr", "commit": "14a1b0db58dc95db6600070efe34a460bb3bc6e64fabc72580ecd51c9af5cf09", "seed": ""}, {"label": "seed 755a57fd: PRE-REGISTRATION, seed D (supersedes the VOID seed-B and seed-C regist", "commit": "755a57fd4dd7d65fec1c77318096fc5bbc233fafe1336745d535615634b34b47", "seed": "ee956d3701811d9a6e6c8db2c49b1de7ac946cbc3447a399794644043399ebe4"}, {"label": "seed 88ecb627: PRE-REGISTRATION, seed E: POSITIVE CONTROL on a second domain (integer", "commit": "88ecb627dbe3b09dc77db99e8d60ebe3096b7f89e6eb9be3379d886b6d9bc843", "seed": "ba6db7cc402ff3440ac68e1086c59cfbfb74c545e9ba5269c041e0e0fe762ee4"}]</script><script src="assets/site.js"></script></body></html>

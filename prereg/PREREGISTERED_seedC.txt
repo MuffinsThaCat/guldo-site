@@ -1,0 +1,38 @@
+PRE-REGISTRATION, seed C (supersedes the VOID seed-B registration). Written BEFORE any seed-C data exists.
+date: 2026-11-18T20:10:56Z
+seed commitment (sha256): 14a1b0db58dc95db6600070efe34a460bb3bc6e64fabc72580ecd51c9af5cf09
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, --jobs 6, local mode (own solvers only), baseline_bkz vs tuned_bkz, this machine.
+
+PRIMARY estimator (fixed, as in the code hashes below): difficulty-stratified credit with the JOINT bootstrap that re-selects bins
+in every resample; bins = octaves of baseline cost from 0.5 s; usable = >=5 instances and submission median cost >=0.5 s; top 3 hardest
+usable bins; baseline-timeout instances excluded; one-sided 95% lower bound.
+UNCONDITIONAL criterion for the primary estimator:
+  (a) credit >= 1.0 bit                   -> supports the claim that this ladder size can certify a pruning-sized speedup
+  (b) 0 <= credit < 1.0, conclusive       -> FAILS
+  (c) inconclusive (< 2 usable bins)      -> FAILS (insufficient power for gm 24/dim at a 120 s cap)
+
+EXPLORATORY estimator (reported beside, never instead): hard-pool claim, baseline cost >= 4 s, n >= 12, submission median >= 0.5 s.
+  Its 4 s threshold was chosen AFTER the author saw seed A's bin table (in-sample there). Criterion: a hard-pool lower bound >= 1.0 bit on
+  seed C is the first out-of-sample support for promoting it; below 1.0 or inconclusive means it is NOT promoted.
+
+CONCURRENCY check (run after the ladders finish): remeasure.py re-runs 4 instances per cost octave of the baseline ladder sequentially.
+  Criterion: overall median |shift| <= 0.10 bits AND no octave with n>=3 beyond +-0.20 bits; otherwise the concurrency bias is flagged
+  and the seed-C credit must not be called clean.
+
+OUTCOME (appended later): this run was KILLED by the user's instruction about 30 seconds after launch, with essentially no data
+(archived in results/stale_superseded/seedC_aborted_run/, never analyzed). Afterwards an audit found a hang in harness.py
+(orphan holding the output pipe) and the harness was changed, so the code hashes below NO LONGER MATCH. This registration is VOID.
+A new one (new seed, new hashes) must be written before any further run.
+
+Already-known facts, stated so they are not later presented as findings: on seed A (12/dim, 60 s cap) the primary estimator gave 0.1 bits
+(median speedup 2.2) and had 0% simulated power; the exploratory claim gave 2.3 (in-sample). The primary rule's design (bins, top-3, floor)
+was influenced by seed A; the joint-bootstrap correction was derived from simulation. Seed B's comparison was never analyzed.
+
+code hashes (sha256):
+2feb07a369fcfdb7c08e8fc416f5a846f29c7fa644096d4b12be140c8a82123b  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+1fdb522b6ddf9258419d1740dc8f4f2bb3896865f113c8f5f10d7ab707d79d0c  harness.py
+fde3e74fe6a0442d7d63246c2b29052fb9b3fe40bccf2fcb6f707dc79a92068f  runner.py
+8d33943015f2c2089f98c738f868451a63fddf1b8663d80293e3b6a731f20a1d  solvers/baseline_bkz.py
+4d011945d3f33adf3bc856f977784b5c572fe3cb0d831bb4db2307ef853247ee  solvers/tuned_bkz.py

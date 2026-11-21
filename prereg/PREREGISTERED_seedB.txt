@@ -1,0 +1,32 @@
+PRE-REGISTRATION for the out-of-sample check of the difficulty-stratified credit (written BEFORE any data from this seed exists)
+date: 2026-11-18T19:51:50Z
+seed commitment (sha256): 2315b668de577ece44e7a57a14d75043331a6073b61af0a1cfd3a06f3ae96537
+config: family gm, dims [64, 66, 68, 70, 72], n=24/dim, cap 120 s, jobs 6, local mode, baseline_bkz vs tuned_bkz
+rule: credit = one-sided 95% lower bound of pooled median log2 speedup over the 3 hardest usable baseline-cost octave bins (start 0.5 s); usable = >=5 instances and submission median >=0.5 s; baseline-timeout instances excluded
+predictions written in advance: credit >= 1.0 bit expected IF hard bins fill; a result below 1.0 or inconclusive counts AGAINST the rule
+code hashes:
+4e2f80c67128710a2ce207e67e6466639435a8b99d9732a34aa2f4de3d53d616  extrapolate.py
+5a8393b185fbfaeed37c0208ab2f6fb2f468d262ced14bbd88db1cda56fc6e4b  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+221c2a60d0aaf6c1e12ff76f250894c9602d25ddc8a0096e551b4eb838c846cf  harness.py
+
+ADDENDUM (appended during the audit, after launch; at this time the seed-B BASELINE ladder was still running and the
+tuned_bkz ladder had produced no data, so no outcome of the comparison was known):
+1. The prediction above is hedged ("IF hard bins fill"). Replace it with this UNCONDITIONAL criterion, to be applied to the
+   pre-registered estimator exactly as hashed above:
+   (a) credit >= 1.0 bit                       -> consistent with the prediction;
+   (b) 0 <= credit < 1.0, conclusive           -> the prediction FAILS;
+   (c) INCONCLUSIVE (< 2 usable bins)          -> the prediction FAILS for this configuration (insufficient power),
+       and counts as evidence that gm 24/dim at a 120 s cap cannot certify a pruning-sized speedup.
+   "Hard bins did not fill" is not an excuse for (b) or (c): it is the thing being tested.
+2. A joint-resample bootstrap (re-selecting bins inside every resample) was found by simulation to be better calibrated
+   (P(lower bound > truth) 4-5% vs 5-9%). It was designed from simulations, not from seed-B data. It is EXPLORATORY here:
+   its seed-B number will be reported next to the pre-registered one, never instead of it.
+OUTCOME (appended later): this run was KILLED by the user's instruction when the baseline ladder was complete and the
+tuned ladder had 100 of 120 records, so that the harness could be fixed (preexec_fn thread-safety, fd leak) and the lower
+bound corrected (joint bootstrap). The seed-B tuned-vs-baseline comparison was never computed or looked at (only the
+baseline's per-dimension solved/timeout counts were seen). The files are archived in results/stale_superseded/
+seedB_killed_run/. This pre-registration is VOID; a new one is written for seed C against the fixed code.
+3. Known weakness of this run, written in advance: it runs 6 instances concurrently (harness --jobs 6) and the drift
+   check covered only short instances (dims 62/64). A sequential re-measurement of a sample of seed-B instances will be
+   reported alongside the credit.

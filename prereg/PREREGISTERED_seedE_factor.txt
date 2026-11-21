@@ -1,0 +1,32 @@
+PRE-REGISTRATION, seed E: POSITIVE CONTROL on a second domain (integer factoring). Written BEFORE any seed-E data exists.
+date: 2026-11-18T21:08:20Z
+seed commitment (sha256): 88ecb627dbe3b09dc77db99e8d60ebe3096b7f89e6eb9be3379d886b6d9bc843
+config: family factor, sizes (bits of N) [58, 60, 62, 64], n=24/size, cap 120 s, --jobs 6 (safe max 8), local mode, this machine.
+baseline: solvers/factor_trial_py.py (trial division over odd candidates, Python loop). submission: solvers/factor_trial_np.py (the SAME algorithm,
+same candidates in the same order, vectorized with numpy). They return identical divisors; only the implementation differs.
+
+WHY: the lattice runs never had a speedup whose true size was known independently. Here it is: calibrated in-process on the PRACTICE seed at
+44/48/52 bits the true speedup was +3.69 / +4.34 / +4.43 bits (per-instance sd 0.13-0.29). Sizes 58-64 are above the calibrated range, so the true
+effect there is unmeasured; the prediction below is an extrapolation of those three numbers, not a measurement.
+
+PRIMARY estimator: unchanged (difficulty-stratified credit, joint bootstrap; hashes below).
+UNCONDITIONAL criteria (judged on the primary estimator's output, no reinterpretation afterwards):
+  (a) credit >= 2.5 bits AND pooled median in [3.5, 5.5] bits  -> the pipeline RECOVERS a known large speedup
+  (b) credit >= 2.5 but the pooled median is outside [3.5, 5.5]  -> the pipeline certifies, but the number disagrees with the calibration: FAILS as a recovery
+  (c) conclusive credit < 2.5 bits                              -> the pipeline UNDER-certifies a known effect: FAILS
+  (d) inconclusive                                              -> FAILS (a known large effect was not certifiable at this ladder)
+Known before the run: numpy's cost at 58 bits is ~0.4 s (< 0.5 s floor), so the lowest bins are expected to be unusable; the credit then rests on
+the 60-64 bit instances. Baseline cost doubles every 2 bits (~1 s at 52), so some 64-bit instances may hit the 120 s cap and are excluded.
+
+CONCURRENCY: after the ladders finish, remeasure.py re-runs a stratified sample of BOTH ladders sequentially (this time pre-registered for both).
+  Criterion: for each ladder, overall median |shift| <= 0.10 bits; the credit is reported with the combined shift (baseline - submission) alongside.
+
+code hashes (sha256):
+3184799efdf9133d53d476ae7fddd3f9e46988f9a58f2192c5b773023d3e672f  extrapolate.py
+c97bf968b6d466123998f1103f1f910f64956171285b889f95df241f951c9276  families.py
+ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067  instances.py
+75c56f34b632dd39b1527a8df97db952e0676de3cfcccf2b3cc94449a8c1f2b1  instances_factor.py
+d428d67ec7b9ca36f2ffbadd77009c6f8ec2be63b192068a3aee97213759aa49  harness.py
+6b1a319d7ce289be40b8ec4a159863d9e7835291eb4934c9062ab6ea29190246  runner.py
+8d429f3eb2651cd3eac1addd50b7a52bc9b755e457fe50af96d4d8e6063136d7  solvers/factor_trial_py.py
+e7c4f007a207b3700bdef94f675cbeacc7244a9d85306b54187939628c92cffc  solvers/factor_trial_np.py

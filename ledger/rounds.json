@@ -1,0 +1,18 @@
+[
+ {
+  "closes_at": 1795363294,
+  "commitments": [
+   "1f520500503e27c82413a672789a301dc40296b1d700275579ce988ef4bef8bd",
+   "4aa6e0553f1d2b3a72a07b8ea410ba0667558405431a8732ca9eeb0754ef0f59",
+   "d3387c9a98f8a2846e6c49876397252c6e559b72b7628f69f3e38df47901f907"
+  ],
+  "family": "factor",
+  "id": "test-1",
+  "log_head": "2be96b5e043f809a9400dc8320c436ca93e11db62e04d62ed3879b4534a3296e",
+  "log_ok": true,
+  "opens_at": 1795276894.9668086,
+  "state": "revealed",
+  "submissions": 1,
+  "title": "Test round (not a real competition)"
+ }
+]

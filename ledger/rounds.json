@@ -1,5 +1,21 @@
 [
  {
+  "closes_at": 1796515140,
+  "commitments": [
+   "075ec240b83f2574cadce0ebe8cc4fd402167ea50bedcd9b30e0b6affc8ac1ff",
+   "53692d2cfb52f6e9e8abb33537f99178b87aa32ee3cc369f54d4759d5fa90772",
+   "a5792d71b93e955a7ada1f032de57709f46a1332fa7f803453bbd3a26621c072"
+  ],
+  "family": "factor",
+  "id": "factor-1",
+  "log_head": "0a2aac987cedcda23d8f039ce8227518f548bb70c34f389d6b963cb6bc83c141",
+  "log_ok": true,
+  "opens_at": 1795277194.6861188,
+  "state": "open",
+  "submissions": 0,
+  "title": "Round 1: factoring semiprimes (counted)"
+ },
+ {
   "closes_at": 1795363294,
   "commitments": [
    "1f520500503e27c82413a672789a301dc40296b1d700275579ce988ef4bef8bd",

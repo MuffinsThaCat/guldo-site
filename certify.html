@@ -36,7 +36,7 @@
 <ul class="fine">
 <li><strong>Lattice security.</strong> Record a lattice attack's cost across dimensions in a form others can check. What anyone can verify is that the instances are the ones the seeds produce and that the credit follows from the recorded costs. The costs themselves are your measurement until a step-counted run is re-executed, or someone independent re-measures it and signs.</li>
 <li><strong>Algorithm benchmarks.</strong> Compare your solver with a baseline on instances generated from seeds, with every answer checked. With seeds you chose yourself you could have tuned to them; a round's seeds are committed before submissions open, which is what rules that out.</li>
-<li><strong>Reproducible research.</strong> Attach a certificate to a paper. A reviewer can check its arithmetic and fairness without re-running anything, and can re-run a sample to test the timings themselves.</li>
+<li><strong>Reproducible research.</strong> Attach a certificate to a paper. A reviewer can check that its numbers follow from its own records without re-running anything, and can re-run a sample to test the timings themselves. <a href="#wording">How to word it</a>.</li>
 <li><strong>AI model evaluation.</strong> Measure inference quality or operation counts on committed instances. See <a href="domains.html#ai">AI workloads</a> for what each kind of evidence shows.</li>
 </ul></section>
 <section class="card"><h2>What it proves and what it does not</h2>
@@ -47,8 +47,16 @@
 <li><strong>Not proven:</strong> that the seeds were committed before you saw them (they are yours). In a competition round, the seeds are committed publicly before the deadline. A practice certificate is weaker on this axis, and says so.</li>
 </ul>
 <p class="fine">The certificate itself states whether it was produced in a round or standalone, whether costs are seconds or counts, and whether the solver source is included. The verifier reports all of this. <a href="limits.html">Full limits</a>.</p></section>
+<section class="card" id="wording"><h2>How to word it in a paper</h2>
+<p class="fine">The word &ldquo;verified&rdquo; should match what was actually checked. Four levels, from weakest to strongest:</p>
+<div class="scroll"><table class="lb"><thead><tr><th>What you did</th><th>What the paper can honestly say</th></tr></thead><tbody>
+<tr><td>A practice run on your own machine and seeds</td><td>&ldquo;Measured with Guldo in practice mode on the author's own seeds. The certificate is attached. The timings were not independently checked.&rdquo;</td></tr>
+<tr><td>A practice run with exact step counts, re-run by someone else</td><td>&ldquo;Costs are exact instruction counts, reproduced by [who] with the re-run option.&rdquo; Only for pure-Python solvers; work inside built-in C functions is not counted.</td></tr>
+<tr><td>A certificate added to the public log</td><td>&ldquo;The certificate is recorded in the public Guldo log.&rdquo; The log shows the file existed and has not changed. It does not make a practice run official, and it does not show the seeds were chosen before the author saw them.</td></tr>
+<tr><td>A competition round with seeds committed in advance, run in the locked test environment</td><td>&ldquo;Certified in round [name], log entry [number]; anyone can check it with the verify command.&rdquo; Only this level should be called certified or verified without a qualifier. No result on this site has reached it yet.</td></tr>
+</tbody></table></div></section>
 <section class="block"><p class="fine">To enter a competition instead, see the <a href="compete.html">Compete</a> page. To define your own problem domain, see the <a href="guide.html">Guide</a>.</p></section>
 </div></div></main>
-<div class="band dark ftr"><div class="wrap"><footer class="foot"><p>Generated 2026-11-22 16:25 UTC from the saved measurement files in <span class="mono">results/</span>; every figure on these pages is recomputed from that data by the judge's own scoring code.</p>
+<div class="band dark ftr"><div class="wrap"><footer class="foot"><p>Generated 2026-11-22 20:02 UTC from the saved measurement files in <span class="mono">results/</span>; every figure on these pages is recomputed from that data by the judge's own scoring code.</p>
 <p>No result on this site is official: they are all practice runs. <a href="limits.html">Why, and what would make one official</a>.</p></footer></div></div>
 <div id="tip" role="tooltip"></div><script src="assets/site.js"></script></body></html>

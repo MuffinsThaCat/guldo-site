@@ -2,12 +2,12 @@
 <html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Certify - Guldo</title><meta name="description" content="Measure a solver, attack, or benchmark and produce a certificate anyone can verify independently. No competition required.">
 <meta name="color-scheme" content="dark light"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%232A78D6'/%3E%3Cpath d='M6 20h4v-4h4v-4h4V8h4' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<script>try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap"><link rel="stylesheet" href="assets/site.css"></head>
-<body><a class="skip" href="#main">Skip to content</a>
-<div class="wrap"><header class="top"><a class="brand" href="index.html"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect x="1.5" y="1.5" width="25" height="25" rx="6" fill="none" stroke="var(--ink)" stroke-width="2"/><path d="M6 20h4v-4h4v-4h4V8h4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Guldo</a>
-<nav class="main" aria-label="Main"><a href="index.html">Overview</a><a href="install.html">Install</a><a href="domains.html">Domains</a><a href="guide.html">Guide</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="preregistrations.html">Pre-registrations</a><a href="compete.html">Compete</a><a href="certify.html" aria-current="page">Certify</a><a href="log.html">Log</a><a href="claims.html">Other claims</a><a href="limits.html">Limits</a><a href="audit.html">Audit</a><button class="theme" id="theme-toggle" type="button" aria-pressed="true">Light mode</button></nav></header>
-<main id="main">
+<body class="bands"><a class="skip" href="#main">Skip to content</a>
+<div class="band dark hdr"><div class="wrap"><header class="top"><a class="brand" href="index.html"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect x="1.5" y="1.5" width="25" height="25" rx="6" fill="none" stroke="var(--ink)" stroke-width="2"/><path d="M6 20h4v-4h4v-4h4V8h4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Guldo</a>
+<nav class="main" aria-label="Main"><a href="index.html">Overview</a><a href="install.html">Install</a><a href="domains.html">Domains</a><a href="guide.html">Guide</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="preregistrations.html">Pre-registrations</a><a href="compete.html">Compete</a><a href="certify.html" aria-current="page">Certify</a><a href="log.html">Log</a><a href="claims.html">Other claims</a><a href="limits.html">Limits</a><a href="audit.html">Audit</a></nav></header></div></div>
+<main id="main" class="bands">
+<div class="band light"><div class="wrap band-in">
 <section class="block"><p class="kicker">Certify</p><h1>Measure a result. Prove it to anyone.</h1>
 <p class="lede">Not here to compete. You have a solver, an attack, or a benchmark and you want a verifiable measurement that anyone can check independently. No round, no opponent, no deadline.</p></section>
 <section class="card"><h2>One command</h2>
@@ -17,6 +17,8 @@
 <div class="cmd"><code>guldo practice my_solver.py --family factor --count --dims 38 40 42</code><button class="copy" type="button" data-copy="guldo practice my_solver.py --family factor --count --dims 38 40 42">Copy</button></div>
 <p class="fine">Without <span class="mono">--yes</span> each command only prints its plan and what it would cost; nothing runs. A lattice run can take hours and needs <span class="mono">pip install "guldo-cli[lattice]"</span>.</p>
 <p class="fine">The certificate is a JSON file. It is self-contained: anyone can check its arithmetic and fairness without the operator, a server or this site. What a certificate cannot show by itself is that the timings are true. You took them, so they are your claim; see &ldquo;What it proves&rdquo; below.</p></section>
+</div></div>
+<div class="band dark"><div class="wrap band-in">
 <section class="block"><div class="two"><div class="card"><h2>Anyone can check it</h2>
 <p class="fine">Hand the certificate to a reviewer, a standards body, or a journal. They verify it on their own machine with one command: no account, no server, and no need to take the sender's word for what verification covers (the list below says what it does not).</p>
 <div class="cmd"><code>guldo verify their.cert.json</code><button class="copy" type="button" data-copy="guldo verify their.cert.json">Copy</button></div>
@@ -26,6 +28,8 @@
 <div class="cmd"><code>guldo attest sign x.cert.json --key my.key --rerun 5 --execute --out x.my.att.json</code><button class="copy" type="button" data-copy="guldo attest sign x.cert.json --key my.key --rerun 5 --execute --out x.my.att.json">Copy</button></div>
 <div class="cmd"><code>guldo attest check x.cert.json a1.att.json a2.att.json</code><button class="copy" type="button" data-copy="guldo attest check x.cert.json a1.att.json a2.att.json">Copy</button></div>
 <p class="fine">An attestation is worth exactly what the signer's identity is worth: one signed by a university lab you know means more than one signed by an unknown key.The tool separates attestations from keys you chose to trust from ones you did not. <strong><span class="mono">--execute</span> runs the certificate's solver on your machine with no protection:</strong> do it in a throwaway virtual machine.</p></div></div></section>
+</div></div>
+<div class="band light"><div class="wrap band-in">
 <section class="card"><h2>Put it on the record</h2>
 <p class="fine">A certificate proves itself to whoever holds the file. To make it findable and permanent, a log operator can verify it and add it to the <a href="log.html">public certificate log</a>: an append-only, witnessed list you can prove a certificate is in, and from which anyone can recompute claims like &ldquo;nothing submitted here reaches T bits.&rdquo; Being in the log is not an official result, and not being in it does not mean a result does not exist.</p></section>
 <section class="card"><h2>Use cases</h2>
@@ -43,7 +47,8 @@
 <li><strong>Not proven:</strong> that the seeds were committed before you saw them (they are yours). In a competition round, the seeds are committed publicly before the deadline. A practice certificate is weaker on this axis, and says so.</li>
 </ul>
 <p class="fine">The certificate itself states whether it was produced in a round or standalone, whether costs are seconds or counts, and whether the solver source is included. The verifier reports all of this. <a href="limits.html">Full limits</a>.</p></section>
-<section class="block"><p class="fine">To enter a competition instead, see the <a href="compete.html">Compete</a> page. To define your own problem domain, see the <a href="guide.html">Guide</a>.</p></section></main>
-<footer class="foot"><p>Generated 2026-11-22 13:05 UTC from the saved measurement files in <span class="mono">results/</span>; every figure on these pages is recomputed from that data by the judge's own scoring code.</p>
-<p>No result on this site is official: they are all practice runs. <a href="limits.html">Why, and what would make one official</a>.</p></footer></div>
+<section class="block"><p class="fine">To enter a competition instead, see the <a href="compete.html">Compete</a> page. To define your own problem domain, see the <a href="guide.html">Guide</a>.</p></section>
+</div></div></main>
+<div class="band dark ftr"><div class="wrap"><footer class="foot"><p>Generated 2026-11-22 13:39 UTC from the saved measurement files in <span class="mono">results/</span>; every figure on these pages is recomputed from that data by the judge's own scoring code.</p>
+<p>No result on this site is official: they are all practice runs. <a href="limits.html">Why, and what would make one official</a>.</p></footer></div></div>
 <div id="tip" role="tooltip"></div><script src="assets/site.js"></script></body></html>

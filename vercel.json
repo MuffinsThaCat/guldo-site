@@ -1,6 +1,12 @@
 {
   "cleanUrls": false,
   "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/log/:path*",
+      "destination": "https://sknrxq2wezx3rqmy.public.blob.vercel-storage.com/log/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

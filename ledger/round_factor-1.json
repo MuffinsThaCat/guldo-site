@@ -1,0 +1,66 @@
+{
+ "allow_private": false,
+ "budget": 40.0,
+ "closes_at": 1796515140,
+ "commitments": [
+  "075ec240b83f2574cadce0ebe8cc4fd402167ea50bedcd9b30e0b6affc8ac1ff",
+  "53692d2cfb52f6e9e8abb33537f99178b87aa32ee3cc369f54d4759d5fa90772",
+  "a5792d71b93e955a7ada1f032de57709f46a1332fa7f803453bbd3a26621c072"
+ ],
+ "consistency_problems": [],
+ "cost_model": "count",
+ "count": {
+  "cap": 40.0,
+  "counter_sha256": "e5d6b668af9989599d2825ed01dfd63353af8099d471e51aa00e1dbd9dead315",
+  "dims": [
+   38,
+   40,
+   42,
+   44
+  ],
+  "n": 12,
+  "python": "cpython 3.14.4",
+  "steps_per_second": 1000000
+ },
+ "family": "factor",
+ "fingerprint": {
+  "baseline": "solvers/factor_trial_py.py",
+  "baseline_sha256": "8d429f3eb2651cd3eac1addd50b7a52bc9b755e457fe50af96d4d8e6063136d7",
+  "code": {
+   "count_runner.py": "e5d6b668af9989599d2825ed01dfd63353af8099d471e51aa00e1dbd9dead315",
+   "counted.py": "ba2bde9f7895202c32840b35ac6542020e7d47b63dd9223f44ab70e99c719454",
+   "declared.py": "cf27909aa0b3436345919c4e2918e6760ed1b182aac145a90e3de5dafda36cef",
+   "extrapolate.py": "3184799efdf9133d53d476ae7fddd3f9e46988f9a58f2192c5b773023d3e672f",
+   "families.py": "06da3bcb599e76f29bcda66ad35bb6d431e7a63c21b3fdcdb36e209a026a9c51",
+   "harness.py": "cad8633c0ba3b1055b8c6a9ff8e99c5b990d9076182f9fcb61cdc70bbb48c67c",
+   "instances.py": "ea2a61628f280fa37262b86a9f61fbfebec8164fab43ac6a4f4edc3876929067",
+   "instances_factor.py": "75c56f34b632dd39b1527a8df97db952e0676de3cfcccf2b3cc94449a8c1f2b1",
+   "instances_mlwe.py": "b16ffaa6ff1aa92b7dd212ad8ae250b17a7efed5e3765995b5a89e454cbf4c12",
+   "judge.py": "66a1dd62bce6fcacf5eb52d743de103f386173fe7a9e9f6d0beca4fa74c85053",
+   "official.py": "32b0de6abe160fa7114fab7e7db653792f74e4c4afe6a000b4f461dab65334c6",
+   "runner.py": "6b1a319d7ce289be40b8ec4a159863d9e7835291eb4934c9062ab6ea29190246",
+   "sandbox/Dockerfile.v2": "f25cdfb765207dbfd7161c55c9220f62956ac8c3e4110f6df413ddd020a91fe0",
+   "sandbox/meter.py": "26b89a5476f16dd48f5f6fcd2ede75536f935dc32b99f942b8328357323fb0ab",
+   "sandbox/meter_core.py": "8d58ec151f7e79a13bb471b31abf640f8c51ca07f3a757e4f75e876909dbb51e"
+  },
+  "cost_model": "count",
+  "dims": [
+   38,
+   40,
+   42,
+   44
+  ],
+  "instance_version": "factor-v1"
+ },
+ "id": "factor-1",
+ "log_entries": 1,
+ "log_error": "",
+ "log_head": "0a2aac987cedcda23d8f039ce8227518f548bb70c34f389d6b963cb6bc83c141",
+ "log_ok": true,
+ "max_submissions": 20,
+ "n": 12,
+ "opens_at": 1795277194.6861188,
+ "state": "open",
+ "submissions": [],
+ "title": "Round 1: factoring semiprimes (counted)"
+}

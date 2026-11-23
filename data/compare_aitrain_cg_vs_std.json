@@ -1,0 +1,110 @@
+{
+ "a": "aitrain_flops_cg.py",
+ "a_below_baseline_median_bits": 10.641802,
+ "a_cheaper": 24,
+ "b": "aitrain_flops_std.py",
+ "b_below_baseline_median_bits": 8.185342,
+ "b_cheaper": 0,
+ "baseline": "aitrain_flops_ref.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": null,
+ "bootstrap_seed": 7591479074052514157,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per size (costs do not vary within a size)",
+ "family": "aitrain",
+ "fixed_cost_sizes": {
+  "32": "A",
+  "40": "A",
+  "48": "A"
+ },
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "b515a7e667388bd1697db43b48c50b4c79c91b39b4627da3189dbef608bae964",
+  "d3f99e1137f6f993674009541cd2f686dc058d7639e2e50822d239042bc46816",
+  "a66ebd93cd11d3b95a7b3769ba649abfa2e5fa76cef1e6346ea448bfbcd9d87d"
+ ],
+ "instances": 24,
+ "limits": [
+  "A count is not a time. It measures arithmetic asked for (tensor operations by shape, plus the solver's own Python instructions), not speed: memory traffic, cache, vectorisation, dtype and kernel quality are invisible to it, so it can show 'N times fewer operations' and cannot show 'faster at the same arithmetic'. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A asked for fewer operations: 1 bit is half the operations, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "the exact credit bounds the median of the instances pooled over the measured sizes, not the gap at any one size",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": 2.457281,
+ "mean_bits_varying_sizes": null,
+ "median_bits_a_below_b": 2.45646,
+ "metric": "ops",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": null,
+ "paired": 24,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "sign_test_p": null,
+ "sign_test_pairs": 0,
+ "sizes": {
+  "32": {
+   "a_cheaper": 8,
+   "a_solved": 8,
+   "b_cheaper": 0,
+   "b_solved": 8,
+   "both_solved": 8,
+   "costs_are_fixed": true,
+   "instances": 8,
+   "median_bits_a_below_b": 2.464058,
+   "ties": 0
+  },
+  "40": {
+   "a_cheaper": 8,
+   "a_solved": 8,
+   "b_cheaper": 0,
+   "b_solved": 8,
+   "both_solved": 8,
+   "costs_are_fixed": true,
+   "instances": 8,
+   "median_bits_a_below_b": 2.45646,
+   "ties": 0
+  },
+  "48": {
+   "a_cheaper": 8,
+   "a_solved": 8,
+   "b_cheaper": 0,
+   "b_solved": 8,
+   "both_solved": 8,
+   "costs_are_fixed": true,
+   "instances": 8,
+   "median_bits_a_below_b": 2.451326,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [
+  "32",
+  "40",
+  "48"
+ ],
+ "sizes_where_b_cheaper": [],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "A used fewer operations than B at every measured size (3)",
+ "vs_baseline_exact": {
+  "a": {
+   "instances": 24,
+   "lower95_median_bits": 10.63701,
+   "median_bits": 10.641802
+  },
+  "b": {
+   "instances": 24,
+   "lower95_median_bits": 8.184836,
+   "median_bits": 8.185342
+  }
+ }
+}

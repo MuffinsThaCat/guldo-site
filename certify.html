@@ -32,10 +32,16 @@
 <div class="band light"><div class="wrap band-in">
 <section class="card"><h2>Put it on the record</h2>
 <p class="fine">A certificate proves itself to whoever holds the file. To make it findable and permanent, a log operator can verify it and add it to the <a href="log.html">public certificate log</a>: an append-only, witnessed list you can prove a certificate is in, and from which anyone can recompute claims like &ldquo;nothing submitted here reaches T bits.&rdquo; Being in the log is not an official result, and not being in it does not mean a result does not exist.</p></section>
+<section class="card" id="compare"><h2>Compare two solvers</h2>
+<p class="fine">A certificate compares a solver with a baseline, never with another solver. When one party says &ldquo;mine is faster than theirs,&rdquo; the two certificates can be compared directly, as long as both measured the same test.</p>
+<div class="cmd"><code>guldo claims compare a.cert.json b.cert.json</code><button class="copy" type="button" data-copy="guldo claims compare a.cert.json b.cert.json">Copy</button></div>
+<p class="fine">Both certificates are checked first. The comparison is refused unless they share the same problem, rules, baseline, sizes and cost cap, and the same kind of measurement: an exact count made the same way, or timings from the same machine. With the same seeds it says whether one solver is ahead on every seed. With different seeds it says whether the two sets of results do not overlap. The result can be saved to a file that anyone can recompute from the two certificates.</p>
+<p class="fine"><strong>What it does not show:</strong> how much faster one is, because each credit is a cautious lower bound and the gap between two lower bounds is not a bound on the real gap; and anything about approaches that were not submitted. A comparison involving a provisional certificate is provisional.</p></section>
 <section class="card"><h2>Use cases</h2>
 <ul class="fine">
 <li><strong>Lattice security.</strong> Record a lattice attack's cost across dimensions in a form others can check. What anyone can verify is that the instances are the ones the seeds produce and that the credit follows from the recorded costs. The costs themselves are your measurement until a step-counted run is re-executed, or someone independent re-measures it and signs.</li>
 <li><strong>Algorithm benchmarks.</strong> Compare your solver with a baseline on instances generated from seeds, with every answer checked. With seeds you chose yourself you could have tuned to them; a round's seeds are committed before submissions open, which is what rules that out.</li>
+<li><strong>Head-to-head claims.</strong> Settle &ldquo;mine is faster than theirs&rdquo; from two certificates, with a refusal when they did not measure the same test. See <a href="#compare">Compare two solvers</a>.</li>
 <li><strong>Reproducible research.</strong> Attach a certificate to a paper. A reviewer can check that its numbers follow from its own records without re-running anything, and can re-run a sample to test the timings themselves. <a href="#wording">How to word it</a>.</li>
 <li><strong>AI model evaluation.</strong> Measure inference quality or operation counts on committed instances. See <a href="domains.html#ai">AI workloads</a> for what each kind of evidence shows.</li>
 </ul></section>

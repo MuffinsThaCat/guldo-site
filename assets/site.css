@@ -64,6 +64,7 @@ table.lb{border-collapse:collapse;width:100%;font-size:14.5px}
 .lb th{font:600 11.5px/1.2 var(--body);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px 14px 8px 0;border-bottom:1px solid var(--line)}
 .lb td{padding:11px 14px 11px 0;border-bottom:1px solid var(--line2);vertical-align:top}
 .lb .num{text-align:right;font-variant-numeric:tabular-nums} .lb tr.why td{padding-top:0}
+.lb tr.grp th{padding:18px 0 6px;color:var(--ink);font-size:12.5px;border-bottom:1px solid var(--line)}
 .lb ul{margin:4px 0 0;padding-left:18px;color:var(--ink2);font-size:13px}
 dl.facts{display:grid;gap:7px;margin:0;font-size:14.5px} dl.facts div{display:grid;grid-template-columns:minmax(120px,200px) 1fr;gap:12px} dt{color:var(--muted)} dd{margin:0;min-width:0}
 @media (max-width:560px){dl.facts div{grid-template-columns:1fr;gap:0}}

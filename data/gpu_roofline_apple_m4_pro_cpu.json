@@ -1,0 +1,367 @@
+{
+ "format": "svp-gpu-roofline-calibration-v1",
+ "device": {
+  "device": "cpu",
+  "torch": "2.14.1",
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.0",
+  "name": "Apple M4 Pro"
+ },
+ "dtypes": [
+  "fp32"
+ ],
+ "quick": true,
+ "constants": {
+  "launch_overhead_s": 0.0,
+  "bandwidth_Bps": 83026787066.20555,
+  "compute_flops": {
+   "fp32": 2708667861046.4834
+  }
+ },
+ "kernels": [
+  {
+   "name": "add n=1048576",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 1048576,
+   "bytes": 12582912,
+   "ops": [
+    [
+     1048576,
+     12582912
+    ]
+   ],
+   "measured": 0.00016846679682203103,
+   "predicted": 0.00015155243800975206,
+   "rel_error": -0.10040173572094069
+  },
+  {
+   "name": "add n=4194304",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 4194304,
+   "bytes": 50331648,
+   "ops": [
+    [
+     4194304,
+     50331648
+    ]
+   ],
+   "measured": 0.00015152018386288546,
+   "predicted": 0.0006062097520390082,
+   "rel_error": 3.0008514811966114
+  },
+  {
+   "name": "add n=16777216",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 16777216,
+   "bytes": 201326592,
+   "ops": [
+    [
+     16777216,
+     201326592
+    ]
+   ],
+   "measured": 0.002284552057972178,
+   "predicted": 0.002424839008156033,
+   "rel_error": 0.061406764487729415
+  },
+  {
+   "name": "matmul 512^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 268435456,
+   "bytes": 3145728,
+   "ops": [
+    [
+     268435456,
+     3145728
+    ]
+   ],
+   "measured": 0.00012091406188119436,
+   "predicted": 9.910238898625651e-05,
+   "rel_error": -0.18038987819604624
+  },
+  {
+   "name": "matmul 1024^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 2147483648,
+   "bytes": 12582912,
+   "ops": [
+    [
+     2147483648,
+     12582912
+    ]
+   ],
+   "measured": 0.0009627421895856969,
+   "predicted": 0.0007928191118900521,
+   "rel_error": -0.17649904567781427
+  },
+  {
+   "name": "matmul 2048^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 17179869184,
+   "bytes": 50331648,
+   "ops": [
+    [
+     17179869184,
+     50331648
+    ]
+   ],
+   "measured": 0.006321312510408461,
+   "predicted": 0.006342552895120417,
+   "rel_error": 0.0033601225500212717
+  },
+  {
+   "name": "gemv d=2048",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 8388608,
+   "bytes": 16793600,
+   "ops": [
+    [
+     8388608,
+     16793600
+    ]
+   ],
+   "measured": 9.78308107733028e-05,
+   "predicted": 0.00020226725124999458,
+   "rel_error": 1.0675209543003357
+  },
+  {
+   "name": "gemv d=4096",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 33554432,
+   "bytes": 67141632,
+   "ops": [
+    [
+     33554432,
+     67141632
+    ]
+   ],
+   "measured": 0.0007149674529500771,
+   "predicted": 0.0008086743371926613,
+   "rel_error": 0.13106454546417967
+  },
+  {
+   "name": "softmax 8192x512 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 20971520,
+   "bytes": 134348800,
+   "ops": [
+    [
+     4194304,
+     16809984
+    ],
+    [
+     4194304,
+     33587200
+    ],
+    [
+     4194304,
+     33554432
+    ],
+    [
+     4194304,
+     16809984
+    ],
+    [
+     4194304,
+     33587200
+    ]
+   ],
+   "measured": 0.0022454400605056435,
+   "predicted": 0.0016181380099999567,
+   "rel_error": -0.2793670877878729
+  },
+  {
+   "name": "softmax 8192x2048 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 83886080,
+   "bytes": 537001984,
+   "ops": [
+    [
+     16777216,
+     67141632
+    ],
+    [
+     16777216,
+     134250496
+    ],
+    [
+     16777216,
+     134217728
+    ],
+    [
+     16777216,
+     67141632
+    ],
+    [
+     16777216,
+     134250496
+    ]
+   ],
+   "measured": 0.008188968757167459,
+   "predicted": 0.006467816026312022,
+   "rel_error": -0.21017942330638195
+  },
+  {
+   "name": "train step n=16384 d=1024 k=3 (10 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 201627648,
+   "bytes": 137121792,
+   "ops": [
+    [
+     100663296,
+     67317760
+    ],
+    [
+     49152,
+     262144
+    ],
+    [
+     49152,
+     458752
+    ],
+    [
+     49152,
+     393216
+    ],
+    [
+     49152,
+     262144
+    ],
+    [
+     49152,
+     458752
+    ],
+    [
+     49152,
+     589824
+    ],
+    [
+     100663296,
+     67317760
+    ],
+    [
+     3072,
+     24576
+    ],
+    [
+     3072,
+     36864
+    ]
+   ],
+   "measured": 0.005726093746488914,
+   "predicted": 0.001651536773194163,
+   "rel_error": -0.7115770634724867
+  },
+  {
+   "name": "mlp b=64 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 4295491584,
+   "bytes": 143654912,
+   "ops": [
+    [
+     2147483648,
+     69730304
+    ],
+    [
+     524288,
+     4194304
+    ],
+    [
+     2147483648,
+     69730304
+    ]
+   ],
+   "measured": 0.004238510358845815,
+   "predicted": 0.0017302236672780025,
+   "rel_error": -0.5917849619815113
+  },
+  {
+   "name": "mlp b=1024 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 68727865344,
+   "bytes": 285212672,
+   "ops": [
+    [
+     34359738368,
+     109051904
+    ],
+    [
+     8388608,
+     67108864
+    ],
+    [
+     34359738368,
+     109051904
+    ]
+   ],
+   "measured": 0.03310787491500378,
+   "predicted": 0.02617849124986701,
+   "rel_error": -0.2092971440458269
+  }
+ ],
+ "summary": {
+  "fit_set": {
+   "n": 6,
+   "median_abs_error": 0.17649904567781427,
+   "p90_abs_error": 3.0008514811966114,
+   "max_abs_error": 3.0008514811966114,
+   "within_25_percent": 0.8333333333333334
+  },
+  "holdout_set": {
+   "n": 7,
+   "median_abs_error": 0.2793670877878729,
+   "p90_abs_error": 1.0675209543003357,
+   "max_abs_error": 1.0675209543003357,
+   "within_25_percent": 0.42857142857142855
+  },
+  "holdout_by_kernel": {
+   "gemv": {
+    "n": 2,
+    "median_abs_error": 1.0675209543003357,
+    "p90_abs_error": 1.0675209543003357,
+    "max_abs_error": 1.0675209543003357,
+    "within_25_percent": 0.5
+   },
+   "mlp": {
+    "n": 2,
+    "median_abs_error": 0.5917849619815113,
+    "p90_abs_error": 0.5917849619815113,
+    "max_abs_error": 0.5917849619815113,
+    "within_25_percent": 0.5
+   },
+   "softmax": {
+    "n": 2,
+    "median_abs_error": 0.2793670877878729,
+    "p90_abs_error": 0.2793670877878729,
+    "max_abs_error": 0.2793670877878729,
+    "within_25_percent": 0.5
+   },
+   "train": {
+    "n": 1,
+    "median_abs_error": 0.7115770634724867,
+    "p90_abs_error": 0.7115770634724867,
+    "max_abs_error": 0.7115770634724867,
+    "within_25_percent": 0.0
+   }
+  },
+  "fp16_vs_fp32_ratios": []
+ },
+ "limits": [
+  "a fit of the roofline form to THIS device on THESE kernels: it says nothing about other devices (run it on them) or about fused kernels, which move fewer bytes than the unfused count",
+  "the constants are fitted from the 'fit' kernels only; the 'holdout' kernels were never used to fit them, which is what makes their error informative",
+  "timings are one operator's measurements on one machine: this checks a MODEL's form, it does not make any time independently verifiable"
+ ]
+}

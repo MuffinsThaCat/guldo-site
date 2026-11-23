@@ -8,7 +8,7 @@
  "baseline": "aitrain_flops_ref.py",
  "baseline_unsolved": 0,
  "bootstrap95_mean_bits": null,
- "bootstrap_seed": 9946547256383829267,
+ "bootstrap_seed": 15541563395013014608,
  "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
  "evidence": "per size (costs do not vary within a size)",
  "family": "aitrain",
@@ -19,9 +19,9 @@
  },
  "format": "svp-tflops-comparison-v1",
  "from": [
-  "1c484a775c0876dbb9961bde665be0ddee08c8d73d9a147fb81a900b83b01240",
-  "1740fce5cf5d25097f8fdada97560d66b422bc43edba99cc97f79e7647d2d4e2",
-  "70fa77b724b3850ff26903be3cf8861c8350f6a6df56343a613a99673d609899"
+  "4281acf89835c615552df53128184e330d22775cf17f7102f96a5b61abef2b38",
+  "8b25c1f10bb88d03b187ff4c0f974799d2923a5e6c30df6a199f325e1edfdc72",
+  "3687635e9763d219b45da9d17b37586252f6b22589fb95bd73a8fe8cc5721c46"
  ],
  "instances": 24,
  "limits": [
@@ -31,6 +31,7 @@
   "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
   "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
   "bytes and peak memory are counted only for tensor operations: arithmetic done in the solver's own Python moves no counted bytes (it pays in operations instead), so a bytes or peak verdict is only meaningful beside the operations gap",
+  "the roofline line compares each run's exact per-operation flops and bytes under the counting convention (no cache, no fusion), assuming operations run one after another: it is not a measurement, real kernels can fall short of it, fuse what the count does not or overlap, launch overhead is not modelled, and the host's Python steps are not tensor work",
   "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
   "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
   "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
@@ -49,6 +50,37 @@
  "python": "cpython 3.14.0",
  "reexecuted": true,
  "rerun": "all",
+ "roofline": {
+  "crossovers": [
+   0.0531658497,
+   0.055527938
+  ],
+  "faster_at_high_balance": "A",
+  "faster_at_low_balance": "B",
+  "instances": 24,
+  "kernels": [
+   415,
+   412
+  ],
+  "lower_bound_from_totals": "trade-off",
+  "model": "sequential",
+  "relation": "device-dependent",
+  "relations": {
+   "device-dependent": 24
+  },
+  "sizes": {
+   "32": {
+    "device-dependent": 8
+   },
+   "40": {
+    "device-dependent": 8
+   },
+   "48": {
+    "device-dependent": 8
+   }
+  },
+  "statement": "neither wins on every device: A is faster on devices with high compute for their bandwidth (it moves fewer bytes) and B on devices with low compute (it needs fewer flops); the faster side changes at balances between 0.0532 and 0.0555 flop/byte, depending on the instance (kernels run one after another, each limited by the larger of its compute time and its memory time; launch overhead is not modelled)"
+ },
  "sign_test_p": null,
  "sign_test_pairs": 0,
  "sizes": {

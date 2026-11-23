@@ -1,0 +1,1557 @@
+{
+ "format": "svp-gpu-roofline-calibration-v1",
+ "device": {
+  "device": "mps",
+  "torch": "2.14.1",
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "python": "3.14.0",
+  "name": "Apple M4 Pro"
+ },
+ "dtypes": [
+  "fp32",
+  "fp16"
+ ],
+ "quick": false,
+ "constants": {
+  "launch_overhead_s": 0.0,
+  "bandwidth_Bps": 217196272377.5426,
+  "compute_flops": {
+   "fp16": 7333054616164.129,
+   "fp32": 6660958772495.518
+  }
+ },
+ "kernels": [
+  {
+   "name": "add n=65536",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 65536,
+   "bytes": 786432,
+   "ops": [
+    [
+     65536,
+     786432
+    ]
+   ],
+   "measured": 2.8238678027037167e-06,
+   "predicted": 3.6208356220450244e-06,
+   "rel_error": 0.2822256121827833
+  },
+  {
+   "name": "add n=131072",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 131072,
+   "bytes": 1572864,
+   "ops": [
+    [
+     131072,
+     1572864
+    ]
+   ],
+   "measured": 4.1086324245043215e-06,
+   "predicted": 7.241671244090049e-06,
+   "rel_error": 0.7625502833740858
+  },
+  {
+   "name": "add n=262144",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 262144,
+   "bytes": 3145728,
+   "ops": [
+    [
+     262144,
+     3145728
+    ]
+   ],
+   "measured": 5.320531244024096e-06,
+   "predicted": 1.4483342488180098e-05,
+   "rel_error": 1.7221609692542397
+  },
+  {
+   "name": "add n=524288",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 524288,
+   "bytes": 6291456,
+   "ops": [
+    [
+     524288,
+     6291456
+    ]
+   ],
+   "measured": 1.7205281778842618e-05,
+   "predicted": 2.8966684976360195e-05,
+   "rel_error": 0.683592593756913
+  },
+  {
+   "name": "add n=1048576",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 1048576,
+   "bytes": 12582912,
+   "ops": [
+    [
+     1048576,
+     12582912
+    ]
+   ],
+   "measured": 3.047924792554113e-05,
+   "predicted": 5.793336995272039e-05,
+   "rel_error": 0.9007480136730388
+  },
+  {
+   "name": "add n=2097152",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 2097152,
+   "bytes": 25165824,
+   "ops": [
+    [
+     2097152,
+     25165824
+    ]
+   ],
+   "measured": 7.708504108450143e-05,
+   "predicted": 0.00011586673990544078,
+   "rel_error": 0.5031027846041678
+  },
+  {
+   "name": "add n=4194304",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 4194304,
+   "bytes": 50331648,
+   "ops": [
+    [
+     4194304,
+     50331648
+    ]
+   ],
+   "measured": 0.00020690901601483347,
+   "predicted": 0.00023173347981088156,
+   "rel_error": 0.1199776804035857
+  },
+  {
+   "name": "add n=8388608",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 8388608,
+   "bytes": 100663296,
+   "ops": [
+    [
+     8388608,
+     100663296
+    ]
+   ],
+   "measured": 0.0004428665324667236,
+   "predicted": 0.0004634669596217631,
+   "rel_error": 0.04651610732537681
+  },
+  {
+   "name": "add n=16777216",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 16777216,
+   "bytes": 201326592,
+   "ops": [
+    [
+     16777216,
+     201326592
+    ]
+   ],
+   "measured": 0.0008888131560524926,
+   "predicted": 0.0009269339192435263,
+   "rel_error": 0.04288951275242181
+  },
+  {
+   "name": "add n=33554432",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 33554432,
+   "bytes": 402653184,
+   "ops": [
+    [
+     33554432,
+     402653184
+    ]
+   ],
+   "measured": 0.0018284817851963453,
+   "predicted": 0.0018538678384870525,
+   "rel_error": 0.013883678522934373
+  },
+  {
+   "name": "matmul 128^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 4194304,
+   "bytes": 196608,
+   "ops": [
+    [
+     4194304,
+     196608
+    ]
+   ],
+   "measured": 1.1268452851709299e-05,
+   "predicted": 9.052089055112561e-07,
+   "rel_error": -0.9196687497899105
+  },
+  {
+   "name": "matmul 256^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 33554432,
+   "bytes": 786432,
+   "ops": [
+    [
+     33554432,
+     786432
+    ]
+   ],
+   "measured": 1.24921467090644e-05,
+   "predicted": 5.0374778085330925e-06,
+   "rel_error": -0.5967484271636148
+  },
+  {
+   "name": "matmul 512^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 268435456,
+   "bytes": 3145728,
+   "ops": [
+    [
+     268435456,
+     3145728
+    ]
+   ],
+   "measured": 5.079284665043815e-05,
+   "predicted": 4.029982246826474e-05,
+   "rel_error": -0.20658468414632347
+  },
+  {
+   "name": "matmul 1024^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 2147483648,
+   "bytes": 12582912,
+   "ops": [
+    [
+     2147483648,
+     12582912
+    ]
+   ],
+   "measured": 0.00033550162515894044,
+   "predicted": 0.0003223985797461179,
+   "rel_error": -0.03905508775587929
+  },
+  {
+   "name": "matmul 2048^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 17179869184,
+   "bytes": 50331648,
+   "ops": [
+    [
+     17179869184,
+     50331648
+    ]
+   ],
+   "measured": 0.002570955693954602,
+   "predicted": 0.0025791886379689434,
+   "rel_error": 0.003202289340769493
+  },
+  {
+   "name": "matmul 4096^3",
+   "group": "fit",
+   "dtype": "fp32",
+   "flops": 137438953472,
+   "bytes": 201326592,
+   "ops": [
+    [
+     137438953472,
+     201326592
+    ]
+   ],
+   "measured": 0.020634333486668766,
+   "predicted": 0.020633509103751547,
+   "rel_error": -3.995200124840004e-05
+  },
+  {
+   "name": "gemv d=1024",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 2097152,
+   "bytes": 4202496,
+   "ops": [
+    [
+     2097152,
+     4202496
+    ]
+   ],
+   "measured": 2.7701171802618774e-05,
+   "predicted": 1.9348840355303097e-05,
+   "rel_error": -0.3015154559824822
+  },
+  {
+   "name": "gemv d=2048",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 8388608,
+   "bytes": 16793600,
+   "ops": [
+    [
+     8388608,
+     16793600
+    ]
+   ],
+   "measured": 7.40505374778877e-05,
+   "predicted": 7.731992734575312e-05,
+   "rel_error": 0.04415079186753634
+  },
+  {
+   "name": "gemv d=4096",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 33554432,
+   "bytes": 67141632,
+   "ops": [
+    [
+     33554432,
+     67141632
+    ]
+   ],
+   "measured": 0.00029818750044796616,
+   "predicted": 0.00030912884123209395,
+   "rel_error": 0.036692821690012645
+  },
+  {
+   "name": "gemv d=8192",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 134217728,
+   "bytes": 268500992,
+   "ops": [
+    [
+     134217728,
+     268500992
+    ]
+   ],
+   "measured": 0.0011300351616228,
+   "predicted": 0.0012362136286265387,
+   "rel_error": 0.09396032142155653
+  },
+  {
+   "name": "softmax 8192x128 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 5242880,
+   "bytes": 33685504,
+   "ops": [
+    [
+     1048576,
+     4227072
+    ],
+    [
+     1048576,
+     8421376
+    ],
+    [
+     1048576,
+     8388608
+    ],
+    [
+     1048576,
+     4227072
+    ],
+    [
+     1048576,
+     8421376
+    ]
+   ],
+   "measured": 0.00022714127680956153,
+   "predicted": 0.00015509245914426188,
+   "rel_error": -0.31719825950307745
+  },
+  {
+   "name": "softmax 8192x256 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 10485760,
+   "bytes": 67239936,
+   "ops": [
+    [
+     2097152,
+     8421376
+    ],
+    [
+     2097152,
+     16809984
+    ],
+    [
+     2097152,
+     16777216
+    ],
+    [
+     2097152,
+     8421376
+    ],
+    [
+     2097152,
+     16809984
+    ]
+   ],
+   "measured": 0.00046073046905803494,
+   "predicted": 0.00030958144568484956,
+   "rel_error": -0.3280638757888318
+  },
+  {
+   "name": "softmax 8192x512 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 20971520,
+   "bytes": 134348800,
+   "ops": [
+    [
+     4194304,
+     16809984
+    ],
+    [
+     4194304,
+     33587200
+    ],
+    [
+     4194304,
+     33554432
+    ],
+    [
+     4194304,
+     16809984
+    ],
+    [
+     4194304,
+     33587200
+    ]
+   ],
+   "measured": 0.0009423932206118479,
+   "predicted": 0.000618559418766025,
+   "rel_error": -0.3436291717331903
+  },
+  {
+   "name": "softmax 8192x1024 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 41943040,
+   "bytes": 268566528,
+   "ops": [
+    [
+     8388608,
+     33587200
+    ],
+    [
+     8388608,
+     67141632
+    ],
+    [
+     8388608,
+     67108864
+    ],
+    [
+     8388608,
+     33587200
+    ],
+    [
+     8388608,
+     67141632
+    ]
+   ],
+   "measured": 0.0018797239317791536,
+   "predicted": 0.0012365153649283758,
+   "rel_error": -0.34218246412492215
+  },
+  {
+   "name": "softmax 8192x2048 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 83886080,
+   "bytes": 537001984,
+   "ops": [
+    [
+     16777216,
+     67141632
+    ],
+    [
+     16777216,
+     134250496
+    ],
+    [
+     16777216,
+     134217728
+    ],
+    [
+     16777216,
+     67141632
+    ],
+    [
+     16777216,
+     134250496
+    ]
+   ],
+   "measured": 0.0038001718930900097,
+   "predicted": 0.0024724272572530775,
+   "rel_error": -0.3493906784193679
+  },
+  {
+   "name": "train step n=16384 d=1024 k=3 (10 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 201627648,
+   "bytes": 137121792,
+   "ops": [
+    [
+     100663296,
+     67317760
+    ],
+    [
+     49152,
+     262144
+    ],
+    [
+     49152,
+     458752
+    ],
+    [
+     49152,
+     393216
+    ],
+    [
+     49152,
+     262144
+    ],
+    [
+     49152,
+     458752
+    ],
+    [
+     49152,
+     589824
+    ],
+    [
+     100663296,
+     67317760
+    ],
+    [
+     3072,
+     24576
+    ],
+    [
+     3072,
+     36864
+    ]
+   ],
+   "measured": 0.0007044563753879629,
+   "predicted": 0.0006313266360375066,
+   "rel_error": -0.10381017463314435
+  },
+  {
+   "name": "train step n=32768 d=512 k=3 (10 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 201919488,
+   "bytes": 139896832,
+   "ops": [
+    [
+     100663296,
+     67508224
+    ],
+    [
+     98304,
+     524288
+    ],
+    [
+     98304,
+     917504
+    ],
+    [
+     98304,
+     786432
+    ],
+    [
+     98304,
+     524288
+    ],
+    [
+     98304,
+     917504
+    ],
+    [
+     98304,
+     1179648
+    ],
+    [
+     100663296,
+     67508224
+    ],
+    [
+     1536,
+     12288
+    ],
+    [
+     1536,
+     18432
+    ]
+   ],
+   "measured": 0.0006909667972649913,
+   "predicted": 0.0006441032825684207,
+   "rel_error": -0.06782310652562085
+  },
+  {
+   "name": "mlp b=64 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 4295491584,
+   "bytes": 143654912,
+   "ops": [
+    [
+     2147483648,
+     69730304
+    ],
+    [
+     524288,
+     4194304
+    ],
+    [
+     2147483648,
+     69730304
+    ]
+   ],
+   "measured": 0.0008662753898533992,
+   "predicted": 0.0006641082828098093,
+   "rel_error": -0.23337510151108287
+  },
+  {
+   "name": "mlp b=1024 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp32",
+   "flops": 68727865344,
+   "bytes": 285212672,
+   "ops": [
+    [
+     34359738368,
+     109051904
+    ],
+    [
+     8388608,
+     67108864
+    ],
+    [
+     34359738368,
+     109051904
+    ]
+   ],
+   "measured": 0.010501156211830676,
+   "predicted": 0.010625732524956948,
+   "rel_error": 0.011863104463289975
+  },
+  {
+   "name": "add n=65536",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 65536,
+   "bytes": 393216,
+   "ops": [
+    [
+     65536,
+     393216
+    ]
+   ],
+   "measured": 2.7137578086922076e-06,
+   "predicted": 1.8104178110225122e-06,
+   "rel_error": -0.3328742140423452
+  },
+  {
+   "name": "add n=131072",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 131072,
+   "bytes": 786432,
+   "ops": [
+    [
+     131072,
+     786432
+    ]
+   ],
+   "measured": 3.7640991195075912e-06,
+   "predicted": 3.6208356220450244e-06,
+   "rel_error": -0.03806050077695833
+  },
+  {
+   "name": "add n=262144",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 262144,
+   "bytes": 1572864,
+   "ops": [
+    [
+     262144,
+     1572864
+    ]
+   ],
+   "measured": 4.254613287457687e-06,
+   "predicted": 7.241671244090049e-06,
+   "rel_error": 0.7020750782304956
+  },
+  {
+   "name": "add n=524288",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 524288,
+   "bytes": 3145728,
+   "ops": [
+    [
+     524288,
+     3145728
+    ]
+   ],
+   "measured": 6.751836195917349e-06,
+   "predicted": 1.4483342488180098e-05,
+   "rel_error": 1.1450968400177985
+  },
+  {
+   "name": "add n=1048576",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 1048576,
+   "bytes": 6291456,
+   "ops": [
+    [
+     1048576,
+     6291456
+    ]
+   ],
+   "measured": 1.723809816667199e-05,
+   "predicted": 2.8966684976360195e-05,
+   "rel_error": 0.6803875170153149
+  },
+  {
+   "name": "add n=2097152",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 2097152,
+   "bytes": 12582912,
+   "ops": [
+    [
+     2097152,
+     12582912
+    ]
+   ],
+   "measured": 2.987554933042702e-05,
+   "predicted": 5.793336995272039e-05,
+   "rel_error": 0.9391566431790304
+  },
+  {
+   "name": "add n=4194304",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 4194304,
+   "bytes": 25165824,
+   "ops": [
+    [
+     4194304,
+     25165824
+    ]
+   ],
+   "measured": 7.484594743800699e-05,
+   "predicted": 0.00011586673990544078,
+   "rel_error": 0.548069653355785
+  },
+  {
+   "name": "add n=8388608",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 8388608,
+   "bytes": 50331648,
+   "ops": [
+    [
+     8388608,
+     50331648
+    ]
+   ],
+   "measured": 0.00020683609727711882,
+   "predicted": 0.00023173347981088156,
+   "rel_error": 0.12037252134188758
+  },
+  {
+   "name": "add n=16777216",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 16777216,
+   "bytes": 100663296,
+   "ops": [
+    [
+     16777216,
+     100663296
+    ]
+   ],
+   "measured": 0.00042771647713379934,
+   "predicted": 0.0004634669596217631,
+   "rel_error": 0.08358453414639011
+  },
+  {
+   "name": "add n=33554432",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 33554432,
+   "bytes": 201326592,
+   "ops": [
+    [
+     33554432,
+     201326592
+    ]
+   ],
+   "measured": 0.0009153274841082748,
+   "predicted": 0.0009269339192435263,
+   "rel_error": 0.012680090281085077
+  },
+  {
+   "name": "matmul 128^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 4194304,
+   "bytes": 98304,
+   "ops": [
+    [
+     4194304,
+     98304
+    ]
+   ],
+   "measured": 1.1457621383215155e-05,
+   "predicted": 5.719722843403575e-07,
+   "rel_error": -0.9500793170580528
+  },
+  {
+   "name": "matmul 256^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 33554432,
+   "bytes": 393216,
+   "ops": [
+    [
+     33554432,
+     393216
+    ]
+   ],
+   "measured": 1.2352071053101099e-05,
+   "predicted": 4.57577827472286e-06,
+   "rel_error": -0.6295537602518835
+  },
+  {
+   "name": "matmul 512^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 268435456,
+   "bytes": 1572864,
+   "ops": [
+    [
+     268435456,
+     1572864
+    ]
+   ],
+   "measured": 4.211674013276934e-05,
+   "predicted": 3.660622619778288e-05,
+   "rel_error": -0.13083904209145925
+  },
+  {
+   "name": "matmul 1024^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 2147483648,
+   "bytes": 6291456,
+   "ops": [
+    [
+     2147483648,
+     6291456
+    ]
+   ],
+   "measured": 0.0003022949222213356,
+   "predicted": 0.000292849809582263,
+   "rel_error": -0.031244694980873677
+  },
+  {
+   "name": "matmul 2048^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 17179869184,
+   "bytes": 25165824,
+   "ops": [
+    [
+     17179869184,
+     25165824
+    ]
+   ],
+   "measured": 0.002309888062882237,
+   "predicted": 0.002342798476658104,
+   "rel_error": 0.014247622776491609
+  },
+  {
+   "name": "matmul 4096^3",
+   "group": "fit",
+   "dtype": "fp16",
+   "flops": 137438953472,
+   "bytes": 100663296,
+   "ops": [
+    [
+     137438953472,
+     100663296
+    ]
+   ],
+   "measured": 0.01874635403510183,
+   "predicted": 0.018742387813264833,
+   "rel_error": -0.00021157297198015623
+  },
+  {
+   "name": "gemv d=1024",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 2097152,
+   "bytes": 2101248,
+   "ops": [
+    [
+     2097152,
+     2101248
+    ]
+   ],
+   "measured": 2.178851320877584e-05,
+   "predicted": 9.674420177651549e-06,
+   "rel_error": -0.5559852989989722
+  },
+  {
+   "name": "gemv d=2048",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 8388608,
+   "bytes": 8396800,
+   "ops": [
+    [
+     8388608,
+     8396800
+    ]
+   ],
+   "measured": 3.7518554790949565e-05,
+   "predicted": 3.865996367287656e-05,
+   "rel_error": 0.030422517292759244
+  },
+  {
+   "name": "gemv d=4096",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 33554432,
+   "bytes": 33570816,
+   "ops": [
+    [
+     33554432,
+     33570816
+    ]
+   ],
+   "measured": 0.00015635156250937143,
+   "predicted": 0.00015456442061604698,
+   "rel_error": -0.011430278435607844
+  },
+  {
+   "name": "gemv d=8192",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 134217728,
+   "bytes": 134250496,
+   "ops": [
+    [
+     134217728,
+     134250496
+    ]
+   ],
+   "measured": 0.0005828118446515873,
+   "predicted": 0.0006181068143132694,
+   "rel_error": 0.060559801564743276
+  },
+  {
+   "name": "softmax 8192x128 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 5242880,
+   "bytes": 16842752,
+   "ops": [
+    [
+     1048576,
+     2113536
+    ],
+    [
+     1048576,
+     4210688
+    ],
+    [
+     1048576,
+     4194304
+    ],
+    [
+     1048576,
+     2113536
+    ],
+    [
+     1048576,
+     4210688
+    ]
+   ],
+   "measured": 0.00020886344555037795,
+   "predicted": 7.754622957213094e-05,
+   "rel_error": -0.6287228271668689
+  },
+  {
+   "name": "softmax 8192x256 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 10485760,
+   "bytes": 33619968,
+   "ops": [
+    [
+     2097152,
+     4210688
+    ],
+    [
+     2097152,
+     8404992
+    ],
+    [
+     2097152,
+     8388608
+    ],
+    [
+     2097152,
+     4210688
+    ],
+    [
+     2097152,
+     8404992
+    ]
+   ],
+   "measured": 0.00040453287510899827,
+   "predicted": 0.00015479072284242478,
+   "rel_error": -0.6173593486049369
+  },
+  {
+   "name": "softmax 8192x512 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 20971520,
+   "bytes": 67174400,
+   "ops": [
+    [
+     4194304,
+     8404992
+    ],
+    [
+     4194304,
+     16793600
+    ],
+    [
+     4194304,
+     16777216
+    ],
+    [
+     4194304,
+     8404992
+    ],
+    [
+     4194304,
+     16793600
+    ]
+   ],
+   "measured": 0.0007527343732363079,
+   "predicted": 0.0003092797093830125,
+   "rel_error": -0.5891250348336099
+  },
+  {
+   "name": "softmax 8192x1024 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 41943040,
+   "bytes": 134283264,
+   "ops": [
+    [
+     8388608,
+     16793600
+    ],
+    [
+     8388608,
+     33570816
+    ],
+    [
+     8388608,
+     33554432
+    ],
+    [
+     8388608,
+     16793600
+    ],
+    [
+     8388608,
+     33570816
+    ]
+   ],
+   "measured": 0.0014846940321149305,
+   "predicted": 0.0006182576824641879,
+   "rel_error": -0.5835790613480902
+  },
+  {
+   "name": "softmax 8192x2048 (5 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 83886080,
+   "bytes": 268500992,
+   "ops": [
+    [
+     16777216,
+     33570816
+    ],
+    [
+     16777216,
+     67125248
+    ],
+    [
+     16777216,
+     67108864
+    ],
+    [
+     16777216,
+     33570816
+    ],
+    [
+     16777216,
+     67125248
+    ]
+   ],
+   "measured": 0.0029817578179063275,
+   "predicted": 0.0012362136286265387,
+   "rel_error": -0.5854077681283455
+  },
+  {
+   "name": "train step n=16384 d=1024 k=3 (10 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 201627648,
+   "bytes": 68560896,
+   "ops": [
+    [
+     100663296,
+     33658880
+    ],
+    [
+     49152,
+     131072
+    ],
+    [
+     49152,
+     229376
+    ],
+    [
+     49152,
+     196608
+    ],
+    [
+     49152,
+     131072
+    ],
+    [
+     49152,
+     229376
+    ],
+    [
+     49152,
+     294912
+    ],
+    [
+     100663296,
+     33658880
+    ],
+    [
+     3072,
+     12288
+    ],
+    [
+     3072,
+     18432
+    ]
+   ],
+   "measured": 0.00044985026761423796,
+   "predicted": 0.0003156633180187533,
+   "rel_error": -0.29829247475418774
+  },
+  {
+   "name": "train step n=32768 d=512 k=3 (10 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 201919488,
+   "bytes": 69948416,
+   "ops": [
+    [
+     100663296,
+     33754112
+    ],
+    [
+     98304,
+     262144
+    ],
+    [
+     98304,
+     458752
+    ],
+    [
+     98304,
+     393216
+    ],
+    [
+     98304,
+     262144
+    ],
+    [
+     98304,
+     458752
+    ],
+    [
+     98304,
+     589824
+    ],
+    [
+     100663296,
+     33754112
+    ],
+    [
+     1536,
+     6144
+    ],
+    [
+     1536,
+     9216
+    ]
+   ],
+   "measured": 0.00046311881305882707,
+   "predicted": 0.00032205164128421037,
+   "rel_error": -0.3046025507858128
+  },
+  {
+   "name": "mlp b=64 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 4295491584,
+   "bytes": 71827456,
+   "ops": [
+    [
+     2147483648,
+     34865152
+    ],
+    [
+     524288,
+     2097152
+    ],
+    [
+     2147483648,
+     34865152
+    ]
+   ],
+   "measured": 0.0007533515636168886,
+   "predicted": 0.0005953551808233128,
+   "rel_error": -0.20972463644334283
+  },
+  {
+   "name": "mlp b=1024 d=2048 h=8192 (3 ops)",
+   "group": "holdout",
+   "dtype": "fp16",
+   "flops": 68727865344,
+   "bytes": 142606336,
+   "ops": [
+    [
+     34359738368,
+     54525952
+    ],
+    [
+     8388608,
+     33554432
+    ],
+    [
+     34359738368,
+     54525952
+    ]
+   ],
+   "measured": 0.009604343737009913,
+   "predicted": 0.009525682893173005,
+   "rel_error": -0.008190132089274549
+  }
+ ],
+ "summary": {
+  "fit_set": {
+   "n": 32,
+   "median_abs_error": 0.2822256121827833,
+   "p90_abs_error": 0.9391566431790304,
+   "max_abs_error": 1.7221609692542397,
+   "within_25_percent": 0.5
+  },
+  "holdout_set": {
+   "n": 26,
+   "median_abs_error": 0.3015154559824822,
+   "p90_abs_error": 0.5891250348336099,
+   "max_abs_error": 0.6287228271668689,
+   "within_25_percent": 0.46153846153846156
+  },
+  "holdout_by_kernel": {
+   "gemv": {
+    "n": 8,
+    "median_abs_error": 0.060559801564743276,
+    "p90_abs_error": 0.5559852989989722,
+    "max_abs_error": 0.5559852989989722,
+    "within_25_percent": 0.75
+   },
+   "mlp": {
+    "n": 4,
+    "median_abs_error": 0.20972463644334283,
+    "p90_abs_error": 0.23337510151108287,
+    "max_abs_error": 0.23337510151108287,
+    "within_25_percent": 1.0
+   },
+   "softmax": {
+    "n": 10,
+    "median_abs_error": 0.5835790613480902,
+    "p90_abs_error": 0.6287228271668689,
+    "max_abs_error": 0.6287228271668689,
+    "within_25_percent": 0.0
+   },
+   "train": {
+    "n": 4,
+    "median_abs_error": 0.29829247475418774,
+    "p90_abs_error": 0.3046025507858128,
+    "max_abs_error": 0.3046025507858128,
+    "within_25_percent": 0.5
+   }
+  },
+  "fp16_vs_fp32_ratios": [
+   {
+    "kernel": "add n=1048576",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.7681328665635216,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.13113671366062363
+   },
+   {
+    "kernel": "add n=131072",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.0915314113837153,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.8322880854749153
+   },
+   {
+    "kernel": "add n=16777216",
+    "group": "fit",
+    "measured_fp32_over_fp16": 2.0780428240889393,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": -0.03755592675196917
+   },
+   {
+    "kernel": "add n=2097152",
+    "group": "fit",
+    "measured_fp32_over_fp16": 2.580204977385754,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": -0.22486778471903168
+   },
+   {
+    "kernel": "add n=262144",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.2505322774477914,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.5993189748622847
+   },
+   {
+    "kernel": "add n=33554432",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.9976257863355633,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.0011885177297354943
+   },
+   {
+    "kernel": "add n=4194304",
+    "group": "fit",
+    "measured_fp32_over_fp16": 2.7644651861239513,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": -0.2765327593782455
+   },
+   {
+    "kernel": "add n=524288",
+    "group": "fit",
+    "measured_fp32_over_fp16": 2.548237439357042,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": -0.21514378169381676
+   },
+   {
+    "kernel": "add n=65536",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.0405747313407354,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.9220147671884045
+   },
+   {
+    "kernel": "add n=8388608",
+    "group": "fit",
+    "measured_fp32_over_fp16": 2.141147209296699,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": -0.06592130082595382
+   },
+   {
+    "kernel": "gemv d=1024",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.271365858569068,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.5731113011411328
+   },
+   {
+    "kernel": "gemv d=2048",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.9737044214653647,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.013322956694352683
+   },
+   {
+    "kernel": "gemv d=4096",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.9071603485260553,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.04867952060019265
+   },
+   {
+    "kernel": "gemv d=8192",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.9389365058260783,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.031493292323105715
+   },
+   {
+    "kernel": "matmul 1024^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.1098486957491513,
+    "predicted_fp32_over_fp16": 1.1009007661845671,
+    "ratio_error": -0.008062296778701294
+   },
+   {
+    "kernel": "matmul 128^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 0.9834897204944318,
+    "predicted_fp32_over_fp16": 1.5826097352867592,
+    "ratio_error": 0.6091777090370913
+   },
+   {
+    "kernel": "matmul 2048^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.113021767274129,
+    "predicted_fp32_over_fp16": 1.1009007661845671,
+    "ratio_error": -0.010890174339758918
+   },
+   {
+    "kernel": "matmul 256^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.0113402566550274,
+    "predicted_fp32_over_fp16": 1.1009007661845671,
+    "ratio_error": 0.08855625882604334
+   },
+   {
+    "kernel": "matmul 4096^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.100711820977656,
+    "predicted_fp32_over_fp16": 1.1009007661845671,
+    "ratio_error": 0.00017165728877444053
+   },
+   {
+    "kernel": "matmul 512^3",
+    "group": "fit",
+    "measured_fp32_over_fp16": 1.2060013783193606,
+    "predicted_fp32_over_fp16": 1.1009007661845671,
+    "ratio_error": -0.08714800333085682
+   },
+   {
+    "kernel": "mlp b=1024 d=2048 h=8192 (3 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.0933757161736033,
+    "predicted_fp32_over_fp16": 1.1154824954935612,
+    "ratio_error": 0.02021883145285419
+   },
+   {
+    "kernel": "mlp b=64 d=2048 h=8192 (3 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.1498952569957592,
+    "predicted_fp32_over_fp16": 1.1154824954935612,
+    "ratio_error": -0.029926866201801405
+   },
+   {
+    "kernel": "softmax 8192x1024 (5 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.266068220872086,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.5796937060961622
+   },
+   {
+    "kernel": "softmax 8192x128 (5 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.0875109151389297,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.8390620012714995
+   },
+   {
+    "kernel": "softmax 8192x2048 (5 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.274473691414127,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.5692752337483291
+   },
+   {
+    "kernel": "softmax 8192x256 (5 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.1389197205144197,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.7560500217668136
+   },
+   {
+    "kernel": "softmax 8192x512 (5 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.2519598601032664,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.597495306147461
+   },
+   {
+    "kernel": "train step n=16384 d=1024 k=3 (10 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.565979673912428,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.27715578517262607
+   },
+   {
+    "kernel": "train step n=32768 d=512 k=3 (10 ops)",
+    "group": "holdout",
+    "measured_fp32_over_fp16": 1.4919860255757353,
+    "predicted_fp32_over_fp16": 2.0,
+    "ratio_error": 0.3404951291204148
+   }
+  ],
+  "fp16_vs_fp32_ratio_summary": {
+   "n": 29,
+   "median_abs_error": 0.21514378169381676,
+   "max_abs_error": 0.9220147671884045,
+   "same_side_of_one": 0.9655172413793104
+  },
+  "fp16_vs_fp32_ratio_summary_holdout": {
+   "n": 13,
+   "median_abs_error": 0.3404951291204148,
+   "max_abs_error": 0.8390620012714995,
+   "same_side_of_one": 1.0
+  }
+ },
+ "limits": [
+  "a fit of the roofline form to THIS device on THESE kernels: it says nothing about other devices (run it on them) or about fused kernels, which move fewer bytes than the unfused count",
+  "the constants are fitted from the 'fit' kernels only; the 'holdout' kernels were never used to fit them, which is what makes their error informative",
+  "timings are one operator's measurements on one machine: this checks a MODEL's form, it does not make any time independently verifiable"
+ ]
+}

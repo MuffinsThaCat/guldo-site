@@ -1,0 +1,138 @@
+{
+ "baseline": {
+  "agent": {
+   "effort": null,
+   "kind": "model",
+   "label": "haiku45",
+   "model": "claude-haiku-4-5-20251001",
+   "provider": "anthropic",
+   "spec": "anthropic:claude-haiku-4-5-20251001"
+  },
+  "digest": "eb80e8389b387cf0eb652742ce9bba71bdc79ffbdede8e07135570e6aa9934e8",
+  "summary": {
+   "agent": "haiku45",
+   "agent_error_trials": 0,
+   "by_size": [
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 2464.0,
+     "size": 1,
+     "solved": 3
+    },
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 3970.0,
+     "size": 2,
+     "solved": 3
+    },
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 5643.0,
+     "size": 3,
+     "solved": 3
+    }
+   ],
+   "instances": 9,
+   "median_tokens_on_solved": 3970.0,
+   "provider_over_proxy_tokens_median": 2.1959049544994946,
+   "provider_over_proxy_tokens_min": 2.137859007832898,
+   "solve_rate": 1.0,
+   "solve_rate_lower95": 0.716871,
+   "solve_rate_stratified_lower95": 0.255436,
+   "solved_instances": 9,
+   "trial_pass_rate": 1.0,
+   "trials": 9,
+   "worst_size_lower95": 0.255436
+  }
+ },
+ "candidate": {
+  "agent": {
+   "effort": null,
+   "kind": "model",
+   "label": "sonnet55",
+   "model": "claude-sonnet-5-5",
+   "provider": "anthropic",
+   "spec": "anthropic:claude-sonnet-5-5"
+  },
+  "digest": "70e005e3689bef20515b70584c0eb53bcc8616fd2d5455932c9757f2878b2b90",
+  "summary": {
+   "agent": "sonnet55",
+   "agent_error_trials": 0,
+   "by_size": [
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 2184.0,
+     "size": 1,
+     "solved": 3
+    },
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 3497.0,
+     "size": 2,
+     "solved": 3
+    },
+    {
+     "instances": 3,
+     "median_tokens_on_solved": 4787.0,
+     "size": 3,
+     "solved": 3
+    }
+   ],
+   "instances": 9,
+   "median_tokens_on_solved": 3497.0,
+   "provider_over_proxy_tokens_median": 2.1837142857142857,
+   "provider_over_proxy_tokens_min": 2.042406517651974,
+   "solve_rate": 1.0,
+   "solve_rate_lower95": 0.716871,
+   "solve_rate_stratified_lower95": 0.255436,
+   "solved_instances": 9,
+   "trial_pass_rate": 1.0,
+   "trials": 9,
+   "worst_size_lower95": 0.255436
+  }
+ },
+ "commit": "15cacf22bffb77dc3a8a600a496b51cd11dd617705be0debf99886571483b52e",
+ "cost": {
+  "baseline_cheaper_on": 0,
+  "both_solved": 9,
+  "candidate_cheaper_on": 9,
+  "ci95_bits": [
+   0.185546,
+   0.222776
+  ],
+  "dearer_by_1_bit_or_more_on": 0,
+  "excluded_unsolved_by_a_side": 0,
+  "factor_lower95": 0.89983,
+  "geometric_mean_factor": 1.152198,
+  "lower95_bits_one_sided": -0.152276,
+  "lower95_bits_unadjusted": 0.187943,
+  "mean_bits": 0.204389,
+  "mean_tool_call_bits": -0.164551,
+  "sign_p_baseline_cheaper": 1.0,
+  "sign_p_candidate_cheaper": 0.00195312,
+  "verdict": "neither is shown cheaper",
+  "worst_gap_bits": 0.161381
+ },
+ "domain": "research",
+ "format": "guldo-agent-comparison-v1",
+ "limits": [
+  "Tokens are PROXY tokens (ceil(utf-8 bytes / 4) of the exact context sent each turn plus the output): recomputable from the stored trajectories, not a provider's billed count.",
+  "A language-model agent cannot be re-run to the same trajectory: verification checks that each recorded output passes the exact verifier and that each recorded cost follows from its trajectory.",
+  "An instance counts as solved when more than half of its trials pass; cost is the mean over solved trials; unsolved instances are excluded from the cost gap, which understates that side's cost.",
+  "The tasks come from a public generator: commit-reveal means no JUDGED instance could have been seen, not that the skill could not be trained for.",
+  "Results hold for this domain, these sizes and caps, and these two agent configurations; nothing is claimed about safety or about other tasks."
+ ],
+ "plan_hash": "7a40abbd6660ea7e60123c4f0fc608cf3f1da5a43d487097c51414050061ac08",
+ "practice": true,
+ "reverified": true,
+ "success": {
+  "baseline_only": 0,
+  "both": 9,
+  "candidate_only": 0,
+  "neither": 0,
+  "sign_p_baseline_better": 1.0,
+  "sign_p_candidate_better": 1.0,
+  "verdict": "no difference in solve rate shown"
+ },
+ "version": "research-v1"
+}

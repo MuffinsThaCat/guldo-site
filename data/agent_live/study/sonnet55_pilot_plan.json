@@ -1,0 +1,26 @@
+{
+ "budget": {
+  "max_nudges": 0,
+  "max_tokens": 20000,
+  "max_tool_calls": 40,
+  "max_turns": 12,
+  "max_wall_s": 600
+ },
+ "commit": "15cacf22bffb77dc3a8a600a496b51cd11dd617705be0debf99886571483b52e",
+ "counter": "proxy-bytes4-v1",
+ "domain": "research",
+ "format": "guldo-agent-plan-v1",
+ "n_per_size": 1,
+ "practice": true,
+ "sizes": [
+  3
+ ],
+ "source_hashes": {
+  "agent_core.py": "d51a9bb05ae7b45d2f2965239cea1be6f13357b056bf96b8540425663caa01a1",
+  "agent_domains/__init__.py": "6dc91fe9a7de1577cc4567f6df35a23625365ab15a65325c7efb0eb7d9758d5f",
+  "agent_domains/research.py": "c58a8fc7289dac71b6d002bd34eb309905c30c0e26b5c30723b39849ad431c48",
+  "agent_harness.py": "f16f8de516886c9298585a5423a47e0e91c6f34ec5314dde8355fe9d3e893b13"
+ },
+ "trials": 1,
+ "version": "research-v1"
+}

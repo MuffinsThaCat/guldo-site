@@ -1,0 +1,141 @@
+{
+ "a": "aickpt_mem_ckpt.py",
+ "a_below_baseline_median_bits": 1.816792,
+ "a_cheaper": 0,
+ "b": "aickpt_mem_recompute.py",
+ "b_below_baseline_median_bits": 3.034362,
+ "b_cheaper": 16,
+ "baseline": "aickpt_mem_ref.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": null,
+ "bootstrap_seed": 3815568684734476688,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per size (costs do not vary within a size)",
+ "family": "aickpt",
+ "fixed_cost_sizes": {
+  "16": "B",
+  "32": "B",
+  "48": "B",
+  "64": "B"
+ },
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "923615c923f35d9af6d8f21f9e4ba383e097d19df56fe9e04fb1d93a249ba3ca",
+  "3dbc9e3ab1d56f669e6daca792acd01df49b15ebfaedabc6b5e52731f1dc11be",
+  "d9f1e04c3b70a1c29376f0a074df5563d862f311d94dcc6029b6b7f2a55e31e4"
+ ],
+ "instances": 16,
+ "limits": [
+  "A count is not a time. Operations, bytes and peak memory are an accounting convention over shapes and declared precisions (no cache, no fusion, no kernel or hardware measurement), exactly reproducible by anyone, so they can show 'N times fewer operations / bytes / memory' and cannot show 'faster'. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A's peak memory is the smaller: 1 bit is half, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "bytes and peak memory are counted only for tensor operations: arithmetic done in the solver's own Python moves no counted bytes (it pays in operations instead), so a bytes or peak verdict is only meaningful beside the operations gap",
+  "the roofline line compares each run's exact per-operation flops and bytes under the counting convention (no cache, no fusion), assuming operations run one after another: it is not a measurement, real kernels can fall short of it, fuse what the count does not or overlap, launch overhead is not modelled, and the host's Python steps are not tensor work",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": -1.18565,
+ "mean_bits_varying_sizes": null,
+ "median_bits_a_below_b": -1.217569,
+ "metric": "peak",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": 2.514225,
+ "paired": 16,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "roofline": {
+  "crossovers": [],
+  "faster_at_high_balance": "A",
+  "faster_at_low_balance": "A",
+  "instances": 16,
+  "kernels": "varies",
+  "lower_bound_from_totals": "A dominates",
+  "model": "sequential",
+  "relation": "A dominates",
+  "relations": {
+   "A dominates": 16
+  },
+  "sizes": {
+   "16": {
+    "A dominates": 4
+   },
+   "32": {
+    "A dominates": 4
+   },
+   "48": {
+    "A dominates": 4
+   },
+   "64": {
+    "A dominates": 4
+   }
+  },
+  "statement": "A is at least as fast as B on every roofline device at every paired instance (kernels run one after another, each limited by the larger of its compute time and its memory time; launch overhead is not modelled)"
+ },
+ "sign_test_p": null,
+ "sign_test_pairs": 0,
+ "sizes": {
+  "16": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 4,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": -0.817136,
+   "ties": 0
+  },
+  "32": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 4,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": -1.099536,
+   "ties": 0
+  },
+  "48": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 4,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": -1.335603,
+   "ties": 0
+  },
+  "64": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 4,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": -1.490326,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [],
+ "sizes_where_b_cheaper": [
+  "16",
+  "32",
+  "48",
+  "64"
+ ],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "B used a smaller peak memory than A at every measured size (4); but that side used 5.71x more operations, and bytes and peak memory are counted only for tensor operations, so work done in plain Python is not in this count: read the two together",
+ "vs_baseline_exact": null
+}

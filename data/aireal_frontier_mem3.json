@@ -1,0 +1,219 @@
+{
+ "agreement_bar": 0.98,
+ "format": "svp-aireal-frontier-mem3-v1",
+ "n": 12,
+ "queries": 128,
+ "results": {
+  "bf16:16": {
+   "acc_mean": 0.8893229166666666,
+   "agree_mean": 0.998046875,
+   "agree_worst": 0.9921875,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.019467987527851956,
+   "median_ops_bits_vs_dense": -0.031130385903828054,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "bf16:32": {
+   "acc_mean": 0.8880208333333334,
+   "agree_mean": 0.998046875,
+   "agree_worst": 0.9921875,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.05316330549168773,
+   "median_ops_bits_vs_dense": -0.025224626736955136,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "bf16:48": {
+   "acc_mean": 0.9108072916666666,
+   "agree_mean": 0.9993489583333334,
+   "agree_worst": 0.9921875,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.08266599633450503,
+   "median_ops_bits_vs_dense": -0.022498695339223992,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "dense:16": {
+   "acc_mean": 0.8893229166666666,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "dense:32": {
+   "acc_mean": 0.8893229166666666,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "dense:48": {
+   "acc_mean": 0.91015625,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 12,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "fp8:16": {
+   "acc_mean": 0.88671875,
+   "agree_mean": 0.9674479166666666,
+   "agree_worst": 0.9375,
+   "cleared": 2,
+   "median_bytes_bits_vs_dense": 0.020868662434853927,
+   "median_ops_bits_vs_dense": -0.031130385903828054,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "fp8:32": {
+   "acc_mean": 0.888671875,
+   "agree_mean": 0.9791666666666666,
+   "agree_worst": 0.953125,
+   "cleared": 7,
+   "median_bytes_bits_vs_dense": 0.044749784291253605,
+   "median_ops_bits_vs_dense": -0.025224626736955136,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "fp8:48": {
+   "acc_mean": 0.9127604166666666,
+   "agree_mean": 0.9908854166666666,
+   "agree_worst": 0.9765625,
+   "cleared": 11,
+   "median_bytes_bits_vs_dense": 0.06552545075312786,
+   "median_ops_bits_vs_dense": -0.022498695339223992,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "s24:16": {
+   "acc_mean": 0.8860677083333334,
+   "agree_mean": 0.9361979166666666,
+   "agree_worst": 0.90625,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.00472281458388057,
+   "median_ops_bits_vs_dense": 0.4981128801799481,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "s24:32": {
+   "acc_mean": 0.88671875,
+   "agree_mean": 0.9759114583333334,
+   "agree_worst": 0.9453125,
+   "cleared": 5,
+   "median_bytes_bits_vs_dense": 0.008728160214388686,
+   "median_ops_bits_vs_dense": 0.6583762073509161,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "s24:48": {
+   "acc_mean": 0.9108072916666666,
+   "agree_mean": 0.9811197916666666,
+   "agree_worst": 0.9609375,
+   "cleared": 6,
+   "median_bytes_bits_vs_dense": 0.012167999598281281,
+   "median_ops_bits_vs_dense": 0.7385686564607732,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "sp50:16": {
+   "acc_mean": 0.892578125,
+   "agree_mean": 0.9694010416666666,
+   "agree_worst": 0.9453125,
+   "cleared": 2,
+   "median_bytes_bits_vs_dense": 0.0023203586804203483,
+   "median_ops_bits_vs_dense": 0.49484106494478924,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp50:32": {
+   "acc_mean": 0.8893229166666666,
+   "agree_mean": 0.9856770833333334,
+   "agree_worst": 0.953125,
+   "cleared": 10,
+   "median_bytes_bits_vs_dense": 0.004330846438236784,
+   "median_ops_bits_vs_dense": 0.6544521869418989,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp50:48": {
+   "acc_mean": 0.912109375,
+   "agree_mean": 0.9928385416666666,
+   "agree_worst": 0.9765625,
+   "cleared": 11,
+   "median_bytes_bits_vs_dense": 0.006055258763729439,
+   "median_ops_bits_vs_dense": 0.73429018450298,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "sp75:16": {
+   "acc_mean": 0.8040364583333334,
+   "agree_mean": 0.8326822916666666,
+   "agree_worst": 0.75,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.0059812698083449535,
+   "median_ops_bits_vs_dense": 0.8298424260435099,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp75:32": {
+   "acc_mean": 0.876953125,
+   "agree_mean": 0.9381510416666666,
+   "agree_worst": 0.8984375,
+   "cleared": 1,
+   "median_bytes_bits_vs_dense": 0.011103860180261773,
+   "median_ops_bits_vs_dense": 1.1485303896029961,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp75:48": {
+   "acc_mean": 0.90234375,
+   "agree_mean": 0.958984375,
+   "agree_worst": 0.921875,
+   "cleared": 1,
+   "median_bytes_bits_vs_dense": 0.015506375515767404,
+   "median_ops_bits_vs_dense": 1.3227573050453314,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  },
+  "sp90:16": {
+   "acc_mean": 0.3528645833333333,
+   "agree_mean": 0.365234375,
+   "agree_worst": 0.3125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.008187244907882514,
+   "median_ops_bits_vs_dense": 1.0770504262210627,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp90:32": {
+   "acc_mean": 0.65625,
+   "agree_mean": 0.6608072916666666,
+   "agree_worst": 0.546875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.015180683782994843,
+   "median_ops_bits_vs_dense": 1.5542684630315098,
+   "n": 12,
+   "net_acc_mean": 0.8893229166666666
+  },
+  "sp90:48": {
+   "acc_mean": 0.6790364583333334,
+   "agree_mean": 0.6998697916666666,
+   "agree_worst": 0.609375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.021209052050900415,
+   "median_ops_bits_vs_dense": 1.8424825005328493,
+   "n": 12,
+   "net_acc_mean": 0.91015625
+  }
+ },
+ "seed": "aireal-frontier-seed"
+}

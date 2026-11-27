@@ -1,0 +1,139 @@
+{
+ "a": "aikvc_mem_latent.py",
+ "a_below_baseline_median_bits": 2.575413,
+ "a_cheaper": 9,
+ "b": "aikvc_mem_fp16.py",
+ "b_below_baseline_median_bits": -0.01,
+ "b_cheaper": 0,
+ "baseline": "aikvc_mem_ref.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": null,
+ "bootstrap_seed": 2779540671431757494,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per size (costs do not vary within a size)",
+ "family": "aikvc",
+ "fixed_cost_sizes": {
+  "1024": "A",
+  "1536": "A",
+  "2048": "A"
+ },
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "29471ed56ba0da215c19a644968e76955e4e1f352358beaa33d980be83c6f2c1",
+  "5d2935dd26f7913139c0b73740da8d252923eba65d8026deb94001b4aaa3ecea",
+  "8f95c780405ba032247790f525f762d88c5d12c784a34a1194f245e9f9196f77"
+ ],
+ "instances": 9,
+ "limits": [
+  "A count is not a time. Operations, bytes and peak memory are an accounting convention over shapes and declared precisions (no cache, no fusion, no kernel or hardware measurement), exactly reproducible by anyone, so they can show 'N times fewer operations / bytes / memory' and cannot show 'faster'. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A asked for fewer operations: 1 bit is half the operations, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "the exact credit bounds the median of the instances pooled over the measured sizes, not the gap at any one size",
+  "the roofline line compares each run's exact per-operation flops and bytes under the counting convention (no cache, no fusion), assuming operations run one after another: it is not a measurement, real kernels can fall short of it, fuse what the count does not or overlap, launch overhead is not modelled, and the host's Python steps are not tensor work",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": 2.581602,
+ "mean_bits_varying_sizes": null,
+ "median_bits_a_below_b": 2.585413,
+ "metric": "ops",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": null,
+ "paired": 9,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "roofline": {
+  "crossovers": [],
+  "faster_at_high_balance": "A",
+  "faster_at_low_balance": "A",
+  "instances": 9,
+  "kernels": [
+   779,
+   655
+  ],
+  "lower_bound_from_totals": "A dominates",
+  "model": "sequential",
+  "relation": "A dominates",
+  "relations": {
+   "A dominates": 9
+  },
+  "sizes": {
+   "1024": {
+    "A dominates": 3
+   },
+   "1536": {
+    "A dominates": 3
+   },
+   "2048": {
+    "A dominates": 3
+   }
+  },
+  "statement": "A is at least as fast as B on every roofline device at every paired instance (kernels run one after another, each limited by the larger of its compute time and its memory time; launch overhead is not modelled)"
+ },
+ "sign_test_p": null,
+ "sign_test_pairs": 0,
+ "sizes": {
+  "1024": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 2.562197,
+   "ties": 0
+  },
+  "1536": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 2.585413,
+   "ties": 0
+  },
+  "2048": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 2.597196,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [
+  "1024",
+  "1536",
+  "2048"
+ ],
+ "sizes_where_b_cheaper": [],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "A used fewer operations than B at every measured size (3)",
+ "vs_baseline_exact": {
+  "a": {
+   "instances": 9,
+   "lower95_median_bits": 2.552214,
+   "median_bits": 2.575413
+  },
+  "b": {
+   "instances": 9,
+   "lower95_median_bits": -0.010009,
+   "median_bits": -0.01
+  }
+ }
+}

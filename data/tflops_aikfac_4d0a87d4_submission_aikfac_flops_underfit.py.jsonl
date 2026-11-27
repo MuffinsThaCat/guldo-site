@@ -1,0 +1,10 @@
+{"meta": true, "solver": "aikfac_flops_underfit.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 1500.0, "family": "aikfac", "sandbox": "tflops", "instance_version": "aikfac-v1", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "39214f682c0740fd62c1887c93f667060b2aa71bee80431f7fb5dd2fdac99f2a", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "2cc5cc51ea14cd96d7b9a846f51fa997e92ba54e08d168c8e29a6dcfbec6eedd"}
+{"id": "16:0", "dim": 16, "wall": 0.0883181095123291, "steps": 34097, "flops": 14584448, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "16:1", "dim": 16, "wall": 0.08760809898376465, "steps": 34097, "flops": 14584448, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "16:2", "dim": 16, "wall": 0.09363198280334473, "steps": 34097, "flops": 14584448, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "24:0", "dim": 24, "wall": 0.08956694602966309, "steps": 50725, "flops": 31992768, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "24:1", "dim": 24, "wall": 0.0920557975769043, "steps": 50725, "flops": 31992768, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "24:2", "dim": 24, "wall": 0.09219002723693848, "steps": 50725, "flops": 31992768, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "32:0", "dim": 32, "wall": 0.09028005599975586, "steps": 68697, "flops": 56276224, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "32:1", "dim": 32, "wall": 0.10720324516296387, "steps": 68697, "flops": 56276224, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}
+{"id": "32:2", "dim": 32, "wall": 0.0921030044555664, "steps": 68697, "flops": 56276224, "status": "wrong", "cpu": 1500.0, "cpu_net": 1500.0}

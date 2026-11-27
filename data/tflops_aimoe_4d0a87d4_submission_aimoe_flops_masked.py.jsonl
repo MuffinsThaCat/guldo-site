@@ -1,0 +1,10 @@
+{"meta": true, "solver": "aimoe_flops_masked.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 800.0, "family": "aimoe", "sandbox": "tflops", "instance_version": "aimoe-v1", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "888d18ae883903b9b8d054fd9100d7a6314fccd11f7214acc7627c635a146ca7", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "5098f13f7bf89fd401fe257de0d6b64c048f4bfe4b8410f3cd4fef0de80a8943"}
+{"id": "256:0", "dim": 256, "wall": 0.0834050178527832, "steps": 131720, "flops": 17625856, "status": "solved", "cpu": 1.7757576, "cpu_net": 1.7757576}
+{"id": "256:1", "dim": 256, "wall": 0.09273815155029297, "steps": 131720, "flops": 17625856, "status": "solved", "cpu": 1.7757576, "cpu_net": 1.7757576}
+{"id": "256:2", "dim": 256, "wall": 0.08555006980895996, "steps": 131725, "flops": 17625856, "status": "solved", "cpu": 1.7757581, "cpu_net": 1.7757581}
+{"id": "384:0", "dim": 384, "wall": 0.08892583847045898, "steps": 197342, "flops": 26257152, "status": "solved", "cpu": 2.6454494, "cpu_net": 2.6454494}
+{"id": "384:1", "dim": 384, "wall": 0.09063911437988281, "steps": 197342, "flops": 26257152, "status": "solved", "cpu": 2.6454494, "cpu_net": 2.6454494}
+{"id": "384:2", "dim": 384, "wall": 0.08870720863342285, "steps": 197300, "flops": 26257152, "status": "solved", "cpu": 2.6454452, "cpu_net": 2.6454452}
+{"id": "512:0", "dim": 512, "wall": 0.09543704986572266, "steps": 262860, "flops": 34888448, "status": "solved", "cpu": 3.5151308, "cpu_net": 3.5151308}
+{"id": "512:1", "dim": 512, "wall": 0.09745192527770996, "steps": 262947, "flops": 34888448, "status": "solved", "cpu": 3.5151395, "cpu_net": 3.5151395}
+{"id": "512:2", "dim": 512, "wall": 0.09427475929260254, "steps": 262897, "flops": 34888448, "status": "solved", "cpu": 3.5151345, "cpu_net": 3.5151345}

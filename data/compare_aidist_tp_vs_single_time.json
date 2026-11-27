@@ -1,0 +1,311 @@
+{
+ "a": "aidist_dist_tp.py",
+ "a_below_baseline_median_bits": -0.028901,
+ "a_cheaper": 15,
+ "b": "aidist_dist_single.py",
+ "b_below_baseline_median_bits": -1.640076,
+ "b_cheaper": 0,
+ "baseline": "aidist_dist_dp.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": null,
+ "bootstrap_seed": 10859745752914694431,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "distributed": {
+  "a_dominates_everywhere": false,
+  "b_dominates_everywhere": false,
+  "grid_axes": {
+   "alpha_flop_times_per_round": [
+    100,
+    10000,
+    1000000
+   ],
+   "beta_flop_times_per_byte": [
+    1,
+    10,
+    100,
+    1000
+   ]
+  },
+  "overall": {
+   "100,1": "A",
+   "100,10": "A",
+   "100,100": "mixed",
+   "100,1000": "B",
+   "10000,1": "A",
+   "10000,10": "A",
+   "10000,100": "mixed",
+   "10000,1000": "B",
+   "1000000,1": "B",
+   "1000000,10": "B",
+   "1000000,100": "B",
+   "1000000,1000": "B"
+  },
+  "ranks": 8,
+  "sizes": {
+   "16": {
+    "a": {
+     "comm": 31395840,
+     "rounds": 22,
+     "steps": 2242,
+     "wcrit": 158784
+    },
+    "a_dominates": false,
+    "b": {
+     "comm": 10321920,
+     "rounds": 1,
+     "steps": 252,
+     "wcrit": 1019392
+    },
+    "b_dominates": false,
+    "grid": {
+     "100,1": "A",
+     "100,10": "A",
+     "100,100": "B",
+     "100,1000": "B",
+     "10000,1": "A",
+     "10000,10": "A",
+     "10000,100": "B",
+     "10000,1000": "B",
+     "1000000,1": "B",
+     "1000000,10": "B",
+     "1000000,100": "B",
+     "1000000,1000": "B"
+    }
+   },
+   "24": {
+    "a": {
+     "comm": 56770560,
+     "rounds": 22,
+     "steps": 2242,
+     "wcrit": 420480
+    },
+    "a_dominates": false,
+    "b": {
+     "comm": 20643840,
+     "rounds": 1,
+     "steps": 252,
+     "wcrit": 2869248
+    },
+    "b_dominates": false,
+    "grid": {
+     "100,1": "A",
+     "100,10": "A",
+     "100,100": "B",
+     "100,1000": "B",
+     "10000,1": "A",
+     "10000,10": "A",
+     "10000,100": "B",
+     "10000,1000": "B",
+     "1000000,1": "B",
+     "1000000,10": "B",
+     "1000000,100": "B",
+     "1000000,1000": "B"
+    }
+   },
+   "32": {
+    "a": {
+     "comm": 88596480,
+     "rounds": 22,
+     "steps": 2242,
+     "wcrit": 869248
+    },
+    "a_dominates": false,
+    "b": {
+     "comm": 34406400,
+     "rounds": 1,
+     "steps": 252,
+     "wcrit": 6136832
+    },
+    "b_dominates": false,
+    "grid": {
+     "100,1": "A",
+     "100,10": "A",
+     "100,100": "B",
+     "100,1000": "B",
+     "10000,1": "A",
+     "10000,10": "A",
+     "10000,100": "B",
+     "10000,1000": "B",
+     "1000000,1": "B",
+     "1000000,10": "B",
+     "1000000,100": "B",
+     "1000000,1000": "B"
+    }
+   },
+   "40": {
+    "a": {
+     "comm": 126873600,
+     "rounds": 22,
+     "steps": 2242,
+     "wcrit": 1554240
+    },
+    "a_dominates": false,
+    "b": {
+     "comm": 51609600,
+     "rounds": 1,
+     "steps": 252,
+     "wcrit": 11215360
+    },
+    "b_dominates": false,
+    "grid": {
+     "100,1": "A",
+     "100,10": "A",
+     "100,100": "A",
+     "100,1000": "B",
+     "10000,1": "A",
+     "10000,10": "A",
+     "10000,100": "A",
+     "10000,1000": "B",
+     "1000000,1": "B",
+     "1000000,10": "B",
+     "1000000,100": "B",
+     "1000000,1000": "B"
+    }
+   },
+   "48": {
+    "a": {
+     "comm": 171601920,
+     "rounds": 22,
+     "steps": 2242,
+     "wcrit": 2524608
+    },
+    "a_dominates": false,
+    "b": {
+     "comm": 72253440,
+     "rounds": 1,
+     "steps": 252,
+     "wcrit": 18498048
+    },
+    "b_dominates": false,
+    "grid": {
+     "100,1": "A",
+     "100,10": "A",
+     "100,100": "A",
+     "100,1000": "B",
+     "10000,1": "A",
+     "10000,10": "A",
+     "10000,100": "A",
+     "10000,1000": "B",
+     "1000000,1": "B",
+     "1000000,10": "B",
+     "1000000,100": "B",
+     "1000000,1000": "B"
+    }
+   }
+  },
+  "statement": "neither dominates: on the 12-machine grid (latency x inverse bandwidth) A is faster at every measured size on 4, B on 6, the winner changes with the size on 2 and they tie on 0: a solver that does less arithmetic per device but sends more wins on a fast network and loses on a slow one"
+ },
+ "evidence": "per size (costs do not vary within a size)",
+ "family": "aidist",
+ "fixed_cost_sizes": {
+  "16": "A",
+  "24": "A",
+  "32": "A",
+  "40": "A",
+  "48": "A"
+ },
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "bac4e622e42cb2a591f62676030bb70387ae6aae1b8a82833012a9dd9067944a",
+  "4534b4f7009e2cc71fb5eee737ff0d03634ea8a898f1b4e469b15bb834b500be",
+  "0df6820585b7667c3b6318b25e9653d8567de8905505d55b0162ebe4abd2f3e8"
+ ],
+ "instances": 15,
+ "limits": [
+  "A count is not a time. Work, rounds and bytes are an accounting convention over a simulated cluster of identical devices on identical links (ring and tree collectives, a barrier at every collective, no overlap of compute and communication, no congestion, no reduction arithmetic, no memory), exactly reproducible by anyone, so they can show 'A is faster than B on every machine with these latencies and bandwidths' and cannot show how fast either runs on any real cluster. The solver's Python is charged in full as serial time. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A's time on the default machine is the smaller: 1 bit is half, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "time is the run's wcrit + steps + 10000 * rounds + 10 * bytes on ONE arbitrary default machine written in the ladder header: it is a convenient scalar for pairing instances, not a claim about any cluster; the machine grid, which is exact for every latency and bandwidth, is the evidence",
+  "the machine grid compares each run's exact critical-path work, Python steps, message rounds and bytes per device on identical devices and links (ring and tree collectives, a barrier at every collective, no overlap, no congestion): 'faster on every machine' means every latency and bandwidth of that model, not any real cluster",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": 1.466283,
+ "mean_bits_varying_sizes": null,
+ "median_bits_a_below_b": 1.611175,
+ "metric": "time",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": -0.165808,
+ "paired": 15,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "sign_test_p": null,
+ "sign_test_pairs": 0,
+ "sizes": {
+  "16": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 0.610657,
+   "ties": 0
+  },
+  "24": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 1.245011,
+   "ties": 0
+  },
+  "32": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 1.611175,
+   "ties": 0
+  },
+  "40": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 1.848879,
+   "ties": 0
+  },
+  "48": {
+   "a_cheaper": 3,
+   "a_solved": 3,
+   "b_cheaper": 0,
+   "b_solved": 3,
+   "both_solved": 3,
+   "costs_are_fixed": true,
+   "instances": 3,
+   "median_bits_a_below_b": 2.015693,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [
+  "16",
+  "24",
+  "32",
+  "40",
+  "48"
+ ],
+ "sizes_where_b_cheaper": [],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "A used a shorter time on the default machine than B at every measured size (5); but that side did 1.12x more total operations, and its time is on the DEFAULT machine only: a faster run here is bought with extra work and communication, so whether it wins elsewhere depends on the interconnect (see the machine grid below, computed exactly from the counts)",
+ "vs_baseline_exact": null
+}

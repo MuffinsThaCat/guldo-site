@@ -1,0 +1,121 @@
+{
+ "a": "aisecond_flops_newtoncg.py",
+ "a_below_baseline_median_bits": 8.896586,
+ "a_cheaper": 14,
+ "b": "aisecond_flops_newton.py",
+ "b_below_baseline_median_bits": 8.728934,
+ "b_cheaper": 2,
+ "baseline": "aisecond_flops_ref.py",
+ "baseline_unsolved": 1,
+ "bootstrap95_mean_bits": [
+  0.07567,
+  0.266922
+ ],
+ "bootstrap_seed": 480001511365537738,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per instance",
+ "family": "aisecond",
+ "fixed_cost_sizes": {},
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "3f5e757489bd89d64a58a4875063980a3c52984ddc3041676644c3050cbb7545",
+  "657339ec896e63afe9e2758b9cd6e26e7135b1694af89bc43382312fb988e665",
+  "f17119a61cf904473411956e2a92cb6db0c00e70be1e84638b86ef04305e5ed4"
+ ],
+ "instances": 16,
+ "limits": [
+  "A count is not a time. It measures arithmetic asked for (tensor operations by shape, plus the solver's own Python instructions), not speed: memory traffic, cache, vectorisation, dtype and kernel quality are invisible to it, so it can show 'N times fewer operations' and cannot show 'faster at the same arithmetic'. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A asked for fewer operations: 1 bit is half the operations, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "the exact credit bounds the median of the instances pooled over the measured sizes, not the gap at any one size",
+  "1 instance(s) that the baseline itself did not solve are left out of every gap (its cost there is unmeasured)",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": 0.174886,
+ "mean_bits_varying_sizes": 0.174886,
+ "median_bits_a_below_b": 0.164018,
+ "metric": "ops",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": null,
+ "paired": 16,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "sign_test_p": 0.004180908203125,
+ "sign_test_pairs": 16,
+ "sizes": {
+  "16": {
+   "a_cheaper": 2,
+   "a_solved": 4,
+   "b_cheaper": 2,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": -0.059049,
+   "ties": 0
+  },
+  "24": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": 0.138173,
+   "ties": 0
+  },
+  "32": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": 0.246936,
+   "ties": 0
+  },
+  "40": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": 0.418438,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [
+  "24",
+  "32",
+  "40"
+ ],
+ "sizes_where_b_cheaper": [],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "A used fewer operations than B",
+ "vs_baseline_exact": {
+  "a": {
+   "instances": 15,
+   "lower95_median_bits": 8.61078,
+   "median_bits": 8.896586
+  },
+  "b": {
+   "instances": 15,
+   "lower95_median_bits": 8.344927,
+   "median_bits": 8.728934
+  }
+ }
+}

@@ -1,0 +1,236 @@
+{
+ "a": "aipar_span_hillis.py",
+ "a_below_baseline_median_bits": 2.724397,
+ "a_cheaper": 16,
+ "b": "aipar_span_blelloch.py",
+ "b_below_baseline_median_bits": 1.205362,
+ "b_cheaper": 0,
+ "baseline": "aipar_span_ref.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": null,
+ "bootstrap_seed": 10717369772827403908,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per size (costs do not vary within a size)",
+ "family": "aipar",
+ "fixed_cost_sizes": {
+  "128": "A",
+  "256": "A",
+  "512": "A",
+  "64": "A"
+ },
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "ecb3da3f033f23bede0a4c40924fe7e7687b59d37e056bcab1d6d0abcf55a6f2",
+  "dbb1ed6351f68b19b91613e98a216effc8f9d4fadbb3dcf098668bbc641e4513",
+  "14a7ac854f7e4971c989351e66c54308521fd7d8567cc97eaafbfad1d6466fc5"
+ ],
+ "instances": 16,
+ "limits": [
+  "A count is not a time. Operations and depth are an accounting convention over shapes and data dependencies on an idealised machine of P identical processors (no communication, synchronisation, load imbalance or memory contention), exactly reproducible by anyone, so they can show 'A can be made faster than B once there are enough processors' and cannot show how fast either runs on any real device. Depth is a conservative bound: per-tensor granularity and the host rule can only overstate it. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A's critical path is the smaller: 1 bit is half, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "span is the depth of the tensor operations plus the solver's own Python instructions, one for one (they run one after another): it is the length of the critical path of an idealised machine, so the operations gap beside it matters, because a shorter path is usually bought with more total work",
+  "the processor counts compare each run's exact work, depth and Python steps on an idealised machine of identical processors (Brent's bounds): no communication, synchronisation, load imbalance or memory contention is modelled, and 'certainly faster' means every machine the model covers, not any real device",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": 1.517225,
+ "mean_bits_varying_sizes": null,
+ "median_bits_a_below_b": 1.519035,
+ "metric": "span",
+ "neither_solved": 0,
+ "only_a_solved": 0,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": -0.642987,
+ "paired": 16,
+ "parallel": {
+  "a_certain_from_p": 512,
+  "b_certain_from_p": null,
+  "overall": {
+   "1": "B",
+   "1024": "A",
+   "1048576": "A",
+   "16": "mixed",
+   "16384": "A",
+   "256": "mixed",
+   "4": "B",
+   "4096": "A",
+   "64": "mixed",
+   "65536": "A"
+  },
+  "sizes": {
+   "128": {
+    "a": {
+     "depth": 24,
+     "flops": 94192,
+     "steps": 454
+    },
+    "a_first_certain_p": 128,
+    "b": {
+     "depth": 46,
+     "flops": 61456,
+     "steps": 1317
+    },
+    "b_first_certain_p": null,
+    "processors": {
+     "1": "B",
+     "1024": "A",
+     "1048576": "A",
+     "16": "B",
+     "16384": "A",
+     "256": "A",
+     "4": "B",
+     "4096": "A",
+     "64": "undecided",
+     "65536": "A"
+    }
+   },
+   "256": {
+    "a": {
+     "depth": 27,
+     "flops": 200688,
+     "steps": 509
+    },
+    "a_first_certain_p": 256,
+    "b": {
+     "depth": 52,
+     "flops": 122912,
+     "steps": 1492
+    },
+    "b_first_certain_p": null,
+    "processors": {
+     "1": "B",
+     "1024": "A",
+     "1048576": "A",
+     "16": "B",
+     "16384": "A",
+     "256": "A",
+     "4": "B",
+     "4096": "A",
+     "64": "undecided",
+     "65536": "A"
+    }
+   },
+   "512": {
+    "a": {
+     "depth": 30,
+     "flops": 425968,
+     "steps": 564
+    },
+    "a_first_certain_p": 512,
+    "b": {
+     "depth": 58,
+     "flops": 245808,
+     "steps": 1667
+    },
+    "b_first_certain_p": null,
+    "processors": {
+     "1": "B",
+     "1024": "A",
+     "1048576": "A",
+     "16": "B",
+     "16384": "A",
+     "256": "undecided",
+     "4": "B",
+     "4096": "A",
+     "64": "B",
+     "65536": "A"
+    }
+   },
+   "64": {
+    "a": {
+     "depth": 21,
+     "flops": 44016,
+     "steps": 399
+    },
+    "a_first_certain_p": 64,
+    "b": {
+     "depth": 40,
+     "flops": 30720,
+     "steps": 1142
+    },
+    "b_first_certain_p": null,
+    "processors": {
+     "1": "B",
+     "1024": "A",
+     "1048576": "A",
+     "16": "undecided",
+     "16384": "A",
+     "256": "A",
+     "4": "B",
+     "4096": "A",
+     "64": "A",
+     "65536": "A"
+    }
+   }
+  },
+  "statement": "A is certainly faster than B at every measured size from 512 processor(s) up (A's upper bound below B's lower bound), and B is not, below it; at 1 processor B is certainly faster instead"
+ },
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "sign_test_p": null,
+ "sign_test_pairs": 0,
+ "sizes": {
+  "128": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": 1.511703,
+   "ties": 0
+  },
+  "256": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": 1.526368,
+   "ties": 0
+  },
+  "512": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": 1.538062,
+   "ties": 0
+  },
+  "64": {
+   "a_cheaper": 4,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 4,
+   "both_solved": 4,
+   "costs_are_fixed": true,
+   "instances": 4,
+   "median_bits_a_below_b": 1.492769,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [
+  "64",
+  "128",
+  "256",
+  "512"
+ ],
+ "sizes_where_b_cheaper": [],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "A used a shorter critical path than B at every measured size (4); but that side did 1.56x more total operations: a shorter critical path is bought with extra work, so it wins only with enough processors (see the processor counts below, computed exactly from the work and the span)",
+ "vs_baseline_exact": null
+}

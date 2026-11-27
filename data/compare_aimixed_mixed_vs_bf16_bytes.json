@@ -1,0 +1,119 @@
+{
+ "a": "aimixed_mem_mixed.py",
+ "a_below_baseline_median_bits": 1.637845,
+ "a_cheaper": 0,
+ "b": "aimixed_mem3_bf16.py",
+ "b_below_baseline_median_bits": 1.518579,
+ "b_cheaper": 2,
+ "baseline": "aimixed_mem_ref.py",
+ "baseline_unsolved": 0,
+ "bootstrap95_mean_bits": [
+  -0.087373,
+  -0.087373
+ ],
+ "bootstrap_seed": 4206044270651177836,
+ "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+ "evidence": "per instance",
+ "family": "aimixed",
+ "fixed_cost_sizes": {},
+ "format": "svp-tflops-comparison-v1",
+ "from": [
+  "b17a2a030bb00fba8e003ac237da46eb6cd3513dbca85bfd2e0a8f27210ade0d",
+  "6fdddfee74085c7fc65c710998e4c14bbf4a1d740f1bad9cd24c3960205bf253",
+  "f69f1b5e86c333d72d9f679a5d5028f3b2eff61ce6b35b834dabb4d57d824e2e"
+ ],
+ "instances": 12,
+ "limits": [
+  "A count is not a time. Operations, bytes and peak memory are an accounting convention over shapes and declared precisions (no cache, no fusion, no kernel or hardware measurement), exactly reproducible by anyone, so they can show 'N times fewer operations / bytes / memory' and cannot show 'faster'. int8 is symmetric absolute-maximum scaling with fp32 scales and 32-bit accumulation, not a model of any integer kernel (no zero-points, sub-8-bit or per-group formats), and whether a real device has a fast int8 path is not in the count. The ladder is the prover's unless it was fixed in advance.",
+  "a positive gap means A's bytes moved is the smaller: 1 bit is half, 3 bits an eighth",
+  "instances a solver did not solve are left out of the gap and counted separately; if one solver fails where the other solves, that failure is not in the bits",
+  "a size where both solvers cost exactly the same on every instance (a fixed number of steps) is one exact fact about that size, not many samples: it carries no p-value, and nothing is said about sizes that were not measured",
+  "the sign test and the bootstrap interval use only the sizes where costs vary between instances",
+  "bytes and peak memory are counted only for tensor operations: arithmetic done in the solver's own Python moves no counted bytes (it pays in operations instead), so a bytes or peak verdict is only meaningful beside the operations gap",
+  "the roofline line compares each run's exact per-operation flops and bytes under the counting convention (no cache, no fusion), assuming operations run one after another: it is not a measurement, real kernels can fall short of it, fuse what the count does not or overlap, launch overhead is not modelled, and the host's Python steps are not tensor work",
+  "the ladders used the public practice seed, so the hidden parts of every instance (the teacher and the test set) can be computed by anyone: this shows the method, not a certified result",
+  "the ladders were not required to match a plan committed in advance (--plan), so the sizes and instances were the prover's choice",
+  "the ladders were checked for internal consistency and EVERY record of all three was re-executed here with identical counts"
+ ],
+ "mean_bits_a_below_b": -0.087373,
+ "mean_bits_varying_sizes": -0.087373,
+ "median_bits_a_below_b": -0.087373,
+ "metric": "bytes",
+ "neither_solved": 0,
+ "only_a_solved": 10,
+ "only_b_solved": 0,
+ "ops_gap_median_bits": -0.020282,
+ "paired": 2,
+ "plan_hash": null,
+ "practice_seed": true,
+ "python": "cpython 3.14.0",
+ "reexecuted": true,
+ "rerun": "all",
+ "roofline": {
+  "crossovers": [],
+  "faster_at_high_balance": "B",
+  "faster_at_low_balance": "B",
+  "instances": 2,
+  "kernels": [
+   170012,
+   160012
+  ],
+  "lower_bound_from_totals": "B dominates",
+  "model": "sequential",
+  "relation": "B dominates",
+  "relations": {
+   "B dominates": 2
+  },
+  "sizes": {
+   "16": {
+    "B dominates": 2
+   }
+  },
+  "statement": "B is at least as fast as A on every roofline device at every paired instance (kernels run one after another, each limited by the larger of its compute time and its memory time; launch overhead is not modelled)"
+ },
+ "sign_test_p": 0.5,
+ "sign_test_pairs": 2,
+ "sizes": {
+  "16": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 2,
+   "b_solved": 2,
+   "both_solved": 2,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": -0.087373,
+   "ties": 0
+  },
+  "32": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 0,
+   "both_solved": 0,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": null,
+   "ties": 0
+  },
+  "48": {
+   "a_cheaper": 0,
+   "a_solved": 4,
+   "b_cheaper": 0,
+   "b_solved": 0,
+   "both_solved": 0,
+   "costs_are_fixed": false,
+   "instances": 4,
+   "median_bits_a_below_b": null,
+   "ties": 0
+  }
+ },
+ "sizes_where_a_cheaper": [],
+ "sizes_where_b_cheaper": [
+  "16"
+ ],
+ "ties": 0,
+ "unit_ops": 10000000,
+ "verdict": "neither is shown to use fewer bytes moved; A also solved 10 more instance(s) than the other",
+ "vs_baseline_exact": null
+}

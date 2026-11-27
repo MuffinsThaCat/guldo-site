@@ -1,0 +1,10 @@
+{"meta": true, "solver": "aikfac_flops_shampoo.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 1500.0, "family": "aikfac", "sandbox": "tflops", "instance_version": "aikfac-v1", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "9bc8e22cd6f67876bc1aaf447277e67d3e7c6138ead07140b8d118fe2c690293", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "2cc5cc51ea14cd96d7b9a846f51fa997e92ba54e08d168c8e29a6dcfbec6eedd"}
+{"id": "16:0", "dim": 16, "wall": 0.12458992004394531, "steps": 58296, "flops": 16196488, "status": "solved", "cpu": 1.6254784, "cpu_net": 1.6254784}
+{"id": "16:1", "dim": 16, "wall": 0.1224520206451416, "steps": 57776, "flops": 15459848, "status": "solved", "cpu": 1.5517624, "cpu_net": 1.5517624}
+{"id": "16:2", "dim": 16, "wall": 0.14692211151123047, "steps": 58192, "flops": 16049160, "status": "solved", "cpu": 1.6107352, "cpu_net": 1.6107352}
+{"id": "24:0", "dim": 24, "wall": 0.14837121963500977, "steps": 89692, "flops": 41072456, "status": "solved", "cpu": 4.1162148, "cpu_net": 4.1162148}
+{"id": "24:1", "dim": 24, "wall": 0.2379169464111328, "steps": 89588, "flops": 40750088, "status": "solved", "cpu": 4.0839676, "cpu_net": 4.0839676}
+{"id": "24:2", "dim": 24, "wall": 0.23429298400878906, "steps": 90524, "flops": 43651400, "status": "solved", "cpu": 4.3741924, "cpu_net": 4.3741924}
+{"id": "32:0", "dim": 32, "wall": 0.19057583808898926, "steps": 127952, "flops": 83809800, "status": "solved", "cpu": 8.3937752, "cpu_net": 8.3937752}
+{"id": "32:1", "dim": 32, "wall": 0.15146398544311523, "steps": 127760, "flops": 83283720, "status": "solved", "cpu": 8.341148, "cpu_net": 8.341148}
+{"id": "32:2", "dim": 32, "wall": 0.16347479820251465, "steps": 127120, "flops": 79289864, "status": "solved", "cpu": 7.9416984, "cpu_net": 7.9416984}

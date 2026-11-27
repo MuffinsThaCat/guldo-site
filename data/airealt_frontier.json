@@ -1,0 +1,249 @@
+{
+ "agreement_bar": 0.98,
+ "format": "svp-airealt-frontier-v1",
+ "n": 8,
+ "queries": 128,
+ "results": {
+  "bf16:24": {
+   "acc_mean": 0.474609375,
+   "agree_mean": 0.9619140625,
+   "agree_worst": 0.953125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.25379242505072597,
+   "median_ops_bits_vs_dense": -0.016811217800586777,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "bf16:32": {
+   "acc_mean": 0.53125,
+   "agree_mean": 0.98046875,
+   "agree_worst": 0.9765625,
+   "cleared": 3,
+   "median_bytes_bits_vs_dense": 0.2416084310928642,
+   "median_ops_bits_vs_dense": -0.013659682181143903,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "bf16:40": {
+   "acc_mean": 0.55078125,
+   "agree_mean": 0.974609375,
+   "agree_worst": 0.96875,
+   "cleared": 1,
+   "median_bytes_bits_vs_dense": 0.23246975587797683,
+   "median_ops_bits_vs_dense": -0.011474858716121835,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "dense:24": {
+   "acc_mean": 0.4775390625,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "dense:32": {
+   "acc_mean": 0.5341796875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "dense:40": {
+   "acc_mean": 0.5576171875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "fp8:24": {
+   "acc_mean": 0.4541015625,
+   "agree_mean": 0.7880859375,
+   "agree_worst": 0.7109375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.17205717651538352,
+   "median_ops_bits_vs_dense": -0.016811217800586777,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "fp8:32": {
+   "acc_mean": 0.5078125,
+   "agree_mean": 0.8447265625,
+   "agree_worst": 0.8046875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.16549485748194773,
+   "median_ops_bits_vs_dense": -0.013659682181143903,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "fp8:40": {
+   "acc_mean": 0.5419921875,
+   "agree_mean": 0.857421875,
+   "agree_worst": 0.796875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.16055347522450283,
+   "median_ops_bits_vs_dense": -0.011474858716121835,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "heads50:24": {
+   "acc_mean": 0.23046875,
+   "agree_mean": 0.3427734375,
+   "agree_worst": 0.265625,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.450659783175318,
+   "median_ops_bits_vs_dense": 0.3773098867491747,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "heads50:32": {
+   "acc_mean": 0.2470703125,
+   "agree_mean": 0.34765625,
+   "agree_worst": 0.28125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.3894465495349322,
+   "median_ops_bits_vs_dense": 0.34887780874129265,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "heads50:40": {
+   "acc_mean": 0.2119140625,
+   "agree_mean": 0.25,
+   "agree_worst": 0.2109375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.3453057177395214,
+   "median_ops_bits_vs_dense": 0.3315949283816937,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "lastpos:24": {
+   "acc_mean": 0.4775390625,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.742635130227262,
+   "median_ops_bits_vs_dense": 0.7711998935844194,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "lastpos:32": {
+   "acc_mean": 0.5341796875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.7152650828511322,
+   "median_ops_bits_vs_dense": 0.7643961955454943,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "lastpos:40": {
+   "acc_mean": 0.5576171875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.6949971411605838,
+   "median_ops_bits_vs_dense": 0.7603832290275707,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "lookup:24": {
+   "acc_mean": 0.48046875,
+   "agree_mean": 0.8857421875,
+   "agree_worst": 0.828125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 27.86349060613505,
+   "median_ops_bits_vs_dense": 7.401401512198758,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "lookup:32": {
+   "acc_mean": 0.541015625,
+   "agree_mean": 0.8798828125,
+   "agree_worst": 0.8671875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 28.090130515281317,
+   "median_ops_bits_vs_dense": 8.121200727787086,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "lookup:40": {
+   "acc_mean": 0.576171875,
+   "agree_mean": 0.8974609375,
+   "agree_worst": 0.8828125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 28.286241884816043,
+   "median_ops_bits_vs_dense": 8.699355298725667,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "mlp50:24": {
+   "acc_mean": 0.126953125,
+   "agree_mean": 0.1923828125,
+   "agree_worst": 0.1640625,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.11382573474271772,
+   "median_ops_bits_vs_dense": 0.41958720933171423,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "mlp50:32": {
+   "acc_mean": 0.2001953125,
+   "agree_mean": 0.24609375,
+   "agree_worst": 0.1875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.1296279229229267,
+   "median_ops_bits_vs_dense": 0.45604944113666235,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "mlp50:40": {
+   "acc_mean": 0.1708984375,
+   "agree_mean": 0.19921875,
+   "agree_worst": 0.125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.1411443667270076,
+   "median_ops_bits_vs_dense": 0.47950600947564026,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  },
+  "sp50:24": {
+   "acc_mean": 0.4208984375,
+   "agree_mean": 0.703125,
+   "agree_worst": 0.6640625,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.0006134814593977058,
+   "median_ops_bits_vs_dense": 0.6700476725778978,
+   "n": 8,
+   "net_acc_mean": 0.4775390625
+  },
+  "sp50:32": {
+   "acc_mean": 0.4765625,
+   "agree_mean": 0.7548828125,
+   "agree_worst": 0.6953125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.0009274300435066018,
+   "median_ops_bits_vs_dense": 0.7397461553139996,
+   "n": 8,
+   "net_acc_mean": 0.5341796875
+  },
+  "sp50:40": {
+   "acc_mean": 0.533203125,
+   "agree_mean": 0.7939453125,
+   "agree_worst": 0.734375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 0.001260864436832496,
+   "median_ops_bits_vs_dense": 0.7854651614260671,
+   "n": 8,
+   "net_acc_mean": 0.5576171875
+  }
+ },
+ "seed": "airealt-frontier-seed"
+}

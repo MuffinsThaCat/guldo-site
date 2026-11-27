@@ -1,0 +1,729 @@
+{
+ "format": "svp-gpu-bench-v1",
+ "header": {
+  "family": "aigpu",
+  "device": "mps",
+  "device_label": "Apple GPU via MPS (arm64, macOS 15.3.1)",
+  "torch": "2.14.1",
+  "python": "cpython 3.14.0",
+  "platform": "macOS-15.3.1-arm64-arm-64bit-Mach-O",
+  "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2",
+  "practice_seed": true,
+  "reps": 7,
+  "warm_runs": 2,
+  "instance_version": "aigpu-v1",
+  "decl_sha256": "63acb7fe7f1e5ea0c860bf8c8888fd8a391e3b7a3bcda5e54392d276274a5f38",
+  "baseline": "aigpu_gpu_ref.py",
+  "overhead": "aigpu_gpu_noop.py",
+  "solver_sha256": {
+   "aigpu_gpu_ref.py": "04f14f42111a67144b6450eedba6565c581d46c9ad143d8476dc04f54f87a17e",
+   "aigpu_gpu_noop.py": "c92d83397144c9832a186bc9c32a27fc6491ec17d51097a55b8c0f9227289b9c",
+   "aigpu_gpu_batched.py": "4dc98405b4381966283ff8412856a18f288967cd5dcaf3397a74073deaacae7c",
+   "aigpu_gpu_sdpa.py": "bee74ca8191361a6bed6acd2756ce94ec92852304b820d6ff26e9002fab91dbc",
+   "aigpu_gpu_sdpa16.py": "267c804ac66ec815188ea7e01fd44afc77c6c0322c4741735fcca2920879d014",
+   "aigpu_gpu_window.py": "a4cb6f6acadb25be9867c1d8f1a2cf6b32ec1ad0b9064338424acd4f4a428b0c"
+  },
+  "sizes": [
+   1024,
+   2048,
+   4096
+  ],
+  "n": 2
+ },
+ "records": [
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    5.6547,
+    5.3813,
+    4.8952,
+    4.8114,
+    5.226,
+    5.9062,
+    5.109
+   ],
+   "median_ms": 5.226,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    3.9285,
+    6.0944,
+    3.8872,
+    6.4223,
+    4.3506,
+    3.9554,
+    3.8024
+   ],
+   "median_ms": 3.9554,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    4.5108,
+    5.7865,
+    4.1623,
+    3.7147,
+    3.832,
+    3.6033,
+    3.4936
+   ],
+   "median_ms": 3.832,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    5.4294,
+    6.659,
+    4.8281,
+    4.344,
+    4.781,
+    4.4683,
+    4.1899
+   ],
+   "median_ms": 4.781,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    2.2974,
+    2.2532,
+    2.6435,
+    2.2918,
+    2.2816,
+    2.167,
+    2.056
+   ],
+   "median_ms": 2.2816,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 1024,
+   "idx": 0,
+   "ms": [
+    2.883,
+    2.6139,
+    2.4089,
+    2.4823,
+    2.4311,
+    2.3752,
+    2.4282
+   ],
+   "median_ms": 2.4311,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    4.053,
+    3.5421,
+    4.2641,
+    3.5703,
+    3.7874,
+    3.6346,
+    3.9255
+   ],
+   "median_ms": 3.7874,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    5.2705,
+    5.1502,
+    4.9322,
+    4.5209,
+    5.4163,
+    4.822,
+    3.7447
+   ],
+   "median_ms": 4.9322,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    3.8689,
+    6.5367,
+    4.7794,
+    3.8755,
+    4.6777,
+    3.8065,
+    4.9882
+   ],
+   "median_ms": 4.6777,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    2.9397,
+    2.5735,
+    7.3425,
+    4.4359,
+    2.7677,
+    2.4776,
+    4.9625
+   ],
+   "median_ms": 2.9397,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    2.682,
+    2.9054,
+    2.7257,
+    2.4881,
+    2.1395,
+    3.1674,
+    2.5561
+   ],
+   "median_ms": 2.682,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 1024,
+   "idx": 1,
+   "ms": [
+    3.9885,
+    4.7761,
+    3.976,
+    3.7513,
+    3.7522,
+    3.6396,
+    3.9886
+   ],
+   "median_ms": 3.976,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    6.1485,
+    8.366,
+    5.1256,
+    4.445,
+    5.0649,
+    4.6454,
+    5.0487
+   ],
+   "median_ms": 5.0649,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    4.9461,
+    2.6605,
+    2.2433,
+    2.3239,
+    2.7804,
+    2.5386,
+    2.7045
+   ],
+   "median_ms": 2.6605,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    3.1449,
+    3.2011,
+    3.9612,
+    3.2626,
+    3.4872,
+    4.3719,
+    3.7027
+   ],
+   "median_ms": 3.4872,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    3.398,
+    3.5173,
+    7.3345,
+    3.9673,
+    6.587,
+    3.2113,
+    3.0742
+   ],
+   "median_ms": 3.5173,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    6.2293,
+    6.4434,
+    7.2375,
+    6.8772,
+    6.3195,
+    5.9673,
+    5.6665
+   ],
+   "median_ms": 6.3195,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 2048,
+   "idx": 0,
+   "ms": [
+    4.2447,
+    3.3262,
+    5.8441,
+    3.4864,
+    3.1747,
+    4.3019,
+    3.9818
+   ],
+   "median_ms": 3.9818,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    4.6496,
+    9.2286,
+    4.1195,
+    3.6863,
+    3.9242,
+    3.7461,
+    3.7439
+   ],
+   "median_ms": 3.9242,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    5.9245,
+    3.44,
+    3.2452,
+    3.3861,
+    3.1819,
+    3.4673,
+    3.6815
+   ],
+   "median_ms": 3.44,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    8.6146,
+    4.1505,
+    4.6254,
+    4.4899,
+    3.1117,
+    3.3148,
+    3.0869
+   ],
+   "median_ms": 4.1505,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    6.0832,
+    5.7848,
+    6.0163,
+    5.2634,
+    5.1283,
+    5.6372,
+    6.047
+   ],
+   "median_ms": 5.7848,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    9.8949,
+    4.6604,
+    4.7013,
+    5.636,
+    5.5958,
+    4.3989,
+    4.4437
+   ],
+   "median_ms": 4.7013,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 2048,
+   "idx": 1,
+   "ms": [
+    4.0933,
+    7.3633,
+    4.8924,
+    3.8044,
+    16.5132,
+    12.1095,
+    4.2968
+   ],
+   "median_ms": 4.8924,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    4.8286,
+    5.2166,
+    4.1827,
+    3.6606,
+    3.6357,
+    3.7215,
+    4.022
+   ],
+   "median_ms": 4.022,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    6.4301,
+    7.3949,
+    7.5662,
+    6.6213,
+    6.3495,
+    6.3768,
+    6.9512
+   ],
+   "median_ms": 6.6213,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    3.7812,
+    4.0154,
+    4.9476,
+    4.208,
+    4.2029,
+    5.3355,
+    4.6202
+   ],
+   "median_ms": 4.208,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    7.0791,
+    7.0655,
+    7.4919,
+    7.0691,
+    7.0073,
+    8.0866,
+    7.0868
+   ],
+   "median_ms": 7.0791,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    14.1214,
+    14.3172,
+    14.6422,
+    14.0321,
+    14.2196,
+    13.7935,
+    14.1185
+   ],
+   "median_ms": 14.1214,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 4096,
+   "idx": 0,
+   "ms": [
+    13.667,
+    13.9185,
+    14.2312,
+    13.8207,
+    14.031,
+    14.2928,
+    13.9483
+   ],
+   "median_ms": 13.9483,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_batched.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    19.354,
+    14.4185,
+    14.4082,
+    14.4465,
+    14.0989,
+    14.2562,
+    13.8145
+   ],
+   "median_ms": 14.4082,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_sdpa16.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    16.0793,
+    7.6692,
+    7.1093,
+    6.7982,
+    6.6238,
+    6.7326,
+    6.2777
+   ],
+   "median_ms": 6.7982,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_noop.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    5.0243,
+    5.6998,
+    5.1389,
+    4.7563,
+    4.94,
+    4.6383,
+    4.6976
+   ],
+   "median_ms": 4.94,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_sdpa.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    17.9238,
+    7.7643,
+    7.109,
+    6.9108,
+    6.7963,
+    7.2674,
+    7.7769
+   ],
+   "median_ms": 7.2674,
+   "correct": true
+  },
+  {
+   "solver": "aigpu_gpu_window.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    5.7988,
+    5.4245,
+    5.8147,
+    5.2438,
+    3.8843,
+    3.655,
+    3.6876
+   ],
+   "median_ms": 5.2438,
+   "correct": false
+  },
+  {
+   "solver": "aigpu_gpu_ref.py",
+   "size": 4096,
+   "idx": 1,
+   "ms": [
+    21.6247,
+    14.0749,
+    14.0952,
+    15.8327,
+    15.0965,
+    16.2344,
+    14.134
+   ],
+   "median_ms": 15.0965,
+   "correct": true
+  }
+ ],
+ "summary": {
+  "aigpu_gpu_batched.py": {
+   "1024": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 4.7294,
+    "median_bits_faster_than_baseline": 0.1024,
+    "median_bits_net_of_overhead": 0.2048,
+    "median_overhead_ms": 2.4818
+   },
+   "2048": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 4.8831,
+    "median_bits_faster_than_baseline": 0.3092,
+    "median_bits_net_of_overhead": 1.0022,
+    "median_overhead_ms": 3.7109
+   },
+   "4096": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 14.1783,
+    "median_bits_faster_than_baseline": 0.0426,
+    "median_bits_net_of_overhead": 0.0631,
+    "median_overhead_ms": 4.481
+   }
+  },
+  "aigpu_gpu_sdpa.py": {
+   "1024": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 3.9657,
+    "median_bits_faster_than_baseline": 0.3564,
+    "median_bits_net_of_overhead": 0.8065,
+    "median_overhead_ms": 2.4818
+   },
+   "2048": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 4.1898,
+    "median_bits_faster_than_baseline": 0.5497,
+    "median_bits_net_of_overhead": 0.691,
+    "median_overhead_ms": 3.44
+   },
+   "4096": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 7.1733,
+    "median_bits_faster_than_baseline": 1.0255,
+    "median_bits_net_of_overhead": 1.9248,
+    "median_overhead_ms": 4.481
+   }
+  },
+  "aigpu_gpu_sdpa16.py": {
+   "1024": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 3.8097,
+    "median_bits_faster_than_baseline": 0.4143,
+    "median_bits_net_of_overhead": 0.9754,
+    "median_overhead_ms": 2.4818
+   },
+   "2048": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 3.8339,
+    "median_bits_faster_than_baseline": 0.6622,
+    "median_bits_net_of_overhead": 1.7226,
+    "median_overhead_ms": 3.44
+   },
+   "4096": {
+    "instances": 2,
+    "rejected": 0,
+    "compared": 2,
+    "median_ms": 6.7097,
+    "median_bits_faster_than_baseline": 1.1218,
+    "median_bits_net_of_overhead": 2.2043,
+    "median_overhead_ms": 4.481
+   }
+  },
+  "aigpu_gpu_window.py": {
+   "1024": {
+    "instances": 2,
+    "rejected": 2,
+    "compared": 0,
+    "median_ms": null,
+    "median_bits_faster_than_baseline": null,
+    "median_bits_net_of_overhead": null,
+    "median_overhead_ms": null
+   },
+   "2048": {
+    "instances": 2,
+    "rejected": 2,
+    "compared": 0,
+    "median_ms": null,
+    "median_bits_faster_than_baseline": null,
+    "median_bits_net_of_overhead": null,
+    "median_overhead_ms": null
+   },
+   "4096": {
+    "instances": 2,
+    "rejected": 2,
+    "compared": 0,
+    "median_ms": null,
+    "median_bits_faster_than_baseline": null,
+    "median_bits_net_of_overhead": null,
+    "median_overhead_ms": null
+   }
+  }
+ }
+}

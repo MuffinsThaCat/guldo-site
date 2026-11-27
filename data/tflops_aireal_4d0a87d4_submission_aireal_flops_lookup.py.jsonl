@@ -1,0 +1,19 @@
+{"meta": true, "solver": "aireal_flops_lookup.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 800.0, "family": "aireal", "sandbox": "tflops", "instance_version": "aireal-v3", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "752455bee562f2f71c6890aff8241e3f8ef0150d6768e1c1e5fa722d9cf579d1", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "126b1d43bfd11415012927d101f138fdab7f72c3bb8460f1073278dfe8226a7a"}
+{"id": "16:0", "dim": 16, "wall": 0.09621620178222656, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "16:1", "dim": 16, "wall": 0.1133580207824707, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "16:2", "dim": 16, "wall": 0.11113595962524414, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "16:3", "dim": 16, "wall": 0.12675690650939941, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "16:4", "dim": 16, "wall": 0.11232495307922363, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "16:5", "dim": 16, "wall": 0.12753677368164062, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:0", "dim": 32, "wall": 0.1083059310913086, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:1", "dim": 32, "wall": 0.08766627311706543, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:2", "dim": 32, "wall": 0.09564375877380371, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:3", "dim": 32, "wall": 0.09868478775024414, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:4", "dim": 32, "wall": 0.10604500770568848, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "32:5", "dim": 32, "wall": 0.10984182357788086, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:0", "dim": 48, "wall": 0.11394476890563965, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:1", "dim": 48, "wall": 0.08817195892333984, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:2", "dim": 48, "wall": 0.10025787353515625, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:3", "dim": 48, "wall": 0.09222888946533203, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:4", "dim": 48, "wall": 0.10726189613342285, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}
+{"id": "48:5", "dim": 48, "wall": 0.08721089363098145, "steps": 3198, "flops": 0, "status": "wrong", "cpu": 800.0, "cpu_net": 800.0}

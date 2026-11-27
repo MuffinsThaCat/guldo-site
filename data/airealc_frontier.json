@@ -1,0 +1,189 @@
+{
+ "agreement_bar": 0.98,
+ "format": "svp-airealc-frontier-v1",
+ "n": 8,
+ "queries": 128,
+ "results": {
+  "bf16:16": {
+   "acc_mean": 0.880859375,
+   "agree_mean": 0.9970703125,
+   "agree_worst": 0.9921875,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.2995047795022376,
+   "median_ops_bits_vs_dense": -0.04710732803737963,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "bf16:32": {
+   "acc_mean": 0.890625,
+   "agree_mean": 0.9990234375,
+   "agree_worst": 0.9921875,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.435273079532906,
+   "median_ops_bits_vs_dense": -0.02871492210850272,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "bf16:48": {
+   "acc_mean": 0.8935546875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.5088162372486257,
+   "median_ops_bits_vs_dense": -0.02048299715007753,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  },
+  "dense:16": {
+   "acc_mean": 0.8798828125,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "dense:32": {
+   "acc_mean": 0.8896484375,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "dense:48": {
+   "acc_mean": 0.8935546875,
+   "agree_mean": 1.0,
+   "agree_worst": 1.0,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.0,
+   "median_ops_bits_vs_dense": 0.0,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  },
+  "fp8:16": {
+   "acc_mean": 0.876953125,
+   "agree_mean": 0.9912109375,
+   "agree_worst": 0.9765625,
+   "cleared": 7,
+   "median_bytes_bits_vs_dense": 0.20776477931193343,
+   "median_ops_bits_vs_dense": -0.04710732803737963,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "fp8:32": {
+   "acc_mean": 0.8916015625,
+   "agree_mean": 0.98828125,
+   "agree_worst": 0.984375,
+   "cleared": 8,
+   "median_bytes_bits_vs_dense": 0.2941117521594963,
+   "median_ops_bits_vs_dense": -0.02871492210850272,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "fp8:48": {
+   "acc_mean": 0.8857421875,
+   "agree_mean": 0.9873046875,
+   "agree_worst": 0.9765625,
+   "cleared": 7,
+   "median_bytes_bits_vs_dense": 0.339660229547491,
+   "median_ops_bits_vs_dense": -0.02048299715007753,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  },
+  "lookup:16": {
+   "acc_mean": 0.9609375,
+   "agree_mean": 0.8916015625,
+   "agree_worst": 0.8671875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 24.832669087043353,
+   "median_ops_bits_vs_dense": 2.2350038424997285,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "lookup:32": {
+   "acc_mean": 0.9658203125,
+   "agree_mean": 0.9052734375,
+   "agree_worst": 0.84375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 25.4067001574715,
+   "median_ops_bits_vs_dense": 3.77196360688992,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "lookup:48": {
+   "acc_mean": 0.982421875,
+   "agree_mean": 0.896484375,
+   "agree_worst": 0.875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": 25.81664073376167,
+   "median_ops_bits_vs_dense": 4.781950311599474,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  },
+  "prune50:16": {
+   "acc_mean": 0.7880859375,
+   "agree_mean": 0.81640625,
+   "agree_worst": 0.7421875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.017516224185713657,
+   "median_ops_bits_vs_dense": 0.22418477703820516,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "prune50:32": {
+   "acc_mean": 0.537109375,
+   "agree_mean": 0.6142578125,
+   "agree_worst": 0.484375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.02387592130189231,
+   "median_ops_bits_vs_dense": 0.22433762414506223,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "prune50:48": {
+   "acc_mean": 0.794921875,
+   "agree_mean": 0.84375,
+   "agree_worst": 0.8203125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.027368465767868454,
+   "median_ops_bits_vs_dense": 0.21867074609478845,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  },
+  "refit50:16": {
+   "acc_mean": 0.7041015625,
+   "agree_mean": 0.763671875,
+   "agree_worst": 0.6796875,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.3805633149768825,
+   "median_ops_bits_vs_dense": -0.16146925246282132,
+   "n": 8,
+   "net_acc_mean": 0.8798828125
+  },
+  "refit50:32": {
+   "acc_mean": 0.7060546875,
+   "agree_mean": 0.76171875,
+   "agree_worst": 0.734375,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.3294193091501383,
+   "median_ops_bits_vs_dense": -0.040288149298222074,
+   "n": 8,
+   "net_acc_mean": 0.8896484375
+  },
+  "refit50:48": {
+   "acc_mean": 0.724609375,
+   "agree_mean": 0.775390625,
+   "agree_worst": 0.703125,
+   "cleared": 0,
+   "median_bytes_bits_vs_dense": -0.3030147388316222,
+   "median_ops_bits_vs_dense": 0.020915107736013593,
+   "n": 8,
+   "net_acc_mean": 0.8935546875
+  }
+ },
+ "seed": "airealc-frontier-seed"
+}

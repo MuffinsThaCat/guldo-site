@@ -1,0 +1,10 @@
+{"meta": true, "solver": "aikfac_flops_kfac.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 1500.0, "family": "aikfac", "sandbox": "tflops", "instance_version": "aikfac-v1", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "11a51d973d9d5153a5e8eb1af360aa883f04615a1788cba572d3d32cc9c1b5e7", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "2cc5cc51ea14cd96d7b9a846f51fa997e92ba54e08d168c8e29a6dcfbec6eedd"}
+{"id": "16:0", "dim": 16, "wall": 0.0952298641204834, "steps": 45276, "flops": 3992448, "status": "solved", "cpu": 0.4037724, "cpu_net": 0.4037724}
+{"id": "16:1", "dim": 16, "wall": 0.0897979736328125, "steps": 45588, "flops": 4434432, "status": "solved", "cpu": 0.448002, "cpu_net": 0.448002}
+{"id": "16:2", "dim": 16, "wall": 0.08732891082763672, "steps": 45588, "flops": 4434432, "status": "solved", "cpu": 0.448002, "cpu_net": 0.448002}
+{"id": "24:0", "dim": 24, "wall": 0.09046673774719238, "steps": 67952, "flops": 9603008, "status": "solved", "cpu": 0.967096, "cpu_net": 0.967096}
+{"id": "24:1", "dim": 24, "wall": 0.08538699150085449, "steps": 67848, "flops": 9280640, "status": "solved", "cpu": 0.9348488, "cpu_net": 0.9348488}
+{"id": "24:2", "dim": 24, "wall": 0.08940982818603516, "steps": 68056, "flops": 9925376, "status": "solved", "cpu": 0.9993432, "cpu_net": 0.9993432}
+{"id": "32:0", "dim": 32, "wall": 0.08609795570373535, "steps": 93916, "flops": 17880576, "status": "solved", "cpu": 1.7974492, "cpu_net": 1.7974492}
+{"id": "32:1", "dim": 32, "wall": 0.09681105613708496, "steps": 93916, "flops": 17880576, "status": "solved", "cpu": 1.7974492, "cpu_net": 1.7974492}
+{"id": "32:2", "dim": 32, "wall": 0.10522794723510742, "steps": 93708, "flops": 16750592, "status": "solved", "cpu": 1.68443, "cpu_net": 1.68443}

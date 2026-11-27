@@ -1,0 +1,17 @@
+{"meta": true, "solver": "aisecond_flops_nesterov.py", "commit": "4d0a87d41f3806f518adcbfce4c96acfba65b6b9f377e44f8229ee6f720548e2", "overhead": 0.0, "budget": 800.0, "family": "aisecond", "sandbox": "tflops", "instance_version": "aisecond-v1", "image": null, "host": "analytic operation counting (no machine timing)", "cpu": "none: operation counts", "ncpu": 1, "jobs": 1, "solver_sha256": "8d7cf9a12a61f3c65b462286285c94ff655488add919c2b63b90d1fd66ce4a5d", "cost_model": "tflops", "unit_ops": 10000000, "python": "cpython 3.14.0", "counter_sha256": "3f61cc21fb1cfe539c4daf24a6f10106655077187e23164ee81a7d0c80416ff0", "decl_sha256": "4d44afbe64646415fb36cb2c1b4e63f0afcad6c03737f52b6e1cb80d7bbca953"}
+{"id": "16:0", "dim": 16, "wall": 0.1551821231842041, "steps": 38361, "flops": 11285392, "status": "solved", "cpu": 1.1323753, "cpu_net": 1.1323753}
+{"id": "16:1", "dim": 16, "wall": 0.13394379615783691, "steps": 41135, "flops": 12210480, "status": "solved", "cpu": 1.2251615, "cpu_net": 1.2251615}
+{"id": "16:2", "dim": 16, "wall": 0.12799596786499023, "steps": 41135, "flops": 12210480, "status": "solved", "cpu": 1.2251615, "cpu_net": 1.2251615}
+{"id": "16:3", "dim": 16, "wall": 0.2667982578277588, "steps": 41135, "flops": 12210480, "status": "solved", "cpu": 1.2251615, "cpu_net": 1.2251615}
+{"id": "24:0", "dim": 24, "wall": 0.13779306411743164, "steps": 58094, "flops": 36027840, "status": "solved", "cpu": 3.6085934, "cpu_net": 3.6085934}
+{"id": "24:1", "dim": 24, "wall": 0.13087105751037598, "steps": 56707, "flops": 35014536, "status": "solved", "cpu": 3.5071243, "cpu_net": 3.5071243}
+{"id": "24:2", "dim": 24, "wall": 0.1322617530822754, "steps": 58094, "flops": 36027840, "status": "solved", "cpu": 3.6085934, "cpu_net": 3.6085934}
+{"id": "24:3", "dim": 24, "wall": 0.13190579414367676, "steps": 59481, "flops": 37041144, "status": "solved", "cpu": 3.7100625, "cpu_net": 3.7100625}
+{"id": "32:0", "dim": 32, "wall": 0.14595794677734375, "steps": 76397, "flops": 79452064, "status": "solved", "cpu": 7.9528461, "cpu_net": 7.9528461}
+{"id": "32:1", "dim": 32, "wall": 0.13397574424743652, "steps": 76397, "flops": 79452064, "status": "solved", "cpu": 7.9528461, "cpu_net": 7.9528461}
+{"id": "32:2", "dim": 32, "wall": 0.1450328826904297, "steps": 79171, "flops": 83006176, "status": "solved", "cpu": 8.3085347, "cpu_net": 8.3085347}
+{"id": "32:3", "dim": 32, "wall": 0.14323091506958008, "steps": 77784, "flops": 81229120, "status": "solved", "cpu": 8.1306904, "cpu_net": 8.1306904}
+{"id": "40:0", "dim": 40, "wall": 0.19179415702819824, "steps": 94657, "flops": 145578440, "status": "solved", "cpu": 14.5673097, "cpu_net": 14.5673097}
+{"id": "40:1", "dim": 40, "wall": 0.17898964881896973, "steps": 97431, "flops": 151086040, "status": "solved", "cpu": 15.1183471, "cpu_net": 15.1183471}
+{"id": "40:2", "dim": 40, "wall": 0.16199398040771484, "steps": 94657, "flops": 145578440, "status": "solved", "cpu": 14.5673097, "cpu_net": 14.5673097}
+{"id": "40:3", "dim": 40, "wall": 0.17893004417419434, "steps": 97431, "flops": 151086040, "status": "solved", "cpu": 15.1183471, "cpu_net": 15.1183471}

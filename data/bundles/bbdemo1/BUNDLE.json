@@ -1,0 +1,21 @@
+{
+ "created": 1795807618.163,
+ "files": {
+  "certificates/e001.certificate.json": "87c912d9d54045674548a8809514103f42b5ad970578034339986eb9bb2a2d66",
+  "joint.json": "e56e970115be873edf8a7148c99afdfdcec41aa3de66f0cc28957eba5359456c",
+  "joint.revealed.json": "d4d4c19ad79514db3270664767ebba03b713662072f327ea69a8dc1174077ab0",
+  "registry.jsonl": "88bb9de7104b5a91afd28846ea15b1d7b031ec8d69b42253527a28ac9a3d20d6",
+  "round/agent-rounds/bbdemo1/bb/e001/arm.json": "0bcbb60bbcf6240f05035a0f1131c32ef763cd4a02327a84d6fec972a088b14e",
+  "round/agent-rounds/bbdemo1/bb/e001/journal.jsonl": "5f347e5292d376c7557dcc78526c79e3afbe5fc0d77535564ebd786edaff92a8",
+  "round/agent-rounds/bbdemo1/entries/e001.json": "8bf554396c57647d236de400d64fae4858957afb0c03f41dbdb648034255370f",
+  "round/agent-rounds/bbdemo1/ladders/baseline.jsonl": "e78a1f91ea8ad44ff08fafbd98a63efabb77b6900b7f7980df613a693b3fdafd",
+  "round/agent-rounds/bbdemo1/ladders/e001.jsonl": "5d797be2c260023fc8dfdbbe5007e64048d74ad0d4cc162f3a9ae3d598cc211b",
+  "round/agent-rounds/bbdemo1/log.jsonl": "7ebccba7445e50b48915c47067177c9aecd392c340358a10df3ba006aa745504",
+  "round/agent-rounds/bbdemo1/plan.json": "3a344ff9b8c36e2ab530fb34525bf33fd5b9d890eaba2f86c3eee3af3e5600b3",
+  "round/agent-rounds/bbdemo1/results.json": "3da4ab90b3838f2581c6894b009bfc8e2700061893f204fafb0314f723891886",
+  "round/agent-rounds/bbdemo1/round.json": "99b093b7ff1670ce1e61e1dde2b6cb76ad7ace356988844c44ce028ca888ff5c",
+  "round/agent-rounds/bbdemo1/seed.revealed": "d5888f5da00eb86e2d46d1882c14bbffc3b7ca92186b0bf82f9c0705299c8148"
+ },
+ "format": "guldo-agent-bundle-v1",
+ "round": "bbdemo1"
+}

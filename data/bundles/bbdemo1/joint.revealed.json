@@ -1,0 +1,9 @@
+{
+ "ceremony": "bbdemo1",
+ "format": "guldo-joint-seed-v1-revealed",
+ "shares": {
+  "operator": "08cf775fcc4ac2141ad20e51d6f722a1adaf239d5cb84d788799215503289586",
+  "vendor-acme": "d21b914f955bb3afd6011a13c1e701b437d483fa9bf57571f699bac36fba5ca3",
+  "verifier": "e89815905938e1aa30a1731998e9c693bc03728b9dc0d2899869a8730f88503e"
+ }
+}

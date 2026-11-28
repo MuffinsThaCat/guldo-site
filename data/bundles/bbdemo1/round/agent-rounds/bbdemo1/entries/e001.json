@@ -1,0 +1,12 @@
+{
+ "config": {
+  "agent": "blackbox:acme-agent",
+  "allow_tools": null,
+  "label": "acme-agent",
+  "system": null
+ },
+ "config_sha256": "000cffd67a4ed0e8eeb75ff57e945606f7d206065751f46481770a775e0b6e68",
+ "eid": "e001",
+ "entered": 1795807055.063136,
+ "handle": "acme-inc"
+}

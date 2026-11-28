@@ -1,0 +1,178 @@
+{
+ "signature": "1c55d6b74fc9f30a5ebfe99625462d26776b860150deeb40d9ebe64a7bdaf5570c35974d2669c8faad186cb1d6969fad4a501ec1272e827190865354795b740d",
+ "statement": {
+  "baseline": {
+   "config": {
+    "agent": "compat:qwen2.5:3b",
+    "allow_tools": null,
+    "label": "whitebox-bare",
+    "system": null
+   },
+   "digest": "d71335a661de2c775d26844f0531d773e72415a81b97e0e562164de9a09727e6",
+   "label": "whitebox-bare",
+   "ladder_sha256": "e78a1f91ea8ad44ff08fafbd98a63efabb77b6900b7f7980df613a693b3fdafd"
+  },
+  "candidate": {
+   "config": {
+    "agent": "blackbox:acme-agent",
+    "allow_tools": null,
+    "label": "acme-agent",
+    "system": null
+   },
+   "config_sha256": "000cffd67a4ed0e8eeb75ff57e945606f7d206065751f46481770a775e0b6e68",
+   "digest": "029780a1482253eda6468d30b8f358655d3ecbcb2fd4e028a9f90103cce91e9a",
+   "eid": "e001",
+   "handle": "acme-inc",
+   "label": "acme-agent",
+   "ladder_sha256": "5d797be2c260023fc8dfdbbe5007e64048d74ad0d4cc162f3a9ae3d598cc211b"
+  },
+  "claim_thresholds": {
+   "min_factor": null,
+   "min_solve_rate": 0.5
+  },
+  "claims": [
+   {
+    "confirmed": false,
+    "text": "candidate solves at least 0.5 of instances (95% one-sided lower bound)"
+   }
+  ],
+  "comparison": {
+   "baseline": {
+    "agent": {
+     "effort": null,
+     "endpoint": "127.0.0.1:11434",
+     "kind": "model",
+     "label": "whitebox-bare",
+     "model": "qwen2.5:3b",
+     "provider": "compat",
+     "spec": "compat:qwen2.5:3b"
+    },
+    "digest": "d71335a661de2c775d26844f0531d773e72415a81b97e0e562164de9a09727e6",
+    "summary": {
+     "agent": "whitebox-bare",
+     "agent_error_trials": 0,
+     "by_size": [
+      {
+       "instances": 8,
+       "median_tokens_on_solved": 4957.0,
+       "size": 200,
+       "solved": 3
+      },
+      {
+       "instances": 8,
+       "median_tokens_on_solved": 2887.0,
+       "size": 400,
+       "solved": 2
+      }
+     ],
+     "instances": 16,
+     "median_tokens_on_solved": 4055.0,
+     "provider_over_proxy_tokens_median": 1.646712103830668,
+     "provider_over_proxy_tokens_min": 1.1280878316559926,
+     "solve_rate": 0.3125,
+     "solve_rate_lower95": 0.132111,
+     "solve_rate_stratified_lower95": 0.058544,
+     "solved_instances": 5,
+     "trial_pass_rate": 0.3125,
+     "trials": 16,
+     "worst_size_lower95": 0.031854
+    }
+   },
+   "budget_note": "the arms were NOT held to the same budget: a black-box arm is held only to max_tool_calls, max_wall_s, a white-box arm to the whole plan budget; a success difference may partly reflect that",
+   "candidate": {
+    "agent": {
+     "kind": "blackbox",
+     "label": "acme-agent",
+     "spec": "blackbox:acme-agent"
+    },
+    "digest": "029780a1482253eda6468d30b8f358655d3ecbcb2fd4e028a9f90103cce91e9a",
+    "summary": {
+     "agent": "acme-agent",
+     "agent_error_trials": 0,
+     "by_size": [
+      {
+       "instances": 8,
+       "median_tokens_on_solved": 261.5,
+       "size": 200,
+       "solved": 6
+      },
+      {
+       "instances": 8,
+       "median_tokens_on_solved": 260.0,
+       "size": 400,
+       "solved": 3
+      }
+     ],
+     "cost_unit": "interaction-tokens",
+     "instances": 16,
+     "median_tokens_on_solved": 261.0,
+     "mode": "blackbox-v1",
+     "provider_over_proxy_tokens_median": null,
+     "provider_over_proxy_tokens_min": null,
+     "solve_rate": 0.5625,
+     "solve_rate_lower95": 0.333374,
+     "solve_rate_stratified_lower95": 0.217189,
+     "solved_instances": 9,
+     "trial_pass_rate": 0.5625,
+     "trials": 16,
+     "worst_size_lower95": 0.085233
+    }
+   },
+   "commit": "6550c464532df77d982257695163d5be0333c69e1955e5ca9da6fbd67dcf9195",
+   "cost": {
+    "both_solved": 4,
+    "excluded_unsolved_by_a_side": 12,
+    "mean_tool_call_bits": 0.792481,
+    "verdict": "not comparable: the arms' cost units differ (proxy-tokens vs interaction-tokens); only tool-call counts are common"
+   },
+   "domain": "dataanalysis",
+   "format": "guldo-agent-comparison-v1",
+   "limits": [
+    "Tokens are PROXY tokens (ceil(utf-8 bytes / 4) of the exact context sent each turn plus the output): recomputable from the stored trajectories, not a provider's billed count.",
+    "A language-model agent cannot be re-run to the same trajectory: verification checks that each recorded output passes the exact verifier and that each recorded cost follows from its trajectory.",
+    "An instance counts as solved when more than half of its trials pass; cost is the mean over solved trials; unsolved instances are excluded from the cost gap, which understates that side's cost.",
+    "The tasks come from a public generator: commit-reveal means no JUDGED instance could have been seen, not that the skill could not be trained for.",
+    "Results hold for this domain, these sizes and caps, and these two agent configurations; nothing is claimed about safety or about other tasks.",
+    "BLACK-BOX arm: the evaluator saw only the calls the vendor's agent made to the hosted tools and what they returned, never its model, prompts or reasoning. Its cost is INTERACTION tokens (what crossed the tool service), not the model's cost, and is never compared with proxy tokens.",
+    "A black-box result shows what the agent's OUTPUT was on instances it could not have seen: not that the agent worked alone (a human, another service or a different model than the one advertised could have produced the calls), nor what it cost the vendor to run.",
+    "A black-box arm is held only to max_tool_calls and max_wall_s; the plan's token and turn caps cannot be enforced on an agent the evaluator cannot see."
+   ],
+   "modes": {
+    "baseline": "whitebox",
+    "baseline_cost_unit": "proxy-tokens",
+    "candidate": "blackbox-v1",
+    "candidate_cost_unit": "interaction-tokens"
+   },
+   "plan_hash": "43df99ebcd4f2c422a509c18f8c19048dc105b01bd1df94c6a3bc973b03cca05",
+   "practice": false,
+   "success": {
+    "baseline_only": 1,
+    "both": 4,
+    "candidate_only": 5,
+    "neither": 6,
+    "sign_p_baseline_better": 0.984375,
+    "sign_p_candidate_better": 0.109375,
+    "verdict": "no difference in solve rate shown"
+   },
+   "version": "dataanalysis-v1"
+  },
+  "format": "guldo-agent-certificate-v1",
+  "not_shown": [
+   "That a particular model produced the trajectories: the operator ran the agents; this is not attested unless receipts are attached (agent_attest.py).",
+   "That tokens are billed tokens: they are proxy tokens (ceil(utf-8 bytes / 4) of the exact context sent each turn plus the output).",
+   "That the result holds on other tasks, other sizes or other caps, or that the agent behaved safely.",
+   "A practice-seed certificate shows the method only: anyone can derive every instance."
+  ],
+  "pubkey": "589a65369b70cf428ec55cd0fd9bef6bc7ff0fb16769554b4e7f2c9b0dbae216",
+  "round": {
+   "commitment": "6550c464532df77d982257695163d5be0333c69e1955e5ca9da6fbd67dcf9195",
+   "domain": "dataanalysis",
+   "id": "bbdemo1",
+   "log_entries": 9,
+   "log_head": "03f90efaeb7ff193b3c5104a5fcac73b51c924b64cada1a601b0c7fbf413a620",
+   "plan_hash": "43df99ebcd4f2c422a509c18f8c19048dc105b01bd1df94c6a3bc973b03cca05",
+   "practice": false
+  },
+  "statement": "Round bbdemo1 (domain dataanalysis; plan 43df99ebcd4f...; seed commitment 6550c464532d...): configuration 'acme-agent' (handle acme-inc) against baseline 'whitebox-bare' on 16 committed instances, 1 trial(s) each. Solved: candidate 9 of 16 (95% one-sided lower bound on the solve rate 0.333), baseline 5 of 16. Success: candidate-only 5, baseline-only 1, both 4, neither 6; exact sign test p=0.109: no difference in solve rate shown. Cost: not comparable: the arms' cost units differ (proxy-tokens vs interaction-tokens); only tool-call counts are common. BLACK-BOX: the candidate was a vendor's own agent driven through the evaluator's tool service: the evaluator saw only its tool calls and the results, never its model, prompts or reasoning, so its cost is INTERACTION tokens (not comparable with proxy tokens) and nothing here shows how the work was done or by what. NOTE: the arms were NOT held to the same budget: a black-box arm is held only to max_tool_calls, max_wall_s, a white-box arm to the whole plan budget; a success difference may partly reflect that. Each verdict is one-sided at 5%."
+ }
+}

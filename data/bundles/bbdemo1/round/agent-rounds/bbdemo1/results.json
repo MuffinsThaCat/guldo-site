@@ -1,0 +1,96 @@
+{
+ "baseline": {
+  "digest": "d71335a661de2c775d26844f0531d773e72415a81b97e0e562164de9a09727e6",
+  "label": "whitebox-bare",
+  "summary": {
+   "agent": "whitebox-bare",
+   "agent_error_trials": 0,
+   "by_size": [
+    {
+     "instances": 8,
+     "median_tokens_on_solved": 4957.0,
+     "size": 200,
+     "solved": 3
+    },
+    {
+     "instances": 8,
+     "median_tokens_on_solved": 2887.0,
+     "size": 400,
+     "solved": 2
+    }
+   ],
+   "instances": 16,
+   "median_tokens_on_solved": 4055.0,
+   "provider_over_proxy_tokens_median": 1.646712103830668,
+   "provider_over_proxy_tokens_min": 1.1280878316559926,
+   "solve_rate": 0.3125,
+   "solve_rate_lower95": 0.132111,
+   "solve_rate_stratified_lower95": 0.058544,
+   "solved_instances": 5,
+   "trial_pass_rate": 0.3125,
+   "trials": 16,
+   "worst_size_lower95": 0.031854
+  }
+ },
+ "commitment": "6550c464532df77d982257695163d5be0333c69e1955e5ca9da6fbd67dcf9195",
+ "domain": "dataanalysis",
+ "entries": [
+  {
+   "config_sha256": "000cffd67a4ed0e8eeb75ff57e945606f7d206065751f46481770a775e0b6e68",
+   "cost": {
+    "both_solved": 4,
+    "excluded_unsolved_by_a_side": 12,
+    "mean_tool_call_bits": 0.792481,
+    "verdict": "not comparable: the arms' cost units differ (proxy-tokens vs interaction-tokens); only tool-call counts are common"
+   },
+   "eid": "e001",
+   "handle": "acme-inc",
+   "label": "acme-agent",
+   "ladder_digest": "029780a1482253eda6468d30b8f358655d3ecbcb2fd4e028a9f90103cce91e9a",
+   "success": {
+    "baseline_only": 1,
+    "both": 4,
+    "candidate_only": 5,
+    "neither": 6,
+    "sign_p_baseline_better": 0.984375,
+    "sign_p_candidate_better": 0.109375,
+    "verdict": "no difference in solve rate shown"
+   },
+   "summary": {
+    "agent": "acme-agent",
+    "agent_error_trials": 0,
+    "by_size": [
+     {
+      "instances": 8,
+      "median_tokens_on_solved": 261.5,
+      "size": 200,
+      "solved": 6
+     },
+     {
+      "instances": 8,
+      "median_tokens_on_solved": 260.0,
+      "size": 400,
+      "solved": 3
+     }
+    ],
+    "cost_unit": "interaction-tokens",
+    "instances": 16,
+    "median_tokens_on_solved": 261.0,
+    "mode": "blackbox-v1",
+    "provider_over_proxy_tokens_median": null,
+    "provider_over_proxy_tokens_min": null,
+    "solve_rate": 0.5625,
+    "solve_rate_lower95": 0.333374,
+    "solve_rate_stratified_lower95": 0.217189,
+    "solved_instances": 9,
+    "trial_pass_rate": 0.5625,
+    "trials": 16,
+    "worst_size_lower95": 0.085233
+   }
+  }
+ ],
+ "format": "guldo-agent-round-results-v1",
+ "plan_hash": "43df99ebcd4f2c422a509c18f8c19048dc105b01bd1df94c6a3bc973b03cca05",
+ "practice": false,
+ "round": "bbdemo1"
+}

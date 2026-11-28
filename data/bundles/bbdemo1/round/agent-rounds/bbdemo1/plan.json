@@ -1,0 +1,27 @@
+{
+ "budget": {
+  "max_nudges": 2,
+  "max_tokens": 30000,
+  "max_tool_calls": 12,
+  "max_turns": 12,
+  "max_wall_s": 240
+ },
+ "commit": "6550c464532df77d982257695163d5be0333c69e1955e5ca9da6fbd67dcf9195",
+ "counter": "proxy-bytes4-v1",
+ "domain": "dataanalysis",
+ "format": "guldo-agent-plan-v1",
+ "n_per_size": 8,
+ "practice": false,
+ "sizes": [
+  200,
+  400
+ ],
+ "source_hashes": {
+  "agent_core.py": "d51a9bb05ae7b45d2f2965239cea1be6f13357b056bf96b8540425663caa01a1",
+  "agent_domains/__init__.py": "6dc91fe9a7de1577cc4567f6df35a23625365ab15a65325c7efb0eb7d9758d5f",
+  "agent_domains/dataanalysis.py": "8d9d6e41f8d595c031210df68895f87d4e6a8164a52c5ca150284854c994c1f8",
+  "agent_harness.py": "f16f8de516886c9298585a5423a47e0e91c6f34ec5314dde8355fe9d3e893b13"
+ },
+ "trials": 1,
+ "version": "dataanalysis-v1"
+}

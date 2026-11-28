@@ -1,0 +1,21 @@
+{
+ "allowed_models": [
+  "qwen2.5:3b"
+ ],
+ "baseline": {
+  "agent": "compat:qwen2.5:3b",
+  "allow_tools": null,
+  "label": "whitebox-bare",
+  "system": null
+ },
+ "closes_at": 1795810654.757767,
+ "commitment": "6550c464532df77d982257695163d5be0333c69e1955e5ca9da6fbd67dcf9195",
+ "created": 1795807054.8897321,
+ "domain": "dataanalysis",
+ "id": "bbdemo1",
+ "max_entries": 60,
+ "plan_hash": "43df99ebcd4f2c422a509c18f8c19048dc105b01bd1df94c6a3bc973b03cca05",
+ "practice": false,
+ "state": "revealed",
+ "title": "black-box vendor agent vs whitebox baseline, joint seed, verifier-hosted"
+}

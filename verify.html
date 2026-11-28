@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verify - Guldo</title><meta name="description" content="Check an agent-evaluation certificate yourself, in your browser: signatures, the hash-chained log, the seed commitment and the registration. Nothing is uploaded.">
+<meta name="color-scheme" content="dark light"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%232A78D6'/%3E%3Cpath d='M6 20h4v-4h4v-4h4V8h4' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600&family=Instrument+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap"><link rel="stylesheet" href="assets/site.css">
+<style>
+.pill.bad{background:#fde7e5;color:#8c1d18}
+[data-theme="dark"] .pill.bad{background:#4a1d1a;color:#ffb4ab}
+.vbanner{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;background:var(--card)}
+.vbanner p{margin:0;font-weight:600}
+.vbanner.v-ok{border-color:var(--ok)}.vbanner.v-warn{border-color:var(--warn)}.vbanner.v-bad{border-color:#b3261e}
+#v-drop{border:2px dashed var(--line2);border-radius:12px;padding:18px;text-align:center;color:var(--muted)}
+#v-drop.over{border-color:var(--accent);color:var(--ink)}
+.vrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}
+.vrow input[type=text]{flex:1 1 320px;min-width:0;padding:10px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+#v-key{width:100%;min-height:74px;padding:10px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:13px;box-sizing:border-box}
+.vbtn{padding:10px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);font:inherit;font-weight:600;cursor:pointer}
+.vbtn.alt{background:transparent;color:var(--ink);border-color:var(--line2)}
+.vfile{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.vfile:focus-visible + label{outline:3px solid var(--accent);outline-offset:2px}
+.vbtn:focus-visible,.vrow input:focus-visible,#v-key:focus-visible,#v-party:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.vchecks td{vertical-align:top;overflow-wrap:anywhere}
+.vdl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:12px 0}.vdl dt{color:var(--muted)}.vdl dd{margin:0;overflow-wrap:anywhere}
+.vstatement{border-left:3px solid var(--accent);padding-left:12px}
+.vwarn{border:1px solid var(--warn);background:var(--warn-bg);border-radius:8px;padding:10px 12px}
+#v-out{display:grid;gap:18px;margin-top:22px}
+#v-status{min-height:1.4em;margin:6px 0 0}
+@media (max-width:560px){.vdl{grid-template-columns:1fr}.vdl dt{margin-top:6px}}
+</style></head>
+
+<body class="bands"><a class="skip" href="#main">Skip to content</a> <div class="band dark hdr"><div class="wrap"><header class="top"><a class="brand" href="./"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect x="1.5" y="1.5" width="25" height="25" rx="6" fill="none" stroke="var(--ink)" stroke-width="2"/><path d="M6 20h4v-4h4v-4h4V8h4" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Guldo</a> <nav class="main" aria-label="Main"><a href="./">Overview</a><a href="install.html">Install</a><a href="domains.html">Domains</a><a href="propose.html">Propose</a><a href="guide.html">Guide</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="preregistrations.html">Pre-registrations</a><a href="compete.html">Compete</a><a href="certify.html">Certify</a><a href="agent.html">Agents</a><a href="verify.html" aria-current="page">Verify</a><a href="log.html">Log</a><a href="claims.html">Other claims</a><a href="limits.html">Limits</a><a href="audit.html">Audit</a></nav></header></div></div>
+<main id="main" class="bands"><div class="band light"><div class="wrap band-in page"><section class="block"><p class="kicker">Verify</p><h1>Check a certificate yourself</h1>
+<p class="lede">A Guldo certificate is a claim about an AI agent that you should not have to take on trust. Point this page at a result bundle and your own browser re-checks the signatures, the hash-chained log, the seed commitment and the registration. Nothing is uploaded and there is no account: the page is a small script you can read.</p>
+
+<div class="card"><h3>What a pass means, and what it does not</h3>
+<p>A pass means the bundle is internally consistent and every signature in it was made by the key you named: the log has not been edited, the seed revealed afterwards is the one committed to before any agent ran, the round was registered before it ran, and the certificate says what the signed numbers say.</p>
+<p><strong>It does not mean the verifier is honest or independent.</strong> A key is not a person. Only you can decide whose key to trust, so take it from the verifier's own publication, not from the person who sent you the certificate.</p>
+<p><strong>It is narrower than the full audit.</strong> Re-deriving every task from the seed and replaying every tool call needs the Python code; this page lists what it skips next to every result.</p>
+<p class="fine">Status, plainly: no independent party has run a round yet. The demonstration bundle below was run by one person playing every role on one laptop; it shows the machinery works, not that any real verifier can be trusted. See <a href="agent.html">Agents</a>.</p></div>
+
+<div class="card"><h3>1. The verifier's public key</h3>
+<p class="fine">One key per line (a <span class="mono"># name</span> comment is fine). Without one, the page can only tell you the bundle is consistent, and says so.</p>
+<label for="v-key" class="fine">Verifier public key(s), 64 hex characters each</label>
+<textarea id="v-key" spellcheck="false" autocomplete="off" placeholder="589a65369b70cf42...  # the verifier's key, from the verifier's own site"></textarea>
+<details><summary>Optional: the other parties in the joint seed</summary>
+<p class="fine">If the seed was made jointly, you can pin each party's key too, and say which party is the verifier so the page can check that operator, vendor and verifier used different keys.</p>
+<label for="v-party" class="fine">Party public keys, one per line</label>
+<textarea id="v-party" spellcheck="false" autocomplete="off" style="width:100%;min-height:60px;padding:10px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:13px;box-sizing:border-box"></textarea>
+<div class="vrow"><label for="v-vparty" class="fine">Name of the verifier's party</label><input type="text" id="v-vparty" placeholder="verifier" autocomplete="off" style="flex:0 1 220px"></div></details></div>
+
+<div class="card"><h3>2. The bundle</h3>
+<div class="vrow"><input type="text" id="v-url" aria-label="Bundle address" placeholder="https://example.org/bundles/round-7  (a folder that serves BUNDLE.json)" autocomplete="off"><button class="vbtn" id="v-go" type="button">Check</button></div>
+<p class="fine">A bundle on another website can be fetched only if that site allows it; otherwise download the folder and choose it:</p>
+<div class="vrow"><input type="file" id="v-folder" class="vfile" webkitdirectory multiple><label class="vbtn alt" for="v-folder">Choose the bundle folder</label></div>
+<div id="v-drop">or drop the bundle folder here</div>
+<div class="vrow"><button class="vbtn alt" id="v-demo" type="button" data-bundle="/data/bundles/bbdemo1" data-key="589a65369b70cf428ec55cd0fd9bef6bc7ff0fb16769554b4e7f2c9b0dbae216" data-vparty="verifier">Try the demonstration bundle</button><span class="fine">Its key comes from this page, so a pass there shows only that the bundle is consistent.</span></div>
+<p id="v-status" class="fine" aria-live="polite"></p></div>
+
+<div id="v-out" aria-live="polite"></div>
+<noscript><div class="card"><p>This page needs JavaScript to run the checks in your browser. Without it, run the full audit with the commands below.</p></div></noscript>
+
+<div class="card"><h3>The full audit, on your own machine</h3>
+<p class="fine">The browser checks are a subset. The audit also re-derives every instance from the revealed seed, replays every session and regenerates every certificate. It needs Python 3.9+ and the downloadable tool from the <a href="install.html">Install page</a>.</p>
+<div class="cmd"><code>python3 agent_verifier.py audit BUNDLE --trusted VERIFIER_KEYS --party-keys PARTY_KEYS --verifier-party verifier --require-registry --require-joint</code><button class="copy" type="button" data-copy="python3 agent_verifier.py audit BUNDLE --trusted VERIFIER_KEYS --party-keys PARTY_KEYS --verifier-party verifier --require-registry --require-joint">Copy</button></div></div>
+
+<div class="card"><h3>For authors who want to cite a result</h3>
+<p>Publish the bundle folder somewhere readers can fetch it (with cross-origin access allowed) and link to <span class="mono">verify?bundle=ADDRESS&amp;key=VERIFIER_KEY</span>. Readers who follow the link get the checks above with no setup. The key in a link comes from you, the author, so a careful reader will compare it with the verifier's own publication; the page says so whenever a key came from a link.</p></div>
+</section></div></div></main>
+<div class="band dark ftr"><div class="wrap"><footer class="foot"><p>No result on this site is official yet: all are provisional, pending the first certified round. Results will be marked <strong>Official</strong> once a round has run. <a href="limits.html">What a certified result requires, and where we stand</a>.</p></footer></div></div>
+<div id="tip" role="tooltip"></div><script src="assets/site.js"></script><script src="assets/guldo_verify.js"></script><script src="assets/verify_ui.js"></script></body></html>

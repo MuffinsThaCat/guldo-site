@@ -1,0 +1,37 @@
+{
+ "ceremony": "bbdemo1",
+ "format": "guldo-joint-seed-v1",
+ "master_sha256": "6bf69ef510b09004782f3134fae831419056831af44a99cbe43f6d42f9d3b548",
+ "parties": [
+  {
+   "signature": "b4f5ef1e452ef80fec8d5a83c518697eba5ae00371ed59d913ad0b66f5d3370bc3ba902d066768b539568732819fd62cb13b8541b12d306fff91e34a85d32501",
+   "statement": {
+    "ceremony": "bbdemo1",
+    "commitment": "22676254491cb030bc9f23be1f765463cbca761cc3d5e6906a670054fd0af274",
+    "format": "guldo-joint-commit-v1",
+    "party": "operator",
+    "pubkey": "256ff160b7939993efbf845bc2e4c81b4c3ce1d82fae706464d1a4e3dc3af0ff"
+   }
+  },
+  {
+   "signature": "4612fb8fe017e7d454a91f4e5c4195c46a957419d219810623b3afcc6f4f87c944ef547ba541a66d0a1f0ff1cc8009f01ea845bb8fa618c07c7fa332ca5a0500",
+   "statement": {
+    "ceremony": "bbdemo1",
+    "commitment": "3b3b1a085debac5f99ef5215e43af1e45c3dc220866595867d9b2770bc4a0424",
+    "format": "guldo-joint-commit-v1",
+    "party": "vendor-acme",
+    "pubkey": "6fdf1d095ae93e3008a1c62d1e577d907f789c6f80d861514804da8a0c97e468"
+   }
+  },
+  {
+   "signature": "596968a0b410e58af3655fa0e32f42cf3aa69ae575efb68987b8c0fa44ebaa1a1af7c2bb070e9a28b4778bee05c2751e6f862fa8444e755a8ce9d2708eb6000b",
+   "statement": {
+    "ceremony": "bbdemo1",
+    "commitment": "12b149e5763d9e45acb03f487627107ed7a3e509a50e61c4bf7e901fc31aa159",
+    "format": "guldo-joint-commit-v1",
+    "party": "verifier",
+    "pubkey": "589a65369b70cf428ec55cd0fd9bef6bc7ff0fb16769554b4e7f2c9b0dbae216"
+   }
+  }
+ ]
+}
